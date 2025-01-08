@@ -14,7 +14,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { fillDrawer } from "@components/QDrawer.ui";
-import Login from "./login.form";
+import LoginForm from "./login.form";
 import QInput from "@components/QInput.ui";
 import { getIndustryList } from "@helpers/getIndustryList.helper";
 import { getCountryList } from "@helpers/getCountryList.helper";
@@ -236,7 +236,7 @@ export default function Register() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() => fillDrawer(Login, "Sign in")}
+              onClick={() => fillDrawer(<LoginForm />, "Sign in")}
             >
               Sign in
             </button>

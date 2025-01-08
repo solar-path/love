@@ -1,6 +1,6 @@
 import { List } from "flowbite-react";
 import { Link } from "wouter-preact";
-import Inquiry from "@routes/admin/crm/inquiry/inquiry.form";
+import InquiryForm from "@routes/admin/crm/inquiry/inquiry.form";
 import { fillDrawer } from "./QDrawer.ui";
 
 export default function QFooter() {
@@ -29,7 +29,7 @@ export default function QFooter() {
 
           <List.Item className="me-4 md:me-6">
             <button
-              onClick={() => fillDrawer("Contact us", <Inquiry />)}
+              onClick={() => fillDrawer(<InquiryForm />, "Contact us")}
               className="hover:text-red-700"
             >
               Contact Us

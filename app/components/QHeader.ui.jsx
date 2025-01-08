@@ -22,10 +22,10 @@ export default function QHeader() {
         <Navbar.Link as={Link} to="/pricing">
           Pricing
         </Navbar.Link>
-        <Navbar.Link onClick={() => fillDrawer("Sign up", <RegisterForm />)}>
+        <Navbar.Link onClick={() => fillDrawer(<RegisterForm />, "Sign up")}>
           Sign up
         </Navbar.Link>
-        <Navbar.Link onClick={() => fillDrawer("Sign in", <LoginForm />)}>
+        <Navbar.Link onClick={() => fillDrawer(<LoginForm />, "Sign in")}>
           Sign in
         </Navbar.Link>
       </Navbar.Collapse>

@@ -4,10 +4,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useLocation } from "wouter-preact";
 import { Label, TextInput, Button } from "flowbite-react";
 import { useForm } from "react-hook-form";
-import Register from "./register.form";
-import ForgotPassword from "./forgot.form";
+import RegisterForm from "./register.form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
 import { fillDrawer } from "@components/QDrawer.ui";
+import ForgotPasswordForm from "./forgot.form";
 // Define a schema for login validation
 const loginSchema = yup
   .object()
@@ -18,7 +18,7 @@ const loginSchema = yup
       .required("Email is required"),
     password: yup
       .string()
-      .min(6, "Password must be at least 6 characters long")
+      .min(8, "Password must be at least 8 characters long")
       .required("Password is required"), // Example password validation
   })
   .required();
@@ -95,7 +95,7 @@ export default function Login() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() => fillDrawer(Register, "Sign up")}
+              onClick={() => fillDrawer(<RegisterForm />, "Sign up")}
             >
               Sign up
             </button>
@@ -107,7 +107,9 @@ export default function Login() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() => fillDrawer(ForgotPassword, "Forgot password")}
+              onClick={() =>
+                fillDrawer(<ForgotPasswordForm />, "Forgot password")
+              }
             >
               Remind
             </button>

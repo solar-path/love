@@ -16,7 +16,7 @@ const forgotSchema = yup
   })
   .required();
 
-export default function ForgotPassword() {
+export default function ForgotPasswordForm() {
   const {
     register,
     handleSubmit,
