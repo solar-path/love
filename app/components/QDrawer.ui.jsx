@@ -1,5 +1,4 @@
 import { Drawer } from "flowbite-react";
-import Icon from "../assets/favicon.png";
 import { signal } from "@preact/signals";
 
 export const DrawerProps = signal({
@@ -33,11 +32,7 @@ export default function QDrawer() {
       position="right"
       className="w-1/4"
     >
-      {/* TITLE */}
-      <Drawer.Header
-        title={DrawerProps.value.title}
-        titleIcon={() => <img src={Icon} alt="Icon" className="h-6 w-6 mr-4" />}
-      />
+      <Drawer.Header title={DrawerProps.value.title} />
       <Drawer.Items>
         {/* CONTENT */}
         {DrawerProps.value.form}
