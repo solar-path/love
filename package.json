@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^3.10.0",
     "@preact/signals": "^2.0.0",
     "flowbite-react": "^0.10.2",
+    "lucide-preact": "^0.469.0",
     "preact": "^10.25.3",
     "react-hook-form": "^7.54.2",
     "wouter-preact": "^3.3.5",
