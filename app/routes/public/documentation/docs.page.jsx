@@ -58,14 +58,15 @@ export default function Docs() {
                 dangerouslySetInnerHTML={{ __html: content }}
                 className="
                   prose-headings:font-semibold 
-                  prose-h1:text-3xl prose-h1:mb-8
-                  prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-                  prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                  prose-p:text-gray-600 prose-p:leading-relaxed
+                  prose-h1:text-3xl prose-h1:mb-6
+                  prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-3
+                  prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-2
+                  prose-p:text-gray-600 prose-p:leading-relaxed prose-p:my-2
                   prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
                   prose-code:text-sm prose-code:bg-gray-50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded
                   prose-pre:bg-gray-50 prose-pre:p-4 prose-pre:rounded-lg
-                  prose-ul:my-6 prose-li:my-2
+                  prose-ul:my-2 prose-ul:space-y-1
+                  prose-li:my-0 prose-li:leading-normal
                   prose-img:rounded-lg
                 "
               />
@@ -87,7 +88,7 @@ export default function Docs() {
                   key={index}
                   href={`#${heading.text.toLowerCase().replace(/\s+/g, "-")}`}
                   className={`
-                    block py-2 px-3 text-sm rounded-md transition-colors
+                    block py-1 px-3 text-sm rounded-md transition-colors
                     ${
                       heading.depth === 1
                         ? "font-medium text-gray-900"
