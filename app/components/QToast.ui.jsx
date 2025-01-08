@@ -10,14 +10,6 @@ export const FlashMessageProps = signal({
   message: "",
 });
 
-export const buildTree = (list, parentKey) => {
-  // Return empty array if list is null, undefined, or not an array
-  if (!Array.isArray(list)) {
-    console.warn("buildTree received invalid input:", list);
-    return [];
-  }
-};
-
 export default function FlashMessageUI() {
   // Access the value of FlashMessageProps directly
   const isVisible = FlashMessageProps.value.state;
