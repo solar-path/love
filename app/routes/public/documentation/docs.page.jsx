@@ -7,15 +7,19 @@ export default function Docs() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Get the current path to determine which markdown file to load
     const path =
       window.location.pathname.split("/documentation/")[1] || "whats-new";
-    console.log("Loading documentation for path:", path);
+    console.log("Current path:", path);
 
-    // Load and parse the markdown file
     const loadContent = async () => {
       try {
-        const response = await fetch(`/posts/${path}.md`);
+        console.log(
+          "Attempting to fetch:",
+          `/app/assets/posts/${path}/${path}.md`
+        );
+        const response = await fetch(`/app/assets/posts/${path}/${path}.md`);
+        console.log("Response status:", response.status);
+
         if (!response.ok) {
           throw new Error(
             `Failed to load markdown: ${response.status} ${response.statusText}`
@@ -23,18 +27,21 @@ export default function Docs() {
         }
 
         const markdown = await response.text();
-        console.log("Loaded markdown:", markdown.substring(0, 100) + "..."); // Log first 100 chars
+        console.log("Markdown content:", markdown);
 
-        // Parse markdown and extract headings for table of contents
-        const tokens = marked.lexer(markdown);
+        const content = markdown.replace(/^---[\s\S]*?---/, "").trim();
+
+        const tokens = marked.lexer(content);
+        console.log("Marked tokens:", tokens);
+
         const headings = tokens.filter((token) => token.type === "heading");
         setToc(headings);
 
-        // Convert markdown to HTML
-        const html = marked.parse(markdown);
+        const html = marked.parse(content);
+        console.log("Generated HTML:", html);
         setContent(html);
       } catch (error) {
-        console.error("Error loading documentation:", error);
+        console.error("Detailed error:", error);
         setError(error.message);
       }
     };
@@ -52,14 +59,23 @@ export default function Docs() {
 
   return (
     <div className="flex flex-row">
-      <div className="w-3/4 p-8">
-        {content ? (
+      <div className="w-3/4 p-8 bg-white">
+        {error && (
+          <div className="p-4 mb-4 text-red-600 bg-red-50 rounded">
+            Error: {error}
+          </div>
+        )}
+
+        {!content && !error && (
+          <div className="p-4 bg-gray-50 rounded">Loading...</div>
+        )}
+
+        {content && (
           <div
             className="prose max-w-none"
             dangerouslySetInnerHTML={{ __html: content }}
+            style={{ minHeight: "200px" }}
           />
-        ) : (
-          <div>Loading...</div>
         )}
       </div>
 
