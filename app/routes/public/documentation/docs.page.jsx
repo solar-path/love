@@ -9,16 +9,10 @@ export default function Docs() {
   useEffect(() => {
     const path =
       window.location.pathname.split("/documentation/")[1] || "whats-new";
-    console.log("Current path:", path);
 
     const loadContent = async () => {
       try {
-        console.log(
-          "Attempting to fetch:",
-          `/app/assets/posts/${path}/${path}.md`
-        );
         const response = await fetch(`/app/assets/posts/${path}/${path}.md`);
-        console.log("Response status:", response.status);
 
         if (!response.ok) {
           throw new Error(
@@ -27,21 +21,13 @@ export default function Docs() {
         }
 
         const markdown = await response.text();
-        console.log("Markdown content:", markdown);
-
         const content = markdown.replace(/^---[\s\S]*?---/, "").trim();
-
         const tokens = marked.lexer(content);
-        console.log("Marked tokens:", tokens);
-
         const headings = tokens.filter((token) => token.type === "heading");
-        setToc(headings);
 
-        const html = marked.parse(content);
-        console.log("Generated HTML:", html);
-        setContent(html);
+        setToc(headings);
+        setContent(marked.parse(content));
       } catch (error) {
-        console.error("Detailed error:", error);
         setError(error.message);
       }
     };
@@ -49,52 +35,75 @@ export default function Docs() {
     loadContent();
   }, [window.location.pathname]);
 
-  if (error) {
-    return (
-      <div className="p-8 text-red-600">
-        Error loading documentation: {error}
-      </div>
-    );
-  }
-
   return (
-    <div className="flex flex-row">
-      <div className="w-3/4 p-8 bg-white">
-        {error && (
-          <div className="p-4 mb-4 text-red-600 bg-red-50 rounded">
-            Error: {error}
-          </div>
-        )}
+    <div className="flex flex-row max-w-8xl mx-auto">
+      {/* Main content */}
+      <div className="w-3/4 min-h-screen bg-white">
+        <div className="px-8 py-6">
+          {error && (
+            <div className="p-4 mb-6 text-red-600 bg-red-50 rounded-lg border border-red-200">
+              Error loading documentation: {error}
+            </div>
+          )}
 
-        {!content && !error && (
-          <div className="p-4 bg-gray-50 rounded">Loading...</div>
-        )}
+          {!content && !error && (
+            <div className="flex items-center justify-center h-32">
+              <div className="animate-pulse text-gray-400">Loading...</div>
+            </div>
+          )}
 
-        {content && (
-          <div
-            className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: content }}
-            style={{ minHeight: "200px" }}
-          />
-        )}
+          {content && (
+            <article className="prose prose-slate max-w-none">
+              <div
+                dangerouslySetInnerHTML={{ __html: content }}
+                className="
+                  prose-headings:font-semibold 
+                  prose-h1:text-3xl prose-h1:mb-8
+                  prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+                  prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+                  prose-p:text-gray-600 prose-p:leading-relaxed
+                  prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                  prose-code:text-sm prose-code:bg-gray-50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded
+                  prose-pre:bg-gray-50 prose-pre:p-4 prose-pre:rounded-lg
+                  prose-ul:my-6 prose-li:my-2
+                  prose-img:rounded-lg
+                "
+              />
+            </article>
+          )}
+        </div>
       </div>
 
+      {/* Table of Contents Sidebar */}
       {toc.length > 0 && (
-        <div className="w-1/4 p-4">
-          <div className="sticky top-4">
-            <h3 className="font-semibold mb-2">On this page</h3>
-            <ul className="space-y-1">
+        <div className="w-1/4 p-6">
+          <div className="sticky top-6">
+            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+              On this page
+            </h3>
+            <nav className="space-y-1">
               {toc.map((heading, index) => (
-                <li key={index} className={`pl-${(heading.depth - 1) * 4}`}>
-                  <a
-                    href={`#${heading.text.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-gray-600 hover:text-gray-900"
-                  >
-                    {heading.text}
-                  </a>
-                </li>
+                <a
+                  key={index}
+                  href={`#${heading.text.toLowerCase().replace(/\s+/g, "-")}`}
+                  className={`
+                    block py-2 px-3 text-sm rounded-md transition-colors
+                    ${
+                      heading.depth === 1
+                        ? "font-medium text-gray-900"
+                        : "text-gray-600"
+                    }
+                    ${heading.depth === 3 ? "pl-6 text-gray-500" : ""}
+                    hover:bg-gray-50 hover:text-gray-900
+                  `}
+                  style={{
+                    paddingLeft: `${(heading.depth - 1) * 1}rem`,
+                  }}
+                >
+                  {heading.text}
+                </a>
               ))}
-            </ul>
+            </nav>
           </div>
         </div>
       )}
