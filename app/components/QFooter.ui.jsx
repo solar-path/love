@@ -5,15 +5,15 @@ import { fillDrawer } from "./QDrawer.ui";
 
 export default function QFooter() {
   return (
-    <footer className="bg-white rounded-lg m-4 dark:bg-gray-800">
+    <footer className="bg-white m-4">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="text-sm text-gray-500 sm:text-center">
           © 2024 Aneko, ltd.
         </span>
 
         <List
           horizontal
-          className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+          className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0"
         >
           <List.Item className="me-4 md:me-6">
             <Link to="/privacy" className="hover:text-red-700">

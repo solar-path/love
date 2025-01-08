@@ -14,26 +14,23 @@ export function App() {
     <div className="flex min-h-screen flex-col justify-between">
       <QHeader />
       <QDrawer />
-      <main className="flex-grow pl-10 pr-10 pr-10">
+      <main className="flex-grow pl-10 pr-10">
         <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/pricing">
-            <Pricing />
-          </Route>
+          <Route path="/" component={Home} />
+          <Route path="/pricing" component={Pricing} />
 
+          <Route path="/documentation/:path*">
+            <DocsLayout>
+              <Docs />
+            </DocsLayout>
+          </Route>
           <Route path="/documentation">
             <DocsLayout>
               <Docs />
             </DocsLayout>
           </Route>
-          <Route path="/privacy">
-            <Privacy />
-          </Route>
-          <Route path="/terms">
-            <Terms />
-          </Route>
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
         </Switch>
       </main>
       <QFooter />
