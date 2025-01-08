@@ -1,23 +1,23 @@
-import { Inbox } from "lucide-preact";
-import QSideNav from "app/components/QSideNav";
+import { Inbox, House } from "lucide-preact";
+import QSideNav from "@components/QSideNav.ui";
 
 export default function AdminLayout({ children }) {
   const items = [
     {
       label: "Dashboard",
       href: "/admin",
-      icon: <Home />,
+      icon: <House size={16} className="text-gray-700" />,
       children: [],
     },
     {
       label: "CRM",
       href: "/admin/crm",
-      icon: <Inbox />,
+      icon: <Inbox size={16} className="text-gray-700" />,
       children: [
         {
           label: "Inquiry",
           href: "/admin/crm/inquiry",
-          icon: <Inbox />,
+          icon: <Inbox size={16} className="text-gray-700" />,
         },
       ],
     },
@@ -26,7 +26,6 @@ export default function AdminLayout({ children }) {
   return (
     <div className="flex flex-row">
       <div className="w-1/4">
-        <h1>Admin</h1>
         <QSideNav items={items} />
       </div>
       <div className="w-3/4">{children}</div>

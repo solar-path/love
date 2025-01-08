@@ -1,3 +1,3 @@
 export default function CrmPage() {
-  return <div>CrmPage</div>;
+  return <div>customer relationship management</div>;
 }
