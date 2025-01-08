@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@libsql/client": "^0.14.0",
     "@preact/signals": "^2.0.0",
+    "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.3",
     "flowbite-react": "^0.10.2",
     "lucide-preact": "^0.469.0",
