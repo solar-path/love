@@ -1,8 +1,6 @@
 import { Card, Button, List } from "flowbite-react";
-import RegisterForm from "@routes/auth/register.form";
-import { fillDrawer } from "@components/QDrawer.ui";
-import QRCode from "@assets/qrcode.png";
-
+import RegisterForm from "../auth/Register.form";
+import QrCode from "@assets/qrcode.png";
 export default function Pricing() {
   const plans = [
     {
@@ -81,7 +79,7 @@ export default function Pricing() {
                 If you like Aneko, please consider donating to support us.
               </p>
 
-              <img src={QRCode} alt="Donate" className="size-40" />
+              <img src={QrCode} alt="Donate" className="size-40" />
             </div>
             <Button
               className="w-full mb-4"
