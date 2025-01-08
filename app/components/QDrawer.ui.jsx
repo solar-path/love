@@ -30,13 +30,10 @@ export default function QDrawer() {
       onClose={closeDrawer}
       backdrop={false}
       position="right"
-      className="w-1/4"
+      className="w-full max-w-md sm:w-[480px]"
     >
       <Drawer.Header title={DrawerProps.value.title} />
-      <Drawer.Items>
-        {/* CONTENT */}
-        {DrawerProps.value.form}
-      </Drawer.Items>
+      <Drawer.Items>{DrawerProps.value.form}</Drawer.Items>
     </Drawer>
   );
 }
