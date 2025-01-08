@@ -7,19 +7,19 @@ export default function Pricing() {
       name: "Free",
       price: 0,
       cost: "per user / per month",
-      features: ["3 users", "all features", "access 24/7"],
+      features: ["3 users", "all features"],
     },
     {
       name: "Standard",
       price: 25,
       cost: "per user / per month",
-      features: ["10 users", "all features", "access 24/7"],
+      features: ["10 users", "all features"],
     },
     {
       name: "Enterprise",
       price: 100,
       cost: "per user / per month",
-      features: ["100 users", "all features", "access 24/7"],
+      features: ["100 users", "all features"],
     },
   ];
 
