@@ -23,7 +23,7 @@ export function App() {
             <Pricing />
           </Route>
 
-          <Route path="/docs">
+          <Route path="/documentation">
             <DocsLayout>
               <Docs />
             </DocsLayout>

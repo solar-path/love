@@ -13,7 +13,7 @@ export default function QHeader() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link as={Link} to="/docs">
+        <Navbar.Link as={Link} to="/documentation">
           Documentation
         </Navbar.Link>
         <Navbar.Link as={Link} to="/addressBook">
