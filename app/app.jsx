@@ -9,6 +9,10 @@ import Docs from "./routes/public/documentation/docs.page";
 import Privacy from "./routes/public/privacy.page";
 import Terms from "./routes/public/terms.page";
 import DocsLayout from "./routes/public/documentation/docs.layouts";
+import AdminLayout from "@routes/admin/admin.layout";
+import AdminPage from "@routes/admin/admin.page";
+import NotFound from "@routes/public/NotFound.page";
+
 export function App() {
   return (
     <div className="flex min-h-screen flex-col justify-between">
@@ -16,24 +20,24 @@ export function App() {
       <QDrawer />
       <main className="flex-grow pl-10 pr-10">
         <Switch>
+          <Route path="/admin">
+            <AdminLayout>
+              <AdminPage />
+            </AdminLayout>
+          </Route>
+
           <Route path="/" component={Home} />
           <Route path="/pricing" component={Pricing} />
-          <DocsLayout>
-            <Route path="/documentation/:path*" component={Docs} />
-          </DocsLayout>
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
 
-          {/* <Route path="/documentation/:path*">
-            <DocsLayout>
-              <Docs />
-            </DocsLayout>
-          </Route>
           <Route path="/documentation">
             <DocsLayout>
               <Docs />
             </DocsLayout>
-          </Route> */}
-          <Route path="/privacy" component={Privacy} />
-          <Route path="/terms" component={Terms} />
+          </Route>
+
+          <Route component={NotFound} />
         </Switch>
       </main>
       <QFooter />

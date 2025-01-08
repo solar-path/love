@@ -16,8 +16,8 @@ export default function QHeader() {
         <Navbar.Link as={Link} to="/documentation">
           Documentation
         </Navbar.Link>
-        <Navbar.Link as={Link} to="/addressBook">
-          Address Book
+        <Navbar.Link as={Link} to="/admin">
+          Administation panel
         </Navbar.Link>
         <Navbar.Link as={Link} to="/pricing">
           Pricing
