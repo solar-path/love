@@ -18,8 +18,11 @@ export function App() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/pricing" component={Pricing} />
+          <DocsLayout>
+            <Route path="/documentation/:path*" component={Docs} />
+          </DocsLayout>
 
-          <Route path="/documentation/:path*">
+          {/* <Route path="/documentation/:path*">
             <DocsLayout>
               <Docs />
             </DocsLayout>
@@ -28,7 +31,7 @@ export function App() {
             <DocsLayout>
               <Docs />
             </DocsLayout>
-          </Route>
+          </Route> */}
           <Route path="/privacy" component={Privacy} />
           <Route path="/terms" component={Terms} />
         </Switch>
