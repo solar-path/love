@@ -5,10 +5,10 @@ import QFooter from "./components/QFooter.ui";
 import { Switch, Route } from "wouter-preact";
 import Home from "./routes/public/home.page";
 import Pricing from "./routes/public/pricing.page";
-import Docs from "./routes/public/docs.page";
+import Docs from "./routes/public/documentation/docs.page";
 import Privacy from "./routes/public/privacy.page";
 import Terms from "./routes/public/terms.page";
-
+import DocsLayout from "./routes/public/documentation/docs.layouts";
 export function App() {
   return (
     <div className="flex min-h-screen flex-col justify-between">
@@ -22,8 +22,11 @@ export function App() {
           <Route path="/pricing">
             <Pricing />
           </Route>
+
           <Route path="/docs">
-            <Docs />
+            <DocsLayout>
+              <Docs />
+            </DocsLayout>
           </Route>
           <Route path="/privacy">
             <Privacy />
