@@ -4,14 +4,14 @@ import { signal } from "@preact/signals";
 
 export const DrawerProps = signal({
   title: "Default title",
-  state: true,
+  state: false,
   form: null,
 });
 
 export const fillDrawer = (form, title) => {
   DrawerProps.value = {
     title,
-    state: false,
+    state: true,
     form,
   };
 };
@@ -19,7 +19,7 @@ export const fillDrawer = (form, title) => {
 export const closeDrawer = () => {
   DrawerProps.value = {
     title: "",
-    state: true,
+    state: false,
     form: null,
   };
 };

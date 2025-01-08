@@ -1,0 +1,1798 @@
+[
+  {
+    "id": "007d1ba6-98e6-4d19-95c3-73081df68bc8",
+    "title": "Internet Services & Infrastructure",
+    "description": "Companies providing services and infrastructure for the internet industry including data centers and cloud networking and storage infrastructure. Also includes companies providing web hosting services. Excludes companies classified in the Software Industry.",
+    "parent": "51cba257-0dd1-4767-9418-0563299651b2"
+  },
+  {
+    "id": "00a85427-d166-465d-a026-5da184e6080e",
+    "title": "Retail REITs",
+    "description": "",
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "016a892a-7365-4024-b0e3-a410e91f687c",
+    "title": "Containers & Packaging",
+    "description": "",
+    "parent": "bbbc26af-9911-4558-b2f5-5ff34a68e579"
+  },
+  {
+    "id": "0292544e-0c54-4cec-91b1-20d0ac745050",
+    "title": "Application Software",
+    "description": "Companies engaged in developing and producing software designed for specialized applications for the business or consumer market. Includes enterprise and technical software, as well as cloud-based software. Excludes companies classified in the Interactive Home Entertainment Sub-Industry. Also excludes companies producing systems or database management software classified in the Systems Software Sub-Industry.",
+    "parent": "c829befa-6355-4704-8783-c3a397ebc1b1"
+  },
+  {
+    "id": "02c4ed3a-c9ef-4cbc-8858-c2f802c4675f",
+    "title": "Tobacco",
+    "description": "Manufacturers of cigarettes and other tobacco products.",
+    "parent": "3b1c1f0d-7bdb-42be-92dd-e1a7842ea074"
+  },
+  {
+    "id": "02d8b551-1958-472c-87a5-ab023a7e93c5",
+    "title": "Other Specialized REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of properties not classified elsewhere. This Sub-Industry includes REITs that manage and own properties such as natural gas and crude oil pipelines, gas stations, fiber optic cables, prisons, automobile parking, and automobile dealerships.",
+    "parent": "aa991bfe-084f-4e93-a64e-f100e7a43285"
+  },
+  {
+    "id": "03321147-48f3-4270-85d9-f5d8640c8d86",
+    "title": "Financial Services",
+    "description": "",
+
+    "parent": "5cc45c90-a583-4763-bd26-981b0bd4c100"
+  },
+  {
+    "id": "03ce777b-0cc0-4a34-b899-829ccfaf9054",
+    "title": "Leisure Facilities",
+    "description": "Owners and operators of leisure facilities, including sport and fitness centers, stadiums, golf courses and amusement parks not classified in the Movies & Entertainment Sub-Industry.",
+
+    "parent": "a80555c4-6f58-4d5e-bf2f-38ac905dcac0"
+  },
+  {
+    "id": "054fa08e-5729-4be4-ab10-b3e22538d356",
+    "title": "Energy",
+    "description": "",
+
+    "parent": null
+  },
+  {
+    "id": "057e575a-dc3e-44c1-b72b-e35ee1ef36dd",
+    "title": "Hotel & Resort REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of hotel and resort properties. ",
+
+    "parent": "a07121c9-903b-4d1b-8ab8-6c7a8cf19ba2"
+  },
+  {
+    "id": "066f8dbe-5de2-45cc-a441-7ce1c9bf8c04",
+    "title": "Media & Entertainment",
+    "description": "",
+
+    "parent": "aa30a28a-549c-4eab-9410-d1ad78629f5f"
+  },
+  {
+    "id": "070629f6-ab03-4cd6-bf30-20a65ba5d661",
+    "title": "Industrial Conglomerates",
+    "description": "Diversified industrial companies with business activities in three or more sectors, none of which contributes a majority of revenues. Stakes held are predominantly of a controlling nature and stake holders maintain an operational interest in the running of the subsidiaries.",
+
+    "parent": "64e8f09b-e25c-4e78-9688-b6a6f8eb1796"
+  },
+  {
+    "id": "09362f1b-dcf3-4481-a1cc-a29d37f750ec",
+    "title": "Diversified REITs",
+    "description": "A company or Trust with significantly diversified operations across two or more property types.",
+
+    "parent": "cc7b4321-c10b-4a72-b51a-2094dba7b1a0"
+  },
+  {
+    "id": "09a81cc0-e423-4557-b9e7-8fd8b9b07a1c",
+    "title": "Timber REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of timberland and timber-related properties.",
+
+    "parent": "aa991bfe-084f-4e93-a64e-f100e7a43285"
+  },
+  {
+    "id": "09f3d386-4f06-49a0-8e49-f827112132f7",
+    "title": "Health Care Supplies",
+    "description": "Manufacturers of health care supplies and medical products not classified elsewhere. Includes eye care products, hospital supplies, and safety needle & syringe devices.",
+
+    "parent": "f5a87709-9703-4939-9492-36cff6b0a324"
+  },
+  {
+    "id": "0ab30985-3a16-445a-ae16-655982ab4589",
+    "title": "Oil & Gas Storage & Transportation",
+    "description": "Companies engaged in the storage and/or transportation of oil, gas and/or refined products. Includes diversified midstream natural gas companies, oil and refined product pipelines, coal slurry pipelines and oil & gas shipping companies.",
+
+    "parent": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4"
+  },
+  {
+    "id": "0b54cf49-3fd2-4ebf-84b8-5917853c1a9e",
+    "title": "Specialized Consumer Services",
+    "description": "Companies providing consumer services not classified elsewhere.  Includes residential services, home security, legal services, personal services, renovation & interior design services, consumer auctions and wedding & funeral services.",
+
+    "parent": "4ff5d278-9423-4074-af00-f38387048df9"
+  },
+  {
+    "id": "0b6c3610-9734-4412-bb6d-41809f83ab7d",
+    "title": "Wireless Telecommunication Services",
+    "description": "",
+
+    "parent": "54ff9c09-1bf3-426a-8153-1dc345ec1b9b"
+  },
+  {
+    "id": "0b81a379-5985-4090-a3c5-1e2f96ae9312",
+    "title": "Banks",
+    "description": "",
+
+    "parent": "26a36868-2980-431e-adcc-6bb61b1dcbe7"
+  },
+  {
+    "id": "0bf70391-c77a-4612-8681-e96c83100a48",
+    "title": "Industrial REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of industrial properties. Includes companies operating industrial warehouses and distribution properties.",
+
+    "parent": "5fcc6e98-3093-4d8c-8ef8-a81099264281"
+  },
+  {
+    "id": "0ecc63bf-52bf-435d-800d-c49563a3b42a",
+    "title": "Diversified Financial Services",
+    "description": "Providers of a diverse range of financial services and/or with some interest in a wide range of financial services including banking, insurance and capital markets, but with no dominant business line. Excludes companies classified in the Regional Banks and Diversified Banks Sub-Industries.",
+
+    "parent": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a"
+  },
+  {
+    "id": "0ff68bcd-a07a-4996-ad57-43db066d1b4e",
+    "title": "Asset Management & Custody Banks",
+    "description": "Financial institutions primarily engaged in investment management and/or related custody and securities fee-based services. Includes companies operating mutual funds, closed-end funds and unit investment trusts.  Excludes banks and other financial institutions primarily involved in commercial lending, investment banking, brokerage and other specialized financial activities. ",
+
+    "parent": "d6a846cb-38f1-4a55-b131-9fc0a9d5cbb1"
+  },
+  {
+    "id": "10b8f981-4bd2-4501-972a-6bba4b1f208f",
+    "title": "Personal Care Products",
+    "description": "",
+
+    "parent": "db8a9e50-2ba8-443c-9e11-bc45940e8a72"
+  },
+  {
+    "id": "11aab0d8-4098-4a5b-98f0-7eafe4c46310",
+    "title": "Commercial & Professional Services",
+    "description": "",
+
+    "parent": "58cb90b4-74ca-445a-91bb-ac2e6ae0ea60"
+  },
+  {
+    "id": "127ca29d-e06b-4343-9367-3d7155dd9092",
+    "title": "Life Sciences Tools & Services",
+    "description": "Companies enabling the drug discovery, development and production continuum by providing analytical tools, instruments, consumables & supplies, clinical trial services and contract research services.  Includes firms primarily servicing the pharmaceutical and biotechnology industries.",
+
+    "parent": "fbe77034-b93f-4632-b691-d95a8b2eed3c"
+  },
+  {
+    "id": "162285f1-304c-4da8-9948-b5b9149fca59",
+    "title": "Office Services & Supplies",
+    "description": "Providers of office services and manufacturers of office supplies and equipment not classified elsewhere.",
+
+    "parent": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4"
+  },
+  {
+    "id": "173b5b31-9280-4c34-b443-3e426ae2c527",
+    "title": "Housewares & Specialties",
+    "description": "Manufacturers of durable household products, including cutlery, cookware, glassware, crystal, silverware, utensils, kitchenware and consumer specialties not classified elsewhere.",
+
+    "parent": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70"
+  },
+  {
+    "id": "1796678d-1dd2-46e2-a341-7c519ccb4808",
+    "title": "Specialty Chemicals",
+    "description": "Companies that primarily produce high value-added chemicals used in the manufacture of a wide variety of products, including but not limited to fine chemicals, additives, advanced polymers, adhesives, sealants and specialty paints, pigments and coatings.",
+
+    "parent": "417fba3c-5b29-41c4-ae19-9f0ae6736122"
+  },
+  {
+    "id": "17e7c6c1-0898-4269-b06a-d7da3b46717b",
+    "title": "Steel",
+    "description": "Producers of iron and steel and related products, including metallurgical (coking) coal mining used for steel production.",
+
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "1840ceb2-6438-4e0d-811f-edbf643eaa9e",
+    "title": "Rail Transportation",
+    "description": "Companies providing primarily goods and passenger rail  transportation.",
+
+    "parent": "8e84f481-db0c-4550-8273-c8b06fa00410"
+  },
+  {
+    "id": "1a7e38d6-f38c-4041-9bcf-6d36a169ae92",
+    "title": "Automotive Parts & Equipment ",
+    "description": "Manufacturers of parts and accessories for  automobiles and motorcycles. Excludes companies classified in the Tires & Rubber Sub-Industry.",
+
+    "parent": "4ec96b5b-2faa-41ca-9515-0aa104ac2abf"
+  },
+  {
+    "id": "1b31c2d7-cd3b-4f1e-948b-9869ea5cdaa3",
+    "title": "Pharmaceuticals, Biotechnology & Life Sciences",
+    "description": "",
+
+    "parent": "c086f28b-e042-4c7f-89e3-4e67fd8bc96b"
+  },
+  {
+    "id": "1b468549-3220-4d73-9beb-17c92d0d3de3",
+    "title": "Broadline Retail",
+    "description": "Retailers offering a wide range of consumer discretionary merchandise. This Sub-Industry includes general and discount merchandise retailers, department stores and on-line retailers and marketplaces selling mostly consumer discretionary merchandise.",
+
+    "parent": "3fdb38d9-4126-487f-98f1-4a265dae7dbd"
+  },
+  {
+    "id": "1b92859c-a470-432f-bc38-9433dfe7062f",
+    "title": "Electrical Components & Equipment",
+    "description": "Companies that produce electric cables and wires, electrical components or equipment not classified in the Heavy Electrical Equipment Sub-Industry.",
+
+    "parent": "fe3d0171-c289-442e-8d86-ae62f0e755e0"
+  },
+  {
+    "id": "1c77fec8-1d03-41ca-9080-8dd51ff3da15",
+    "title": "Food Distributors",
+    "description": "Distributors of food products to other companies and not directly to the consumer.",
+
+    "parent": "f9106ba8-d8fa-4e73-8987-6920a8f5df10"
+  },
+  {
+    "id": "1ebf3d08-c62c-4f3a-ab71-eecbd27ab2a6",
+    "title": "Beverages",
+    "description": "",
+
+    "parent": "ccb6b66e-87c8-4841-a996-8faf35326f6a"
+  },
+  {
+    "id": "1efd690c-d026-4bbf-a492-5ceeb02922ed",
+    "title": "Diversified Telecommunication Services",
+    "description": "",
+
+    "parent": "54ff9c09-1bf3-426a-8153-1dc345ec1b9b"
+  },
+  {
+    "id": "1f2eb354-74f2-4120-b4dd-37f4a8e5c8ec",
+    "title": "Diversified Real Estate Activities",
+    "description": "Companies engaged in a diverse spectrum of real estate activities including real estate development & sales, real estate management, or real estate services, but with no dominant business line.",
+
+    "parent": "45d426b4-e634-4e40-8b37-afdce8270b6f"
+  },
+  {
+    "id": "2195b2e0-4ea2-4def-a752-d8d73ca6a409",
+    "title": "Tires & Rubber",
+    "description": "Manufacturers of tires and rubber.",
+
+    "parent": "4ec96b5b-2faa-41ca-9515-0aa104ac2abf"
+  },
+  {
+    "id": "21efbc88-df63-4c91-82a4-493a68184fe9",
+    "title": "Data Processing & Outsourced Services ",
+    "description": "Providers of commercial data processing and/or business process outsourcing services. This Sub-Industry includes companies providing services for customer experience management, back-office automation, call center management, and investor communications.",
+
+    "parent": "510ae903-aa25-4147-b5a8-7603f185ad62"
+  },
+  {
+    "id": "224f4436-e985-469a-a3ed-5f12b94adf6b",
+    "title": "Restaurants",
+    "description": "Owners and operators of restaurants, bars, pubs, fast-food or take-out facilities. Includes companies that provide food catering services.",
+
+    "parent": "a80555c4-6f58-4d5e-bf2f-38ac905dcac0"
+  },
+  {
+    "id": "22729879-2f92-4c6b-9afc-56f5bda0ed5e",
+    "title": "Apparel, Accessories & Luxury Goods",
+    "description": "Manufacturers of apparel, accessories & luxury goods. Includes companies primarily producing designer handbags, wallets, luggage, jewelry and watches. Excludes shoes classified in the Footwear Sub-Industry.",
+
+    "parent": "465a9bf9-64ea-410b-9775-4037593655f0"
+  },
+  {
+    "id": "23cf92bd-b1b4-45e1-a2a0-aa759e8f4e73",
+    "title": "Construction Materials",
+    "description": "",
+
+    "parent": "bbbc26af-9911-4558-b2f5-5ff34a68e579"
+  },
+  {
+    "id": "2450572f-51aa-4ec4-9118-9c215e47128a",
+    "title": "Health Care Distributors",
+    "description": "Distributors and wholesalers of health care products not classified elsewhere. ",
+
+    "parent": "d070da5b-b409-4bb6-9487-d22be0a2a33e"
+  },
+  {
+    "id": "259ea8e1-26e7-45fb-a262-2fff8f7ead56",
+    "title": "Automobiles & Components",
+    "description": "",
+
+    "parent": "9a140867-d2cf-4644-8682-87bd3993df03"
+  },
+  {
+    "id": "26a36868-2980-431e-adcc-6bb61b1dcbe7",
+    "title": "Banks",
+    "description": "",
+
+    "parent": "5cc45c90-a583-4763-bd26-981b0bd4c100"
+  },
+  {
+    "id": "2787be28-6df5-49e8-879e-99c272b82b55",
+    "title": "Diversified Chemicals",
+    "description": "Manufacturers of a diversified range of chemical products not classified in the Industrial Gases, Commodity Chemicals, Specialty Chemicals or Fertilizers & Agricultural Chemicals Sub-Industries.",
+
+    "parent": "417fba3c-5b29-41c4-ae19-9f0ae6736122"
+  },
+  {
+    "id": "27c85309-b3d2-464c-b1ed-b06fc6e188ca",
+    "title": "Diversified Capital Markets",
+    "description": "Financial institutions primarily engaged in diversified capital markets activities, including a significant presence in at least two of the following area: large/major corporate lending, investment banking, brokerage and asset management. Excludes less diversified companies classified in the Asset Management& Custody Banks or Investment Banking & Brokerage sub-industries.  Also excludes companies classified in the Banks or Insurance industry groups or the Consumer Finance Sub-Industry. ",
+
+    "parent": "d6a846cb-38f1-4a55-b131-9fc0a9d5cbb1"
+  },
+  {
+    "id": "2a4b8b7d-5791-448a-91da-16e87fa4c960",
+    "title": "Specialty Retail",
+    "description": "",
+
+    "parent": "42a47244-a752-4265-87fb-080a7f873a6f"
+  },
+  {
+    "id": "2b72510b-ee6e-430b-8b6e-430ac59c3b05",
+    "title": "Machinery",
+    "description": "",
+
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "2e3d65d8-01b0-4433-af07-884732a931fb",
+    "title": "Health Care  Services",
+    "description": "Providers of patient health care services not classified elsewhere. Includes dialysis centers, lab testing services, and pharmacy management services. Also includes companies providing business support services to health care providers, such as clerical support services, collection agency services, staffing services and outsourced sales & marketing services",
+
+    "parent": "d070da5b-b409-4bb6-9487-d22be0a2a33e"
+  },
+  {
+    "id": "2e77cdd0-1f7d-4e83-9147-14c6e5aadbbb",
+    "title": "Biotechnology",
+    "description": "",
+
+    "parent": "1b31c2d7-cd3b-4f1e-948b-9869ea5cdaa3"
+  },
+  {
+    "id": "2f1b09ab-d757-4e78-85b4-b675dbf07835",
+    "title": "Interactive Media & Services",
+    "description": "",
+
+    "parent": "066f8dbe-5de2-45cc-a441-7ce1c9bf8c04"
+  },
+  {
+    "id": "313f06f1-2bc9-41a6-ad3a-d4b8d6261ae2",
+    "title": "Marine Transportation",
+    "description": "Companies providing goods or passenger maritime transportation. Excludes cruise-ships classified in the Hotels, Resorts & Cruise Lines Sub-Industry.",
+
+    "parent": "ef13d1fd-d683-487a-8f80-e28e6787a9de"
+  },
+  {
+    "id": "3151a7df-335e-4410-bd18-24eb46e92bdc",
+    "title": "Homebuilding",
+    "description": "Residential construction companies. Includes manufacturers of prefabricated houses and semi-fixed manufactured homes.",
+
+    "parent": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70"
+  },
+  {
+    "id": "32e0a1f9-49b9-4a05-a4b4-46a23a8af442",
+    "title": "Construction & Engineering",
+    "description": "Companies engaged in primarily non-residential construction. Includes civil engineering companies and large-scale contractors. Excludes companies classified in the Homebuilding Sub-Industry.",
+
+    "parent": "52f5ebaf-a8be-4ca9-9015-633cd8064b61"
+  },
+  {
+    "id": "34efc5a0-f760-4bf2-9deb-4d5bf3b442f5",
+    "title": "Systems Software",
+    "description": "Companies engaged in developing and producing systems and database management software.",
+
+    "parent": "c829befa-6355-4704-8783-c3a397ebc1b1"
+  },
+  {
+    "id": "352b83f3-abec-45c9-9d5a-c6a875627e99",
+    "title": "Research & Consulting Services",
+    "description": "Companies primarily providing research and consulting services to businesses and governments not classified elsewhere.  Includes companies involved in management consulting services, architectural design, business information or scientific research, marketing, and testing & certification services. Excludes companies providing information technology consulting services classified in the IT Consulting & Other Services Sub-Industry.",
+
+    "parent": "510ae903-aa25-4147-b5a8-7603f185ad62"
+  },
+  {
+    "id": "37d56eb4-1f44-417e-83a7-54cf1b7223dc",
+    "title": "Electric Utilities",
+    "description": "",
+
+    "parent": "5b8879cd-8efd-46a9-99a2-736ada1a90e4"
+  },
+  {
+    "id": "37f4790b-e38f-4a93-b483-f61c6bc27121",
+    "title": "Distillers & Vintners",
+    "description": "Distillers, vintners and producers of alcoholic beverages not classified in the Brewers Sub-Industry.",
+
+    "parent": "1ebf3d08-c62c-4f3a-ab71-eecbd27ab2a6"
+  },
+  {
+    "id": "382dca74-a0e7-4ddd-be16-18eab9fbaddb",
+    "title": "Utilities",
+    "description": "",
+
+    "parent": null
+  },
+  {
+    "id": "386acc47-a538-4181-82f5-bf6701203499",
+    "title": "Real Estate Operating Companies",
+    "description": "Companies engaged in operating real estate properties for the purpose of leasing & management.",
+
+    "parent": "45d426b4-e634-4e40-8b37-afdce8270b6f"
+  },
+  {
+    "id": "3b075f12-d152-4eae-99ee-6b7440f6fe6d",
+    "title": "Passenger Ground Transportation",
+    "description": "Companies providing passenger ground transportation and related services, including bus, taxi, vehicle rental, ride sharing and on-demand ride sharing platforms, and other passenger logistics.",
+
+    "parent": "8e84f481-db0c-4550-8273-c8b06fa00410"
+  },
+  {
+    "id": "3b1c1f0d-7bdb-42be-92dd-e1a7842ea074",
+    "title": "Tobacco",
+    "description": "",
+
+    "parent": "ccb6b66e-87c8-4841-a996-8faf35326f6a"
+  },
+  {
+    "id": "3b80fc89-124a-4622-95df-27f4fff0d986",
+    "title": "Real Estate",
+    "description": "",
+
+    "parent": null
+  },
+  {
+    "id": "3c6ae2ee-5ad8-427e-89ea-cb0294436bc9",
+    "title": "Entertainment",
+    "description": "",
+
+    "parent": "066f8dbe-5de2-45cc-a441-7ce1c9bf8c04"
+  },
+  {
+    "id": "3cd42929-1f69-4878-90c3-fba3b9c20d4d",
+    "title": "Real Estate Management & Development",
+    "description": "",
+    "parent": "3b80fc89-124a-4622-95df-27f4fff0d986"
+  },
+  {
+    "id": "3eb556be-3022-4155-a214-deada0a8fa9c",
+    "title": "Coal & Consumable Fuels",
+    "description": "Companies primarily involved in the production and mining of coal, related products and other consumable fuels related to the generation of energy.  Excludes companies primarily producing gases classified in the Industrial Gases sub-industry and companies primarily mining for metallurgical (coking) coal used for steel production.",
+
+    "parent": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4"
+  },
+  {
+    "id": "3edd4508-a577-4662-8670-9d3f8dcb30bc",
+    "title": "Consumer Durables & Apparel",
+    "description": "",
+
+    "parent": "9a140867-d2cf-4644-8682-87bd3993df03"
+  },
+  {
+    "id": "3f4b48f8-0b02-4da1-9455-e4c35d1bc165",
+    "title": "Multi-line Insurance",
+    "description": "Insurance companies with diversified interests in life, health and property and casualty insurance.",
+
+    "parent": "f528ef7b-fd9d-488e-948d-1b6290c5631a"
+  },
+  {
+    "id": "3f7cf881-4aad-4317-a4e5-9bb82f5cacc7",
+    "title": "Transaction & Payment Processing Services ",
+    "description": "Providers of transaction & payment processing services and related payment services including digital/mobile payment processors, payment service providers & gateways, and digital wallet providers.",
+
+    "parent": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a"
+  },
+  {
+    "id": "3fdb38d9-4126-487f-98f1-4a265dae7dbd",
+    "title": "Broadline Retail",
+    "description": "",
+
+    "parent": "42a47244-a752-4265-87fb-080a7f873a6f"
+  },
+  {
+    "id": "40491481-618d-4990-91c9-a442c53417a2",
+    "title": "Water Utilities",
+    "description": "",
+
+    "parent": "5b8879cd-8efd-46a9-99a2-736ada1a90e4"
+  },
+  {
+    "id": "417fba3c-5b29-41c4-ae19-9f0ae6736122",
+    "title": "Chemicals",
+    "description": "",
+
+    "parent": "bbbc26af-9911-4558-b2f5-5ff34a68e579"
+  },
+  {
+    "id": "418e07f5-2797-4e38-933f-be03e1d1b334",
+    "title": "Advertising",
+    "description": "Companies providing advertising, marketing or public relations services.",
+
+    "parent": "ff75d5fa-cbf9-4425-9f88-aea7a9ed45b5"
+  },
+  {
+    "id": "42a47244-a752-4265-87fb-080a7f873a6f",
+    "title": "Consumer Discretionary Distribution & Retail",
+    "description": "",
+
+    "parent": "9a140867-d2cf-4644-8682-87bd3993df03"
+  },
+  {
+    "id": "434b5d6f-bfdd-4b9f-b995-f3914291b672",
+    "title": "Brewers",
+    "description": "Producers of beer and malt liquors. Includes breweries not classified in the Restaurants Sub-Industry.",
+
+    "parent": "1ebf3d08-c62c-4f3a-ab71-eecbd27ab2a6"
+  },
+  {
+    "id": "43c7e5c7-ae30-4fc6-a2ba-970ea40d2265",
+    "title": "Multi-Family Residential REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of apartments and other multi-family housing including student housing.",
+
+    "parent": "eda69381-d271-4dbf-9365-94855723413d"
+  },
+  {
+    "id": "4519594e-dfec-4557-b92e-ba46ddf381d6",
+    "title": "Leisure Products",
+    "description": "",
+
+    "parent": "3edd4508-a577-4662-8670-9d3f8dcb30bc"
+  },
+  {
+    "id": "45d426b4-e634-4e40-8b37-afdce8270b6f",
+    "title": "Real Estate Management & Development",
+    "description": "",
+
+    "parent": "3cd42929-1f69-4878-90c3-fba3b9c20d4d"
+  },
+  {
+    "id": "4644a997-2930-4bcc-a896-7f368bb75269",
+    "title": "Food Retail",
+    "description": "Owners and operators of primarily food retail stores.",
+
+    "parent": "f9106ba8-d8fa-4e73-8987-6920a8f5df10"
+  },
+  {
+    "id": "465a9bf9-64ea-410b-9775-4037593655f0",
+    "title": "Textiles, Apparel & Luxury Goods",
+    "description": "",
+
+    "parent": "3edd4508-a577-4662-8670-9d3f8dcb30bc"
+  },
+  {
+    "id": "4787b554-0e96-4a3f-93a9-aee0e96ba07f",
+    "title": "Broadcasting",
+    "description": "Owners and operators of television or radio broadcasting systems, including programming. Includes radio and television broadcasting, radio networks, and radio stations.",
+    "parent": "ff75d5fa-cbf9-4425-9f88-aea7a9ed45b5"
+  },
+  {
+    "id": "4874754f-ec8d-4f36-a29e-ebd8111d1425",
+    "title": "Silver",
+    "description": "Companies primarily mining silver. Excludes companies classified in the Gold or Precious Metals & Minerals Sub-Industries.",
+
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "49283813-1409-4c9f-b0e9-39b1f68d31b5",
+    "title": "Home Improvement Retail",
+    "description": "Owners and operators of home and garden improvement retail stores. Includes stores offering building materials and supplies.",
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "4a397e6b-f49e-4e40-a282-d23decffed78",
+    "title": "Metal, Glass & Plastic Containers ",
+    "description": "Manufacturers of metal, glass or plastic containers. Includes corks and caps.",
+
+    "parent": "016a892a-7365-4024-b0e3-a410e91f687c"
+  },
+  {
+    "id": "4e1fa92c-aa1f-44d6-a811-435cc179ed89",
+    "title": "Airport Services",
+    "description": "Operators of airports and companies providing related services.",
+
+    "parent": "fd963df7-c8cb-4116-88fd-78feb2c9be4c"
+  },
+  {
+    "id": "4ec90752-e383-4130-9169-e38b31875c4f",
+    "title": "Movies & Entertainment",
+    "description": "Companies that engage in producing and selling entertainment products and services, including companies engaged in the production, distribution and screening of movies and television shows, producers and distributors of music, entertainment theaters and sports teams. Also includes companies offering and/or producing entertainment content streamed online.",
+
+    "parent": "3c6ae2ee-5ad8-427e-89ea-cb0294436bc9"
+  },
+  {
+    "id": "4ec96b5b-2faa-41ca-9515-0aa104ac2abf",
+    "title": "Automobile Components",
+    "description": "",
+
+    "parent": "259ea8e1-26e7-45fb-a262-2fff8f7ead56"
+  },
+  {
+    "id": "4f21ca19-0ce5-484d-9eb4-1d346ce5e1f5",
+    "title": "Paper & Forest Products",
+    "description": "",
+    "parent": "bbbc26af-9911-4558-b2f5-5ff34a68e579"
+  },
+  {
+    "id": "4f3b5a8c-c3b5-4beb-a0c5-3cce423feceb",
+    "title": "Oil & Gas Equipment & Services",
+    "description": "Manufacturers of equipment, including drilling rigs and equipment, and providers of supplies and services to companies involved in the drilling, evaluation and completion of oil and gas wells.",
+    "parent": "7a8e1192-3c9a-4eb1-82fe-ac97748b4e38"
+  },
+  {
+    "id": "4ff5d278-9423-4074-af00-f38387048df9",
+    "title": "Diversified Consumer Services",
+    "description": "",
+    "parent": "7688f874-88ed-40f7-8dbd-ccc8d1f7f2ff"
+  },
+  {
+    "id": "5023b71c-7cef-401b-abe0-b3d158928f7c",
+    "title": "Distributors",
+    "description": "Distributors and wholesalers of general merchandise not classified elsewhere. Includes vehicle distributors.",
+    "parent": "d9f3d483-493f-463f-ac47-671f6aa44ff4"
+  },
+  {
+    "id": "509b0a97-7382-40a4-9a3d-3269722fea40",
+    "title": "Aerospace & Defense",
+    "description": "",
+
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "50d8970b-6421-4d71-8449-ead3a0d55578",
+    "title": "Soft Drinks & Non-alcoholic Beverages",
+    "description": "Producers of non-alcoholic beverages including mineral waters. Excludes producers of milk classified in the Packaged Foods Sub-Industry.",
+    "parent": "1ebf3d08-c62c-4f3a-ab71-eecbd27ab2a6"
+  },
+  {
+    "id": "510ae903-aa25-4147-b5a8-7603f185ad62",
+    "title": "Professional Services",
+    "description": "",
+    "parent": "11aab0d8-4098-4a5b-98f0-7eafe4c46310"
+  },
+  {
+    "id": "51336afd-a3de-4cea-9c1a-8f9819bb50f1",
+    "title": "Trading Companies & Distributors",
+    "description": "Trading companies and other distributors of industrial equipment and products.",
+    "parent": "b4593164-9f85-49e5-b953-fcb671b62259"
+  },
+  {
+    "id": "51cba257-0dd1-4767-9418-0563299651b2",
+    "title": "IT Services",
+    "description": "",
+    "parent": "faae81f5-23d6-40bd-9a1e-5b878aa9da3a"
+  },
+  {
+    "id": "5264f3bb-080b-48bc-b582-251976e4ff72",
+    "title": "Oil & Gas Exploration & Production",
+    "description": "Companies engaged in the exploration and production of oil and gas not classified elsewhere.",
+    "parent": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4"
+  },
+  {
+    "id": "52f5ebaf-a8be-4ca9-9015-633cd8064b61",
+    "title": "Construction & Engineering",
+    "description": "",
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "543c1d65-327a-467c-b82c-96e94cc771e7",
+    "title": "Automobile Manufacturers",
+    "description": "Companies that produce mainly passenger automobiles and light trucks. Excludes companies producing mainly motorcycles and three-wheelers classified in the Motorcycle Manufacturers Sub-Industry and heavy duty trucks classified in the Construction Machinery & Heavy Trucks Sub-Industry.",
+    "parent": "ea42fb6a-3076-4c76-a41c-bcef0b7fe791"
+  },
+  {
+    "id": "546c4654-0fe7-494e-84da-693bf42d4850",
+    "title": "Communications Equipment",
+    "description": "Manufacturers of communication equipment and products, including LANs, WANs, routers, telephones, switchboards and exchanges. Excludes cellular phone manufacturers classified in the Technology Hardware,Storage & Peripherals Sub-Industry.",
+
+    "parent": "bc5d32b8-b316-478d-b725-1a7a214f9659"
+  },
+  {
+    "id": "54ff9c09-1bf3-426a-8153-1dc345ec1b9b",
+    "title": "Telecommunication Services",
+    "description": "",
+
+    "parent": "aa30a28a-549c-4eab-9410-d1ad78629f5f"
+  },
+  {
+    "id": "559d1aaa-5f04-47e3-a0fd-d06c6383c10b",
+    "title": "Materials",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "5729d952-8e29-43b6-9668-62269b94c595",
+    "title": "Independent Power Producers & Energy Traders",
+    "description": "Companies that operate as Independent Power Producers (IPPs), Gas & Power Marketing & Trading Specialists and/or Integrated Energy Merchants. Excludes producers of electricity using renewable sources, such as solar power, hydropower, and wind power. Also excludes electric transmission companies and utility distribution companies classified in the Electric Utilities Sub-Industry.",
+
+    "parent": "8b551bb7-64de-4e53-ad82-9fdd05b1268d"
+  },
+  {
+    "id": "5771123c-6996-4774-b827-e66f24388aad",
+    "title": "Electronic Manufacturing Services",
+    "description": "Producers of electronic equipment mainly for the OEM (Original Equipment Manufacturers) markets.",
+
+    "parent": "5e5153ab-3a79-4fa0-ac48-31587563a77b"
+  },
+  {
+    "id": "58cb90b4-74ca-445a-91bb-ac2e6ae0ea60",
+    "title": "Industrials",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "58d2aa74-8907-4942-b05c-11c365ea1e63",
+    "title": "Equity Real Estate Investment Trusts (REITs)",
+    "description": "",
+    "parent": "3b80fc89-124a-4622-95df-27f4fff0d986"
+  },
+  {
+    "id": "58df9c23-eff2-4a5d-90d7-e641c442e5f5",
+    "title": "Renewable Electricity ",
+    "description": "Companies that engage in the generation and distribution of electricity using renewable sources, including, but not limited to, companies that produce electricity using biomass, geothermal energy, solar energy, hydropower, and wind power. Excludes companies manufacturing capital equipment used to generate electricity using renewable sources, such as manufacturers of solar power systems, installers of photovoltaic cells,  and companies involved in the provision of technology, components, and services mainly to this market. ",
+
+    "parent": "8b551bb7-64de-4e53-ad82-9fdd05b1268d"
+  },
+  {
+    "id": "5ab21c23-55b0-416c-a07c-54b889dee534",
+    "title": "Automotive Retail",
+    "description": "Ownersand operators of stores specializing in automotive retail.  Includes auto dealers, gas stations, and retailers of auto accessories, motorcycles & parts, automotive glass, and automotive equipment & parts.",
+
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "5b8879cd-8efd-46a9-99a2-736ada1a90e4",
+    "title": "Utilities",
+    "description": "",
+    "parent": "382dca74-a0e7-4ddd-be16-18eab9fbaddb"
+  },
+  {
+    "id": "5cc45c90-a583-4763-bd26-981b0bd4c100",
+    "title": "Financials",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "5e5153ab-3a79-4fa0-ac48-31587563a77b",
+    "title": "Electronic Equipment, Instruments & Components",
+    "description": "",
+    "parent": "98e6422c-d466-4707-80b9-4757de67da8e"
+  },
+  {
+    "id": "5fcc6e98-3093-4d8c-8ef8-a81099264281",
+    "title": "Industrial REITs",
+    "description": "",
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "6134667f-0ac5-4dc0-8839-ca8ef79f89c4",
+    "title": "Insurance Brokers",
+    "description": "Insurance and reinsurance brokerage firms.",
+
+    "parent": "f528ef7b-fd9d-488e-948d-1b6290c5631a"
+  },
+  {
+    "id": "62a563d9-d89e-48fa-a891-011350d7660a",
+    "title": "Air Freight & Logistics",
+    "description": "",
+    "parent": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3"
+  },
+  {
+    "id": "6466c4c6-123e-4c37-91f5-4094a7621cae",
+    "title": "Copper",
+    "description": "Companies involved primarily in copper ore mining. ",
+
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "64e8f09b-e25c-4e78-9688-b6a6f8eb1796",
+    "title": "Industrial Conglomerates",
+    "description": "",
+
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "6687dad6-33cb-49dc-bd5c-d328d9a4f096",
+    "title": "Managed Health Care",
+    "description": "Owners and operators of Health Maintenance Organizations (HMOs) and other managed plans.",
+
+    "parent": "d070da5b-b409-4bb6-9487-d22be0a2a33e"
+  },
+  {
+    "id": "67205f2a-c84d-48ad-a17d-7431b2a99e39",
+    "title": "Aerospace & Defense",
+    "description": "Manufacturers of civil or military aerospace and defense equipment, parts or products. Includes defense electronics and space equipment.",
+
+    "parent": "509b0a97-7382-40a4-9a3d-3269722fea40"
+  },
+  {
+    "id": "6deb4d9b-a66a-4039-85b8-65104a6b0a4a",
+    "title": "Leisure Products",
+    "description": "Manufacturers of leisure products and equipment includingsports equipment, bicycles and toys.",
+
+    "parent": "4519594e-dfec-4557-b92e-ba46ddf381d6"
+  },
+  {
+    "id": "6f86559a-60e5-4e1c-a16e-5bc81581e194",
+    "title": "Household Products",
+    "description": "Producers of non-durable household products, including detergents, soaps, diapers and other tissue and household paper products not classified in the Paper Products Sub-Industry.",
+
+    "parent": "d3c2a142-560d-4c78-9328-ef2f63ac12f3"
+  },
+  {
+    "id": "6f9f5883-c1f3-408a-9885-30d57f18683f",
+    "title": "Pharmaceuticals",
+    "description": "",
+
+    "parent": "1b31c2d7-cd3b-4f1e-948b-9869ea5cdaa3"
+  },
+  {
+    "id": "6fdde2a5-45c6-44c7-82f0-7901078b900c",
+    "title": "Personal Care Products ",
+    "description": "Manufacturers of personal and beauty care products, including cosmetics and perfumes.",
+
+    "parent": "10b8f981-4bd2-4501-972a-6bba4b1f208f"
+  },
+  {
+    "id": "716bb3c0-65e6-427e-892d-be02daa749fe",
+    "title": "Electronic Components",
+    "description": "Manufacturers of electronic components. Includes electronic components, connection devices, electron tubes, electronic capacitors and resistors, electronic coil, printed circuit board, transformer and other inductors, signal processing technology/components.",
+
+    "parent": "5e5153ab-3a79-4fa0-ac48-31587563a77b"
+  },
+  {
+    "id": "71e1a09d-ab31-40b2-a475-f27b4069aca5",
+    "title": "Multi-Sector Holdings",
+    "description": "A company with significantly diversified holdings across three or more sectors, none of which contributes a majority of profit and/or sales. Stakes held are predominantly of a non-controlling nature.  Includes diversified financial companies where stakes held are of a controlling nature. Excludes other diversified companies classified in the Industrials Conglomerates Sub-Industry.",
+
+    "parent": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a"
+  },
+  {
+    "id": "729c35e1-9dba-40d4-8aaf-7b461de6f092",
+    "title": "Health Care Technology",
+    "description": "Companies providing information technology services primarily to health care providers.  Includes companies providing application, systems and/or data processing software, internet-based tools, and IT consulting services to doctors, hospitals or businesses operating primarily in the Health Care Sector",
+
+    "parent": "d183ea24-e9e2-4aa8-ab85-3a61f900d0b6"
+  },
+  {
+    "id": "74a6b8da-e65d-44bb-b2ff-d7f79ea435bd",
+    "title": "Other Specialty Retail",
+    "description": "Owners and operators of specialty retail stores not classified elsewhere. Includes jewelry stores, toy stores, office supply stores, health & vision care stores, and book & entertainment stores.",
+
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "74d88f46-f9c6-42bd-82b7-9fa470cdfb90",
+    "title": "Health Care Equipment & Services",
+    "description": "",
+
+    "parent": "c086f28b-e042-4c7f-89e3-4e67fd8bc96b"
+  },
+  {
+    "id": "7688f874-88ed-40f7-8dbd-ccc8d1f7f2ff",
+    "title": "Consumer Services",
+    "description": "",
+
+    "parent": "9a140867-d2cf-4644-8682-87bd3993df03"
+  },
+  {
+    "id": "79b7bc65-7ad5-49d9-a63b-5b8e406aef59",
+    "title": "Semiconductors & Semiconductor Equipment",
+    "description": "",
+
+    "parent": "cfa4f482-a916-4436-afa6-f9fb35d30141"
+  },
+  {
+    "id": "7a8e1192-3c9a-4eb1-82fe-ac97748b4e38",
+    "title": "Energy Equipment & Services",
+    "description": "",
+
+    "parent": "e80dfd56-b795-462f-821b-40d3de173290"
+  },
+  {
+    "id": "7b393fba-e24d-4586-a998-4fe6264bceba",
+    "title": "Apparel Retail",
+    "description": "Retailers specialized mainly in apparel and accessories.",
+
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "7dc68172-40e6-4076-a9e9-ca2a6a3144d8",
+    "title": "Home Furnishings",
+    "description": "Manufacturers of soft home furnishings or furniture, including upholstery, carpets and wall-coverings.",
+
+    "parent": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70"
+  },
+  {
+    "id": "7e57146c-ae92-442f-a170-99a8298f500e",
+    "title": "Human Resource & Employment Services",
+    "description": "Companies providing business support services relating to human capital management. This Sub-Industry includes employment agencies, employee training, payroll processing, benefit & retirement support services, corporate & job seeker recruitment services, and online job portals generating revenue from fees or commissions for offering recruitment services to companies or job seekers.",
+
+    "parent": "510ae903-aa25-4147-b5a8-7603f185ad62"
+  },
+  {
+    "id": "7ee6a7a8-3fce-4d91-9774-d3744ff4dfeb",
+    "title": "Consumer Staples Merchandise Retail ",
+    "description": "Retailers offering a wide range of consumer staples merchandise such as food, household, and personal care products. This Sub-Industry includes hypermarkets, super centers and other consumer staples retailers such as discount retail spaces and on-line marketplaces selling mostly consumer staples goods.",
+
+    "parent": "f9106ba8-d8fa-4e73-8987-6920a8f5df10"
+  },
+  {
+    "id": "7f77380f-6df2-4c79-a0d3-203b5acd7f2b",
+    "title": "Gold",
+    "description": "Producers of gold and related products, including companies that mine or process gold and the South African finance houses which primarily invest in, but do not operate, gold mines.",
+
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "7ffbca50-7015-45e4-9839-20f2a14c429c",
+    "title": "Fertilizers & Agricultural Chemicals",
+    "description": "Producers of fertilizers, pesticides, potash or other agriculture-related chemicals not classified elsewhere.",
+
+    "parent": "417fba3c-5b29-41c4-ae19-9f0ae6736122"
+  },
+  {
+    "id": "824a6672-b2c9-497c-adad-7c56da59e4df",
+    "title": "Building Products",
+    "description": "",
+
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "82a04c88-f830-4b49-ad6f-8261c9311af8",
+    "title": "Financial Exchanges & Data",
+    "description": "Financial  exchanges  for  securities,  commodities,  derivatives and other financial instruments, and providers of financial decision support tools and products  including ratings agencies",
+
+    "parent": "d6a846cb-38f1-4a55-b131-9fc0a9d5cbb1"
+  },
+  {
+    "id": "8375102c-9718-4930-94d0-74de1d8a3b6c",
+    "title": "Gas Utilities",
+    "description": "Companies whose main charter is to distribute and transmit natural and manufactured gas. Excludes companies primarily involved in gas exploration or production classified in the Oil & Gas Exploration & Production Sub-Industry. Also excludes companies engaged in thestorage and/or transportation of oil, gas, and/or refined products classified in the Oil & Gas Storage & Transportation Sub-Industry.",
+
+    "parent": "a1c5558d-d629-4b18-8bfb-67bf98403e04"
+  },
+  {
+    "id": "867cdf0a-2185-4a60-955c-97c6f40a7d81",
+    "title": "Education Services",
+    "description": "Companies providing educational services, either on-line or through conventional teaching methods. Includes, private universities, correspondence teaching, providers of educational seminars, educational materials and technical education. Excludes companies providing employee education programs classified in the Human Resources & Employment Services Sub-Industry",
+    "parent": "4ff5d278-9423-4074-af00-f38387048df9"
+  },
+  {
+    "id": "8892645a-bf03-4433-a0e5-0242a5d8a5c0",
+    "title": "Telecom Tower REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of telecom towers and related structures that support wireless telecommunications.",
+    "parent": "aa991bfe-084f-4e93-a64e-f100e7a43285"
+  },
+  {
+    "id": "8a77415e-703d-48ac-9924-9430011bf00e",
+    "title": "Environmental & Facilities Services",
+    "description": "Companies providing environmental and facilities maintenance services. Includes waste management, facilities management and pollution control services.  Excludes large-scale water treatment systems classified in the Water Utilities Sub-Industry.",
+    "parent": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4"
+  },
+  {
+    "id": "8ac514cd-beac-486e-80a3-c4f1f979365b",
+    "title": "Passenger Airlines",
+    "description": "Companies providing primarily passenger air transportation.",
+    "parent": "db145895-2b00-47c6-9efa-55bc47c4bae8"
+  },
+  {
+    "id": "8b551bb7-64de-4e53-ad82-9fdd05b1268d",
+    "title": "Independent Power and Renewable Electricity Producers",
+    "description": "",
+
+    "parent": "5b8879cd-8efd-46a9-99a2-736ada1a90e4"
+  },
+  {
+    "id": "8bb4fe71-66bc-464d-9a5e-b3d3a843e7b6",
+    "title": "Air Freight & Logistics",
+    "description": "Companies providing air freight transportation, courier and logistics services, including package and mail delivery and customs agents. Excludes those companies classified in the Airlines, Marine or Trucking Sub-Industries.",
+
+    "parent": "62a563d9-d89e-48fa-a891-011350d7660a"
+  },
+  {
+    "id": "8bf2c815-86b2-4a8d-b84f-329a9a6da95a",
+    "title": "Insurance",
+    "description": "",
+
+    "parent": "5cc45c90-a583-4763-bd26-981b0bd4c100"
+  },
+  {
+    "id": "8d1b409d-be6a-4f1c-b733-790f8645a59c",
+    "title": "Alternative Carriers",
+    "description": "Providers of communications and high-density data transmission services primarily through a high bandwidth/fiber-optic cable network.",
+
+    "parent": "1efd690c-d026-4bbf-a492-5ceeb02922ed"
+  },
+  {
+    "id": "8e84f481-db0c-4550-8273-c8b06fa00410",
+    "title": "Ground Transportation",
+    "description": "",
+
+    "parent": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3"
+  },
+  {
+    "id": "91c1ea80-8208-445f-8498-7548b380b830",
+    "title": "Consumer Staples Distribution & Retail",
+    "description": "",
+
+    "parent": "b956bbac-2064-4827-bd40-f1b1c1aeb700"
+  },
+  {
+    "id": "9308573f-4318-4208-9684-5f361939cef5",
+    "title": "Office REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of office properties.",
+
+    "parent": "f0a09fba-3bd0-41cf-8361-70bd461f5f3b"
+  },
+  {
+    "id": "948fa432-9f90-4f0b-9990-95477482087e",
+    "title": "Security & Alarm Services",
+    "description": "Companies providing security and protection services to business and governments. Includes companies providing services such as correctional facilities, security & alarm services, armored transportation & guarding.  Excludes companies providing security software classified under the Systems Software Sub-Industry and home security services classified under the Specialized Consumer Services Sub-Industry. Also excludes companies manufacturing security system equipment classified under the Electronic Equipment & Instruments Sub-Industry. ",
+
+    "parent": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4"
+  },
+  {
+    "id": "9542fbf9-4121-4f11-b94d-798029f490e4",
+    "title": "IT Consulting & Other Services",
+    "description": "Providers of information technology and systems integration services not classified in the Data Processing & Outsourced Services Sub-Industry.  Includes information technology consulting and information management services.",
+
+    "parent": "51cba257-0dd1-4767-9418-0563299651b2"
+  },
+  {
+    "id": "98e6422c-d466-4707-80b9-4757de67da8e",
+    "title": "Technology Hardware & Equipment",
+    "description": "",
+
+    "parent": "eb78f653-2e98-4695-b8e5-f411685d948e"
+  },
+  {
+    "id": "9a140867-d2cf-4644-8682-87bd3993df03",
+    "title": "Consumer Discretionary",
+    "description": "",
+
+    "parent": null
+  },
+  {
+    "id": "9d62d7c3-0a54-4afe-93fe-708ce1838420",
+    "title": "Agricultural Products & Services",
+    "description": "Producers of agricultural products. Includes crop growers, owners of plantations and companies that produce and process foods but do not package and market them. Excludescompanies classified in the Forest Products Sub-Industry and those that package and market the food products classified in the Packaged Foods Sub-Industry.",
+
+    "parent": "dd06691e-b434-46d6-b205-0fa19fa58c08"
+  },
+  {
+    "id": "9e0cb823-4496-44fe-a320-4f64de8ab6c3",
+    "title": "Aluminum",
+    "description": "Producers of aluminum and related products, including companies that mine or process bauxite and companies that recycle aluminum to produce finished or semi-finished products. Excludes companies that primarily produce aluminum building materials classified in the Building Products Sub-Industry.",
+
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "9e6b3baa-c5f4-4c82-aa6a-b1167deaf783",
+    "title": "Electric Utilities",
+    "description": "Companies that produce or distribute electricity. Includes both nuclear and non-nuclear facilities.",
+
+    "parent": "37d56eb4-1f44-417e-83a7-54cf1b7223dc"
+  },
+  {
+    "id": "9f12dd4d-52bf-4aa4-a205-7c42aaed7ad9",
+    "title": "Real Estate Development",
+    "description": "Companies that develop real estate and sell the properties after development. Excludes companies classified in the Homebuilding Sub-Industry.",
+
+    "parent": "45d426b4-e634-4e40-8b37-afdce8270b6f"
+  },
+  {
+    "id": "9f6dfd4b-c570-42ef-9104-1ef9a73d1bca",
+    "title": "Construction Materials",
+    "description": "Manufacturers of construction materials including sand, clay, gypsum, lime, aggregates, cement, concrete and bricks. Other finished or semi-finished building materials are classified  in the Building Products Sub-Industry.",
+
+    "parent": "23cf92bd-b1b4-45e1-a2a0-aa759e8f4e73"
+  },
+  {
+    "id": "9f98e42e-ff8f-4eaa-92f9-b7dc18c88944",
+    "title": "Commercial Printing",
+    "description": "Companies providing commercial printing services. Includes printers primarily serving the media industry.",
+
+    "parent": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4"
+  },
+  {
+    "id": "a07121c9-903b-4d1b-8ab8-6c7a8cf19ba2",
+    "title": "Hotel & Resort REITs",
+    "description": "",
+
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "a1c5558d-d629-4b18-8bfb-67bf98403e04",
+    "title": "Gas Utilities",
+    "description": "",
+
+    "parent": "5b8879cd-8efd-46a9-99a2-736ada1a90e4"
+  },
+  {
+    "id": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70",
+    "title": "Household Durables",
+    "description": "",
+
+    "parent": "3edd4508-a577-4662-8670-9d3f8dcb30bc"
+  },
+  {
+    "id": "a316d1ea-65db-4e86-bf80-c9f4173324d8",
+    "title": "Computer &Electronics Retail",
+    "description": "Owners and operators of consumer electronics, computers, video and related products retail stores.",
+
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "a6bced7c-b37a-404a-b141-c3c417fbc353",
+    "title": "Commercial & Residential Mortgage Finance ",
+    "description": "Financial companies providing commercial and residential mortgage financing and related mortgage services. This Sub-Industry includes non-deposit funded mortgage lending institutions, building societies, companies providing real estate financing products, loan servicing, mortgage broker services, and mortgage insurance. ",
+
+    "parent": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a"
+  },
+  {
+    "id": "a80555c4-6f58-4d5e-bf2f-38ac905dcac0",
+    "title": "Hotels, Restaurants & Leisure",
+    "description": "",
+
+    "parent": "7688f874-88ed-40f7-8dbd-ccc8d1f7f2ff"
+  },
+  {
+    "id": "aa30a28a-549c-4eab-9410-d1ad78629f5f",
+    "title": "Communication Services",
+    "description": "",
+
+    "parent": null
+  },
+  {
+    "id": "aa991bfe-084f-4e93-a64e-f100e7a43285",
+    "title": "Specialized REITs",
+    "description": "",
+
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "ac0c6059-07bd-4071-84b0-9ded54b4b239",
+    "title": "Oil & Gas Drilling",
+    "description": "Drilling contractors or owners of drilling rigs that contract their services for drilling wells",
+
+    "parent": "7a8e1192-3c9a-4eb1-82fe-ac97748b4e38"
+  },
+  {
+    "id": "af9f4268-0a91-4c2b-b495-ebbef4e0b305",
+    "title": "Real Estate Services",
+    "description": "Real estate service providers such as real estate agents, brokers & real estate appraisers.",
+
+    "parent": "45d426b4-e634-4e40-8b37-afdce8270b6f"
+  },
+  {
+    "id": "afd01d89-03b5-4c3e-b20f-171d71d9ae10",
+    "title": "Health Care Equipment",
+    "description": "Manufacturers of health care equipment and devices. Includes medical instruments, drug delivery systems, cardiovascular & orthopedic devices, and diagnostic equipment.",
+
+    "parent": "f5a87709-9703-4939-9492-36cff6b0a324"
+  },
+  {
+    "id": "b2f7df46-20d7-45fd-baf3-87c6287c8871",
+    "title": "Integrated Oil & Gas",
+    "description": "Integrated oil companies engaged in the exploration & production of oil and gas, as well as at least one other significant activity in either refining, marketing and transportation, or chemicals.",
+
+    "parent": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4"
+  },
+  {
+    "id": "b419b8ee-3384-40b8-8c90-89774abacdb8",
+    "title": "Life & Health Insurance",
+    "description": "Companies providing primarily life, disability, indemnity or supplemental health insurance. Excludes managed care companies classified in the Managed Health Care Sub-Industry.",
+
+    "parent": "f528ef7b-fd9d-488e-948d-1b6290c5631a"
+  },
+  {
+    "id": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3",
+    "title": "Transportation",
+    "description": "",
+
+    "parent": "58cb90b4-74ca-445a-91bb-ac2e6ae0ea60"
+  },
+  {
+    "id": "b4593164-9f85-49e5-b953-fcb671b62259",
+    "title": "Trading Companies & Distributors",
+    "description": "",
+
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "b4acab1b-eab3-4df4-b57e-cad1a9b344b5",
+    "title": "Agricultural & Farm Machinery",
+    "description": "Companies manufacturing agricultural machinery, farm machinery, and their related parts. Includes machinery used for the production of crops and agricultural livestock, agricultural tractors, planting and fertilizing machinery, fertilizer and chemical application equipment, and grain dryers and blowers.",
+
+    "parent": "2b72510b-ee6e-430b-8b6e-430ac59c3b05"
+  },
+  {
+    "id": "b786c8ec-707f-49a0-9d8f-06e8b0c34ac2",
+    "title": "Cable &Satellite",
+    "description": "Providers of cable or satellite television services. Includes cable networks and program distribution.",
+
+    "parent": "ff75d5fa-cbf9-4425-9f88-aea7a9ed45b5"
+  },
+  {
+    "id": "b7dad87f-1570-434d-9c6d-41e2e5ec7ab5",
+    "title": "Health Care REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of properties serving the health care industry, including hospitals, nursing homes, and assisted living properties.",
+
+    "parent": "c5f913a2-29cd-4d4c-b00e-460d29fdb9bc"
+  },
+  {
+    "id": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a",
+    "title": "Financial Services",
+    "description": "",
+    "parent": "03321147-48f3-4270-85d9-f5d8640c8d86"
+  },
+  {
+    "id": "b956bbac-2064-4827-bd40-f1b1c1aeb700",
+    "title": "Consumer Staples",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "b9d6b237-1305-4ffa-bca5-d9e58406bc01",
+    "title": "Heavy Electrical Equipment",
+    "description": "Manufacturers of power-generating equipment and other heavy electrical equipment, including power turbines, heavy electrical machinery intended for fixed-use and large electrical systems. Excludes cables and wires, classified in the Electrical Components & Equipment Sub-Industry.",
+    "parent": "fe3d0171-c289-442e-8d86-ae62f0e755e0"
+  },
+  {
+    "id": "ba01f3f4-a1bc-4d54-af41-82d273611db7",
+    "title": "Electronic Equipment & Instruments ",
+    "description": "Manufacturers of electronic equipment and instruments including analytical, electronic test and measurement instruments, scanner/barid products, lasers, display screens, point-of-sales machines, and security system equipment.",
+    "parent": "5e5153ab-3a79-4fa0-ac48-31587563a77b"
+  },
+  {
+    "id": "ba70789d-0743-4322-9c71-21b7490139e0",
+    "title": "Biotechnology",
+    "description": "Companies primarily engaged in the research, development, manufacturing and/or marketing of products based on genetic analysis and genetic engineering.  Includes companies specializing in protein-based therapeutics to treat human diseases. Excludes companies manufacturing products using biotechnology but without a health care application.",
+    "parent": "2e77cdd0-1f7d-4e83-9147-14c6e5aadbbb"
+  },
+  {
+    "id": "bb7c079a-2057-4200-a05e-a6b092a4a198",
+    "title": "Industrial Machinery & Supplies & Components",
+    "description": "Manufacturers of industrial machinery and industrial components. Includes companies that manufacture presses, machine tools, compressors, pollution control equipment, elevators, escalators, insulators, pumps, roller bearings and other metal fabrications.",
+    "parent": "2b72510b-ee6e-430b-8b6e-430ac59c3b05"
+  },
+  {
+    "id": "bbbc26af-9911-4558-b2f5-5ff34a68e579",
+    "title": "Materials",
+    "description": "",
+    "parent": "559d1aaa-5f04-47e3-a0fd-d06c6383c10b"
+  },
+  {
+    "id": "bc5d32b8-b316-478d-b725-1a7a214f9659",
+    "title": "Communications Equipment",
+    "description": "",
+    "parent": "98e6422c-d466-4707-80b9-4757de67da8e"
+  },
+  {
+    "id": "c02bc77e-76f5-4ace-afde-263feade61ab",
+    "title": "Integrated Telecommunication Services",
+    "description": "Operators of primarily fixed-line telecommunications networks and companies providing both wireless and fixed-line telecommunicationsservices not classified elsewhere. Also includes internet service providers offering internet access to end users.",
+    "parent": "1efd690c-d026-4bbf-a492-5ceeb02922ed"
+  },
+  {
+    "id": "c086f28b-e042-4c7f-89e3-4e67fd8bc96b",
+    "title": "Health Care",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "c4137a8d-bec2-4923-a48f-0b97f8af3b2f",
+    "title": "Pharmaceuticals",
+    "description": "Companies engaged in the research, development or production of pharmaceuticals. Includes veterinary drugs.",
+    "parent": "6f9f5883-c1f3-408a-9885-30d57f18683f"
+  },
+  {
+    "id": "c5710c31-bbac-41ec-ae26-bf8d3f0fd966",
+    "title": "Interactive Home Entertainment",
+    "description": "Producers of interactive gaming products, including mobile gaming applications. Also includes educational software used primarily in the home. Excludes online gambling companies classified in the Casinos & Gaming Sub-Industry.",
+    "parent": "3c6ae2ee-5ad8-427e-89ea-cb0294436bc9"
+  },
+  {
+    "id": "c5f913a2-29cd-4d4c-b00e-460d29fdb9bc",
+    "title": "Health Care REITs",
+    "description": "",
+
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "c81b1b3b-9cff-48c0-9c0f-72f5fafafb4a",
+    "title": "Diversified Support Services",
+    "description": "Companies primarily providing labor oriented support services to businesses and governments.  Includes commercial cleaning services, dining & catering services, equipment repair services, industrial maintenance services, industrial auctioneers, storage & warehousing, transaction services, uniform rental services, and other business support services.",
+    "parent": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4"
+  },
+  {
+    "id": "c829befa-6355-4704-8783-c3a397ebc1b1",
+    "title": "Software",
+    "description": "",
+    "parent": "faae81f5-23d6-40bd-9a1e-5b878aa9da3a"
+  },
+  {
+    "id": "c8a1995a-3870-415c-aaa1-b9bcefbc0b62",
+    "title": "Technology Hardware, Storage & Peripherals",
+    "description": "Manufacturers of cellular phones, personal computers, servers, electronic computer components and peripherals. Includes data storage components, motherboards, audio and video cards, monitors, keyboards, printers, and other peripherals. Excludes semiconductors classified in the Semiconductors Sub-Industry.",
+
+    "parent": "e5959cd9-55d0-4409-8f44-e1f38fb187f1"
+  },
+  {
+    "id": "caebc1be-2dc3-4731-867a-1ed04ccaa228",
+    "title": "Multi-Utilities",
+    "description": "Utility companies with significantly diversified activities in addition to core Electric Utility, Gas Utility and/or Water Utility operations.",
+
+    "parent": "e247783a-a693-4563-ae8f-3dd1534109b2"
+  },
+  {
+    "id": "cafafe5b-0399-4119-8b70-7de41e50afc0",
+    "title": "Diversified Banks",
+    "description": "Large, geographically diverse banks with a national footprint whose revenues are derived primarily from conventional banking operations, have significant business activity in retail banking and small and medium corporate lending, and provide a diverse range of financial services.  Excludes banks classified in the Regional Banks and Thrifts & Mortgage Finance Sub-Industries. Also excludes investment banks classified in the Investment Banking & Brokerage Sub-Industry.",
+
+    "parent": "0b81a379-5985-4090-a3c5-1e2f96ae9312"
+  },
+  {
+    "id": "cb73639a-ca83-43aa-b51f-9517b5101cbd",
+    "title": "Interactive Media & Services",
+    "description": "Companies engaging in content and information creation or distribution through proprietary platforms, where revenues are derived primarily through pay-per-click advertisements. Includes search engines, social media and networking platforms, online classifieds, and online review companies. Excludes companies operating online marketplaces classified in Internet & Direct Marketing Retail. ",
+
+    "parent": "2f1b09ab-d757-4e78-85b4-b675dbf07835"
+  },
+  {
+    "id": "cbb9e95f-3f37-4deb-96ac-e9b5da47fe1b",
+    "title": "Consumer Finance",
+    "description": "Providers of consumer finance services, including personal credit, credit cards, lease financing, travel-related money services and pawn shops.  Excludes mortgage lenders classified in the Thrifts & Mortgage Finance Sub-Industry.",
+
+    "parent": "d02fc880-57a1-454c-8ed7-99cde788d98a"
+  },
+  {
+    "id": "cc7b4321-c10b-4a72-b51a-2094dba7b1a0",
+    "title": "Diversified REITs",
+    "description": "",
+
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "ccb6b66e-87c8-4841-a996-8faf35326f6a",
+    "title": "Food, Beverage & Tobacco",
+    "description": "",
+
+    "parent": "b956bbac-2064-4827-bd40-f1b1c1aeb700"
+  },
+  {
+    "id": "cd043cb7-fe76-4645-bd2a-2426d0666c93",
+    "title": "Household Appliances",
+    "description": "Manufacturers of electric household appliances and related products.  Includes manufacturers of power and hand tools, including garden improvement tools.  Excludes TVs and other audio and video products classified in the Consumer Electronics Sub-Industry and personal computers classified in the Technology Hardware, Storage & Peripherals Sub-Industry.",
+    "parent": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70"
+  },
+  {
+    "id": "ce9072d4-01f0-4962-9ded-b0dc4f8e19f2",
+    "title": "Publishing",
+    "description": "Publishers of newspapers, magazines and books in print or electronic formats.",
+    "parent": "ff75d5fa-cbf9-4425-9f88-aea7a9ed45b5"
+  },
+  {
+    "id": "cfa4f482-a916-4436-afa6-f9fb35d30141",
+    "title": "Semiconductors & Semiconductor Equipment",
+    "description": "",
+    "parent": "eb78f653-2e98-4695-b8e5-f411685d948e"
+  },
+  {
+    "id": "d02fc880-57a1-454c-8ed7-99cde788d98a",
+    "title": "Consumer Finance",
+    "description": "",
+    "parent": "03321147-48f3-4270-85d9-f5d8640c8d86"
+  },
+  {
+    "id": "d070da5b-b409-4bb6-9487-d22be0a2a33e",
+    "title": "Health Care Providers & Services",
+    "description": "",
+    "parent": "74d88f46-f9c6-42bd-82b7-9fa470cdfb90"
+  },
+  {
+    "id": "d10a492d-345c-4730-82dc-199333b038c6",
+    "title": "Mortgage Real Estate Investment \nTrusts (REITs)",
+    "description": "",
+    "parent": "03321147-48f3-4270-85d9-f5d8640c8d86"
+  },
+  {
+    "id": "d152cf26-8927-4d6c-b82b-798ebed4899d",
+    "title": "Cargo Ground Transportation ",
+    "description": "Companies providing ground transportation services for goods and freight.",
+    "parent": "8e84f481-db0c-4550-8273-c8b06fa00410"
+  },
+  {
+    "id": "d183ea24-e9e2-4aa8-ab85-3a61f900d0b6",
+    "title": "Health Care Technology",
+    "description": "",
+    "parent": "74d88f46-f9c6-42bd-82b7-9fa470cdfb90"
+  },
+  {
+    "id": "d19f9e51-4ee5-4a64-bccd-3fbfb504479c",
+    "title": "Drug Retail",
+    "description": "Owners and operators of primarily drug retail stores and pharmacies.",
+    "parent": "f9106ba8-d8fa-4e73-8987-6920a8f5df10"
+  },
+  {
+    "id": "d1e23ff7-20e9-4a5d-8f99-a76736cd6ab3",
+    "title": "Oil & Gas Refining & Marketing",
+    "description": "Companies engaged in the refining and marketing of oil, gas and/or refined products not classified in the Integrated Oil & Gas or Independent Power Producers & Energy Traders Sub-Industries.",
+    "parent": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4"
+  },
+  {
+    "id": "d2451720-637e-4d90-90d9-af19120abf78",
+    "title": "Packaged Foods & Meats",
+    "description": "Producers of packaged foods including dairy products, fruit juices, meats, poultry, fish and pet foods.",
+    "parent": "dd06691e-b434-46d6-b205-0fa19fa58c08"
+  },
+  {
+    "id": "d3256ec5-c2f3-4d1e-ad20-0eb5a97c5575",
+    "title": "Semiconductors",
+    "description": "Manufacturers of semiconductors and related products, including manufacturers of solar modules and cells.",
+    "parent": "79b7bc65-7ad5-49d9-a63b-5b8e406aef59"
+  },
+  {
+    "id": "d3c2a142-560d-4c78-9328-ef2f63ac12f3",
+    "title": "Household Products",
+    "description": "",
+    "parent": "db8a9e50-2ba8-443c-9e11-bc45940e8a72"
+  },
+  {
+    "id": "d4008f38-a899-4119-b512-0fe1d271cb39",
+    "title": "Diversified Metals & Mining",
+    "description": "Companies engaged in the diversified production or extraction of metals and minerals not classified elsewhere. Including, but not limited to, nonferrous metal mining (except bauxite), salt and borate mining, phosphate rock mining, and diversified mining operations. Excludes iron ore mining, classified in the Steel Sub-Industry, bauxite mining, classified in the Aluminum Sub-Industry, and coal mining, classified in either the Steel or Coal & Consumable Fuels Sub-Industries.",
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "d6a846cb-38f1-4a55-b131-9fc0a9d5cbb1",
+    "title": "Capital Markets",
+    "description": "",
+    "parent": "03321147-48f3-4270-85d9-f5d8640c8d86"
+  },
+  {
+    "id": "d6dcf001-a401-4d00-8605-f02e69e2b527",
+    "title": "Consumer Electronics",
+    "description": "Manufacturers of consumer electronics products including TVs, home audio equipment, game consoles, digital cameras, and related products. Excludes personal home computer manufacturers classified in the Technology Hardware, Storage & Peripherals Sub-Industry, and electric household appliances classified in the Household Appliances Sub-Industry.",
+    "parent": "a2a8f2ab-8427-48d9-84dd-feabcbe47b70"
+  },
+  {
+    "id": "d9f3d483-493f-463f-ac47-671f6aa44ff4",
+    "title": "Distributors",
+    "description": "",
+    "parent": "42a47244-a752-4265-87fb-080a7f873a6f"
+  },
+  {
+    "id": "da02e86d-d01f-46c1-8a47-3588bf56debf",
+    "title": "Self-Storage REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of self storage properties.",
+    "parent": "aa991bfe-084f-4e93-a64e-f100e7a43285"
+  },
+  {
+    "id": "db145895-2b00-47c6-9efa-55bc47c4bae8",
+    "title": "Passenger Airlines",
+    "description": "",
+    "parent": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3"
+  },
+  {
+    "id": "db8a9e50-2ba8-443c-9e11-bc45940e8a72",
+    "title": "Personal Care Products",
+    "description": "",
+    "parent": "b956bbac-2064-4827-bd40-f1b1c1aeb700"
+  },
+  {
+    "id": "dd06691e-b434-46d6-b205-0fa19fa58c08",
+    "title": "Food Products",
+    "description": "",
+    "parent": "ccb6b66e-87c8-4841-a996-8faf35326f6a"
+  },
+  {
+    "id": "dd81a785-98a7-431e-9299-d4cc196d96cd",
+    "title": "Single-Family Residential REITs ",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of single-family residential housing including manufactured homes.",
+    "parent": "eda69381-d271-4dbf-9365-94855723413d"
+  },
+  {
+    "id": "df2d29ac-255e-4c2b-83f6-57dfcb6be5ad",
+    "title": "Mortgage REITs",
+    "description": "Companies or Trusts that service, originate, purchase and/or securitize residential and/or commercial mortgage loans.  Includes trusts that invest in mortgage-backed securities and other mortgage related assets.",
+    "parent": "d10a492d-345c-4730-82dc-199333b038c6"
+  },
+  {
+    "id": "df9a965a-2877-4d3e-87f6-79fdc3a98f4f",
+    "title": "Reinsurance",
+    "description": "Companies providing primarily reinsurance.",
+    "parent": "f528ef7b-fd9d-488e-948d-1b6290c5631a"
+  },
+  {
+    "id": "e1cb25aa-5f44-4afd-8372-b01a06631f86",
+    "title": "Marine Ports & Services",
+    "description": "Owners and operators of marine ports and related services.",
+    "parent": "fd963df7-c8cb-4116-88fd-78feb2c9be4c"
+  },
+  {
+    "id": "e247783a-a693-4563-ae8f-3dd1534109b2",
+    "title": "Multi-Utilities",
+    "description": "",
+    "parent": "5b8879cd-8efd-46a9-99a2-736ada1a90e4"
+  },
+  {
+    "id": "e2b50476-320a-482d-a927-cf3c07e98878",
+    "title": "Footwear",
+    "description": "Manufacturers of footwear. Includes sport and leather shoes.",
+    "parent": "465a9bf9-64ea-410b-9775-4037593655f0"
+  },
+  {
+    "id": "e3424d53-975a-4d7e-b3f4-2486643e5911",
+    "title": "Capital Goods",
+    "description": "",
+    "parent": "58cb90b4-74ca-445a-91bb-ac2e6ae0ea60"
+  },
+  {
+    "id": "e46643b8-4940-47d4-9b5b-caaa9f732c3b",
+    "title": "Precious Metals & Minerals",
+    "description": "Companies mining precious metals and minerals not classified in the Gold Sub-Industry. Includes companies primarily mining platinum.",
+    "parent": "eac3d16e-c57b-4764-80ee-2a01156bf75a"
+  },
+  {
+    "id": "e4f100dc-d236-467b-8383-c8faf0eb859c",
+    "title": "Investment Banking & Brokerage",
+    "description": "Financial institutions primarily engaged in investment banking & brokerage services, including equity and debt underwriting, mergers and acquisitions, securities lending and advisory services. Excludes banks and other financial institutions primarily involved in commercial lending, asset management and specialized financial activities. ",
+    "parent": "d6a846cb-38f1-4a55-b131-9fc0a9d5cbb1"
+  },
+  {
+    "id": "e5959cd9-55d0-4409-8f44-e1f38fb187f1",
+    "title": "Technology Hardware, Storage & Peripherals",
+    "description": "",
+    "parent": "98e6422c-d466-4707-80b9-4757de67da8e"
+  },
+  {
+    "id": "e80dfd56-b795-462f-821b-40d3de173290",
+    "title": "Energy",
+    "description": "",
+    "parent": "054fa08e-5729-4be4-ab10-b3e22538d356"
+  },
+  {
+    "id": "e930252f-4cfd-4977-828a-b6235ad49459",
+    "title": "Construction Machinery & Heavy Transportation Equipment",
+    "description": "Manufacturers of heavy duty trucks, rolling machinery, earth-moving and construction equipment, and manufacturers of related parts. Includes non-military shipbuilding.",
+    "parent": "2b72510b-ee6e-430b-8b6e-430ac59c3b05"
+  },
+  {
+    "id": "e93251e0-1d4f-4cb2-8e9e-32e83e4406f4",
+    "title": "Oil, Gas & Consumable Fuels",
+    "description": "",
+    "parent": "e80dfd56-b795-462f-821b-40d3de173290"
+  },
+  {
+    "id": "ea42fb6a-3076-4c76-a41c-bcef0b7fe791",
+    "title": "Automobiles",
+    "description": "",
+    "parent": "259ea8e1-26e7-45fb-a262-2fff8f7ead56"
+  },
+  {
+    "id": "eac3d16e-c57b-4764-80ee-2a01156bf75a",
+    "title": "Metals & Mining",
+    "description": "",
+    "parent": "bbbc26af-9911-4558-b2f5-5ff34a68e579"
+  },
+  {
+    "id": "eb78f653-2e98-4695-b8e5-f411685d948e",
+    "title": "Information Technology",
+    "description": "",
+    "parent": null
+  },
+  {
+    "id": "ebff262e-16ad-4cf0-a9e1-abf591f0a35b",
+    "title": "Textiles",
+    "description": "Manufacturers of textile and related products not classified in the Apparel, Accessories & Luxury Goods, Footwear or Home Furnishings Sub-Industries.",
+    "parent": "465a9bf9-64ea-410b-9775-4037593655f0"
+  },
+  {
+    "id": "ecf2490c-f51d-422e-9f3b-d2599b0e36e4",
+    "title": "Commercial Services & Supplies",
+    "description": "",
+    "parent": "11aab0d8-4098-4a5b-98f0-7eafe4c46310"
+  },
+  {
+    "id": "eda69381-d271-4dbf-9365-94855723413d",
+    "title": "Residential REITs",
+    "description": "",
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "ee65a878-da48-4e42-8a21-55986df97c38",
+    "title": "Casinos & Gaming",
+    "description": "Owners and operators of casinos and gaming facilities. Includes companies providing lottery and betting services.",
+    "parent": "a80555c4-6f58-4d5e-bf2f-38ac905dcac0"
+  },
+  {
+    "id": "ef13d1fd-d683-487a-8f80-e28e6787a9de",
+    "title": "Marine Transportation",
+    "description": "",
+    "parent": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3"
+  },
+  {
+    "id": "f0036681-9135-47be-a8f3-6d1c68b01b8f",
+    "title": "Building Products",
+    "description": "Manufacturers of building components and home improvement products and equipment. Excludes lumber and plywood classified under Forest Products and cement and other materials classified in the Construction Materials Sub-Industry.",
+    "parent": "824a6672-b2c9-497c-adad-7c56da59e4df"
+  },
+  {
+    "id": "f0502af2-9ab9-4087-9500-c158b608078b",
+    "title": "Industrial Gases",
+    "description": "Manufacturers of industrial gases.",
+    "parent": "417fba3c-5b29-41c4-ae19-9f0ae6736122"
+  },
+  {
+    "id": "f0a09fba-3bd0-41cf-8361-70bd461f5f3b",
+    "title": "Office REITs",
+    "description": "",
+    "parent": "58d2aa74-8907-4942-b05c-11c365ea1e63"
+  },
+  {
+    "id": "f37c013c-2902-4dfd-a962-24d259f2a5ac",
+    "title": "Highways & Railtracks",
+    "description": "Owners and operators of roads, tunnels and railtracks.",
+    "parent": "fd963df7-c8cb-4116-88fd-78feb2c9be4c"
+  },
+  {
+    "id": "f3916c6b-e7c1-4b6e-a4db-05aead249977",
+    "title": "Water Utilities",
+    "description": "Companies that purchase and redistribute water to the end-consumer. Includes large-scale water treatment systems.",
+    "parent": "40491481-618d-4990-91c9-a442c53417a2"
+  },
+  {
+    "id": "f399540c-4c87-4900-ba08-7475f87d3491",
+    "title": "Wireless Telecommunication Services",
+    "description": "Providers of primarily cellular or wireless telecommunication services.",
+    "parent": "0b6c3610-9734-4412-bb6d-41809f83ab7d"
+  },
+  {
+    "id": "f4adc47f-3b7c-457b-89c1-9752d7d16577",
+    "title": "Motorcycle Manufacturers",
+    "description": "Companies that produce motorcycles, scooters or three-wheelers. Excludes bicycles classified in the Leisure Products Sub-Industry. ",
+    "parent": "ea42fb6a-3076-4c76-a41c-bcef0b7fe791"
+  },
+  {
+    "id": "f4e3ff94-400d-4f19-8026-7b84c38979c1",
+    "title": "Health Care Facilities",
+    "description": "Owners and operatorsof health care facilities, including hospitals, nursing homes, rehabilitation centers and animal hospitals.",
+    "parent": "d070da5b-b409-4bb6-9487-d22be0a2a33e"
+  },
+  {
+    "id": "f528ef7b-fd9d-488e-948d-1b6290c5631a",
+    "title": "Insurance",
+    "description": "",
+    "parent": "8bf2c815-86b2-4a8d-b84f-329a9a6da95a"
+  },
+  {
+    "id": "f5a87709-9703-4939-9492-36cff6b0a324",
+    "title": "Health Care Equipment & Supplies",
+    "description": "",
+    "parent": "74d88f46-f9c6-42bd-82b7-9fa470cdfb90"
+  },
+  {
+    "id": "f6dffe25-be38-4557-ba90-53410f3d2ce5",
+    "title": "Hotels, Resorts & Cruise Lines",
+    "description": "Owners and operators of hotels, resorts and cruise-ships. Includes travel agencies, tour operators and related services not classified elsewhere . Excludes casino-hotels classified in the Casinos & Gaming Sub-Industry.",
+    "parent": "a80555c4-6f58-4d5e-bf2f-38ac905dcac0"
+  },
+  {
+    "id": "f865f427-3d1c-454d-bdef-ab43bbfa7a01",
+    "title": "Regional Banks",
+    "description": "Commercial banks, savings banks and thrifts whose business are derived primarily from conventional banking operations such as retail banking, corporate lending and originating various residential and commercial mortgage loans funded mainly through deposits. Regional banks tend to operate in limited geographic regions. Excludes companies classified in the Diversified Banks and Commercial & Residential Mortgage Finance Sub-Industries. Also excludes investment banks classified in the Investment Banking & Brokerage Sub-Industry.",
+
+    "parent": "0b81a379-5985-4090-a3c5-1e2f96ae9312"
+  },
+  {
+    "id": "f8db6af7-f059-44da-abe6-e3b716ec21a0",
+    "title": "Paper Products",
+    "description": "Manufacturersof all grades of paper. Excludes companies specializing in paper packaging classified in the Paper Packaging Sub-Industry.",
+    "parent": "4f21ca19-0ce5-484d-9eb4-1d346ce5e1f5"
+  },
+  {
+    "id": "f90a7c81-d34e-41f0-83f9-ae768c2c7dbe",
+    "title": "Property & Casualty Insurance",
+    "description": "Companies providing primarily property and casualty insurance.",
+    "parent": "f528ef7b-fd9d-488e-948d-1b6290c5631a"
+  },
+  {
+    "id": "f9106ba8-d8fa-4e73-8987-6920a8f5df10",
+    "title": "Consumer Staples Distribution & Retail",
+    "description": "",
+    "parent": "91c1ea80-8208-445f-8498-7548b380b830"
+  },
+  {
+    "id": "f9a58834-6951-46cf-be89-1c781f9a9cce",
+    "title": "Homefurnishing Retail",
+    "description": "Owners and operators of furniture and home furnishings retail stores.  Includes residential furniture, homefurnishings, housewares, and interior design.  Excludes home and garden improvement stores, classified in the Home Improvement Retail Sub-Industry.",
+    "parent": "2a4b8b7d-5791-448a-91da-16e87fa4c960"
+  },
+  {
+    "id": "fa64ecc5-7ae8-4581-b8b4-b1b790a21ffc",
+    "title": "Specialized Finance",
+    "description": "Providers  of  specialized  financial  services  not  classified  elsewhere. Companies  in  this  sub-industry  derive  a  majority  of  revenue  from  one  specialized  line  of  business. \nIncludes,  but  not  limited  to,  commercial  financing  companies,  central  banks,  leasing  institutions, factoring services, and specialty boutiques. Excludes companies classified in the Financial Exchanges & Data sub-industry.",
+    "parent": "b91ba6f7-e668-4703-a2f9-6c932fe0ec3a"
+  },
+  {
+    "id": "faae81f5-23d6-40bd-9a1e-5b878aa9da3a",
+    "title": "Software & Services",
+    "description": "",
+
+    "parent": "eb78f653-2e98-4695-b8e5-f411685d948e"
+  },
+  {
+    "id": "faeacc88-5e70-41dc-86e1-04c951119da1",
+    "title": "Commodity Chemicals",
+    "description": "Companies that primarily produce industrial chemicals and basic chemicals. Including but not limited to plastics, synthetic fibers, films, commodity-based paints & pigments, explosives and petrochemicals. Excludes chemicalcompanies classified in the Diversified Chemicals, Fertilizers & Agricultural Chemicals, Industrial Gases, or Specialty Chemicals Sub-Industries.",
+    "parent": "417fba3c-5b29-41c4-ae19-9f0ae6736122"
+  },
+  {
+    "id": "fbe77034-b93f-4632-b691-d95a8b2eed3c",
+    "title": "Life Sciences Tools & Services",
+    "description": "",
+    "parent": "1b31c2d7-cd3b-4f1e-948b-9869ea5cdaa3"
+  },
+  {
+    "id": "fcda139c-003b-417c-a5f8-466e40a51d4f",
+    "title": "Retail REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of shopping malls, outlet malls, neighborhood and community shopping centers.",
+    "parent": "00a85427-d166-465d-a026-5da184e6080e"
+  },
+  {
+    "id": "fcdd514d-e15f-45e5-bfb2-00e17b25e6cb",
+    "title": "Data Center REITs",
+    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of data center properties.",
+    "parent": "aa991bfe-084f-4e93-a64e-f100e7a43285"
+  },
+  {
+    "id": "fd2bbbcd-8003-4022-86e5-d2eb7d8f9046",
+    "title": "Semiconductor Materials & Equipment",
+    "description": "Manufacturers of semiconductor equipment, including manufacturers of the raw material and equipment used in the solar power industry.",
+    "parent": "79b7bc65-7ad5-49d9-a63b-5b8e406aef59"
+  },
+  {
+    "id": "fd6b6c91-90aa-4293-813d-9ef8b4a37e9d",
+    "title": "Forest Products",
+    "description": "Manufacturers of timber and related wood products. Includes lumber for the building industry.",
+    "parent": "4f21ca19-0ce5-484d-9eb4-1d346ce5e1f5"
+  },
+  {
+    "id": "fd823969-cb3f-4203-b648-2d4bf0ad4194",
+    "title": "Paper & Plastic Packaging Products & Materials",
+    "description": "Manufacturers of paper and cardboard containers and packaging.",
+    "parent": "016a892a-7365-4024-b0e3-a410e91f687c"
+  },
+  {
+    "id": "fd963df7-c8cb-4116-88fd-78feb2c9be4c",
+    "title": "Transportation Infrastructure",
+    "description": "",
+    "parent": "b41ab2d7-f55b-4d65-8c3d-d4dd9caaa0e3"
+  },
+  {
+    "id": "fded1211-cd89-49a8-9b2e-0a12dcd179c4",
+    "title": "Technology Distributors",
+    "description": "Distributors of technology hardware and equipment. Includes distributors of communications equipment, computers & peripherals, semiconductors, and electronic equipment and components.",
+    "parent": "5e5153ab-3a79-4fa0-ac48-31587563a77b"
+  },
+  {
+    "id": "fe3d0171-c289-442e-8d86-ae62f0e755e0",
+    "title": "Electrical Equipment",
+    "description": "",
+    "parent": "e3424d53-975a-4d7e-b3f4-2486643e5911"
+  },
+  {
+    "id": "ff75d5fa-cbf9-4425-9f88-aea7a9ed45b5",
+    "title": "Media",
+    "description": "",
+    "parent": "066f8dbe-5de2-45cc-a441-7ce1c9bf8c04"
+  }
+]

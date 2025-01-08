@@ -14,7 +14,7 @@ export function App() {
     <div className="flex min-h-screen flex-col justify-between">
       <QHeader />
       <QDrawer />
-      <main class="flex-grow pl-10 pr-10 pr-10">
+      <main className="flex-grow pl-10 pr-10 pr-10">
         <Switch>
           <Route path="/">
             <Home />
