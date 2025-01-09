@@ -11,6 +11,9 @@ importers:
       '@hono/node-server':
         specifier: ^1.13.7
         version: 1.13.7(hono@4.6.16)
+      '@hono/zod-validator':
+        specifier: ^0.4.2
+        version: 0.4.2(hono@4.6.16)(zod@3.24.1)
       '@libsql/client':
         specifier: ^0.14.0
         version: 0.14.0
@@ -469,6 +472,12 @@ packages:
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
+
+  '@hono/zod-validator@0.4.2':
+    resolution: {integrity: sha512-1rrlBg+EpDPhzOV4hT9pxr5+xDVmKuz6YJl+la7VCwK6ass5ldyKm5fD+umJdV2zhHD6jROoCCv8NbTwyfhT0g==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
 
   '@libsql/client@0.14.0':
     resolution: {integrity: sha512-/9HEKfn6fwXB5aTEEoMeFh4CtG0ZzbncBb1e++OCdVpgKZ/xyMsIVYXm0w7Pv4RUel803vE6LwniB3PqD72R0Q==}
@@ -972,6 +981,11 @@ snapshots:
   '@hono/node-server@1.13.7(hono@4.6.16)':
     dependencies:
       hono: 4.6.16
+
+  '@hono/zod-validator@0.4.2(hono@4.6.16)(zod@3.24.1)':
+    dependencies:
+      hono: 4.6.16
+      zod: 3.24.1
 
   '@libsql/client@0.14.0':
     dependencies:

@@ -1,25 +1,25 @@
 @baseUrl = http://localhost:3000
 
 ### Get Industry List
-GET {{baseUrl}}/industry
+GET {{baseUrl}}/business/industry
 
 ### Get Industry by ID
-GET {{baseUrl}}/industry/0292544e-0c54-4cec-91b1-20d0ac745050
+GET {{baseUrl}}/business/industry/0292544e-0c54-4cec-91b1-20d0ac745050
 
 ### Get Country List
-GET {{baseUrl}}/country
+GET {{baseUrl}}/business/country
 
 ### Get Country by ID
-GET {{baseUrl}}/country/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
+GET {{baseUrl}}/business/country/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
 
 ### Get Inquiry List
-GET {{baseUrl}}/inquiry
+GET {{baseUrl}}/crm/inquiry
 
 ### Get Inquiry by ID
-GET {{baseUrl}}/inquiry/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
+GET {{baseUrl}}/crm/inquiry/accb1539-39ed-4cae-8f55-3a73ff719db3
 
 ### Create Inquiry
-POST {{baseUrl}}/inquiry
+POST {{baseUrl}}/crm/inquiry
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### Update Inquiry
-PUT {{baseUrl}}/inquiry/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
+PUT {{baseUrl}}/crm/inquiry/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
 Content-Type: application/json
 
 {
