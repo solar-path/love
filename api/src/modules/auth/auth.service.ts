@@ -1,6 +1,7 @@
 import { db } from "@/database/database.js";
 import { userTable } from "@/database/schema/auth.drizzle.js";
 import { findRecordByKey } from "@/helper/findRecordByKey.helper.js";
+import bcrypt from "bcryptjs";
 
 export const register = async (user: { email: string; password: string }) => {
     const record = await findRecordByKey(userTable, 'email', user.email);
