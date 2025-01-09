@@ -1,25 +1,32 @@
 // flashMessage.tsx
 import { useEffect } from "preact/hooks";
 import { Toast } from "flowbite-react";
-import { CircleCheck, CircleX } from "lucide-react";
+import { CircleCheck, CircleX } from "lucide-preact";
 import { signal } from "@preact/signals";
 
-export const FlashMessageProps = signal({
+export const QToastProps = signal({
   state: false,
   type: "",
   message: "",
 });
 
-export default function FlashMessageUI() {
-  // Access the value of FlashMessageProps directly
-  const isVisible = FlashMessageProps.value.state;
-  const type = FlashMessageProps.value.type;
-  const message = FlashMessageProps.value.message;
+export const fillToast = (type, message) => {
+  QToastProps.value = {
+    state: true,
+    type,
+    message,
+  };
+};
 
+export default function QToast() {
+  // Access the value of FlashMessageProps directly
+  const isVisible = QToastProps.value.state;
+  const type = QToastProps.value.type;
+  const message = QToastProps.value.message;
   useEffect(() => {
     if (isVisible) {
       const timer = setTimeout(() => {
-        FlashMessageProps.value = { ...FlashMessageProps.value, state: false }; // Hide after 5 seconds
+        QToastProps.value = { ...QToastProps.value, state: false }; // Hide after 5 seconds
       }, 5000);
       return () => clearTimeout(timer);
     }
