@@ -4,12 +4,14 @@ import { prettyJSON } from "hono/pretty-json";
 import { logger } from "hono/logger";
 import business from "./modules/business/business.module.js";
 import crm from "./modules/crm/crm.module.js";
+import auth from "./modules/auth/auth.module.js";
 
 const app = new Hono();
 
 app
   .use(prettyJSON())
   .use(logger())
+  .route("/auth", auth)
   .route("/business", business)
   .route("/crm", crm)
   .get("/", (c) => {

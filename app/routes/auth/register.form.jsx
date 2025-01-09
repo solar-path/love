@@ -10,7 +10,6 @@ import {
   Boxes,
   Earth,
 } from "lucide-preact";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { fillDrawer } from "@components/QDrawer.ui";
@@ -18,37 +17,6 @@ import LoginForm from "./login.form";
 import QInput from "@components/QInput.ui";
 import { getIndustryList } from "@api/src/modules/business/industry/getIndustryList.helper";
 import { getCountryList } from "@helpers/getCountryList.helper";
-
-const registerSchema = yup
-  .object()
-  .shape({
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    password: yup
-      .string()
-      .min(8, "Password must be at least 8 characters long")
-      .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
-      .matches(
-        /[!@#$%^&*(),.?":{}|<>]/,
-        "Password must contain at least one special character"
-      )
-      .matches(/[0-9]/, "Password must contain at least one number")
-      .required("Password is required"),
-    passwordConfirm: yup
-      .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match")
-      .required("Password confirmation is required"),
-    residence: yup.string().required("Residence is required"),
-    residenceId: yup.string().notRequired(),
-    industry: yup.string().required("Industry is required"),
-    industryId: yup.string().notRequired(),
-    company: yup.string().required("Company is required"),
-    bin: yup.string().required("Business Identification Number is required"),
-    terms: yup.boolean().oneOf([true], "You must accept the terms of use"),
-  })
-  .required();
 
 export default function Register() {
   const {
