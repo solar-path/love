@@ -5,14 +5,18 @@ import InquiryForm from "./inquiry.form";
 import RespondToInquiryForm from "./respondToInquiry.form";
 import { getInquiryList } from "./inquiry.store";
 import { useEffect, useState } from "preact/hooks";
+
 export default function InquiryPage() {
   const [inquiryList, setInquiryList] = useState([]);
 
   useEffect(() => {
     const fetchInquiryList = async () => {
-      setInquiryList(await getInquiryList());
+      const data = await getInquiryList();
+      setInquiryList(data);
     };
-    fetchInquiryList();
+    fetchInquiryList().catch((error) => {
+      console.error("Error fetching inquiry list:", error);
+    });
   }, []);
 
   const tableActions = [
@@ -42,6 +46,7 @@ export default function InquiryPage() {
 
   return (
     <div>
+      <pre>{JSON.stringify(inquiryList, null, 2)}</pre>
       {/* <QTable
         items={inquiryList}
         caption="Inquiry"
