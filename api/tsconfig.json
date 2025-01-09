@@ -12,6 +12,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true
-  }
+  },
+  "include": ["src/**/*"]
 }

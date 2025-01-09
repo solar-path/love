@@ -23,6 +23,9 @@ importers:
       hono:
         specifier: ^4.6.16
         version: 4.6.16
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.1
     devDependencies:
       '@types/node':
         specifier: ^22.10.5
@@ -742,6 +745,9 @@ packages:
       utf-8-validate:
         optional: true
 
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
 snapshots:
 
   '@drizzle-team/brocli@0.10.2': {}
@@ -1209,3 +1215,5 @@ snapshots:
   web-streams-polyfill@3.3.3: {}
 
   ws@8.18.0: {}
+
+  zod@3.24.1: {}

@@ -8,6 +8,12 @@ import {
   getIndustryList,
   getIndustryById,
 } from "./modules/business/industry.service.js";
+import {
+  getInquiryList,
+  getInquiryById,
+  createInquiry,
+  updateInquiry,
+} from "./modules/crm/inquiry.service.js";
 
 const app = new Hono();
 
@@ -26,6 +32,20 @@ app
   })
   .get("/country/:id", async (c) => {
     return c.json(await getCountryById(c.req.param("id")));
+  })
+  .get("/inquiry", async (c) => {
+    return c.json(await getInquiryList());
+  })
+  .get("/inquiry/:id", async (c) => {
+    return c.json(await getInquiryById(c.req.param("id")));
+  })
+  .post("/inquiry", async (c) => {
+    const inquiry = await c.req.json();
+    return c.json(await createInquiry(inquiry));
+  })
+  .put("/inquiry/:id", async (c) => {
+    const inquiry = await c.req.json();
+    return c.json(await updateInquiry(c.req.param("id"), inquiry));
   });
 
 const port = 3000;
