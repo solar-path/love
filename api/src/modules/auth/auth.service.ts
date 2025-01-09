@@ -1,13 +1,11 @@
 import { db } from "@/database/database.js";
 import { userTable } from "@/database/schema/auth.drizzle.js";
-import bcrypt from "bcryptjs";
 import { eq } from "drizzle-orm";
 import type { Register, Login, ForgotPassword } from "./auth.zod.js";
 import {
   companyTable,
   structureTable,
 } from "@/database/schema/business.drizzle.js";
-import jwt from "jsonwebtoken";
 
 export const register = async (data: Register) => {
   const record = await db
@@ -32,7 +30,7 @@ export const register = async (data: Register) => {
       .values({
         id: crypto.randomUUID(),
         email: data.email,
-        password: await bcrypt.hash(data.password, 10),
+        password: data.password,
         verificationToken,
       })
       .returning()
@@ -86,14 +84,14 @@ export const login = async (data: Login) => {
       message: "Invalid credentials",
     };
 
-  const isPasswordValid = await bcrypt.compare(data.password, user.password);
+  // // const isPasswordValid = await bcrypt.compare(data.password, user.password);
 
-  if (!isPasswordValid)
-    return {
-      data: null,
-      success: false,
-      message: "Invalid credentials",
-    };
+  // if (!isPasswordValid)
+  //   return {
+  //     data: null,
+  //     success: false,
+  //     message: "Invalid credentials",
+  //   };
 
   if (!user.emailVerified)
     return {
@@ -102,19 +100,10 @@ export const login = async (data: Login) => {
       message: "Account is not verified",
     };
 
-  const token = await jwt.sign(
-    {
-      email: user.email,
-      id: user.verificationToken,
-    },
-    process.env.JWT_SECRET as string
-  );
-
   const { password, ...userData } = user;
 
   return {
     data: {
-      token,
       user: userData,
     },
     success: true,
