@@ -78,16 +78,17 @@ export const login = async (data: Login) => {
         message: "Account is not verified",
       };
 
-      const token = await jwt.sign({
+    const token = await jwt.sign({
         email: user.email,
         id: user.verificationToken
-      }, process.env.JWT_SECRET as string)
+    }, process.env.JWT_SECRET as string)
 
+    const {password, ...userData} = user;
 
   return {
     data: {
         token,
-        user
+        user: userData
     },
     success: true,
     message: "Login successful",
