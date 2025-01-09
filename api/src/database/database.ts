@@ -1,6 +1,6 @@
-import 'dotenv/config';
-import { createClient } from '@libsql/client';
-import { drizzle } from 'drizzle-orm/libsql';
+import "dotenv/config";
+import { createClient } from "@libsql/client";
+import { drizzle } from "drizzle-orm/libsql";
 
 import * as businessSchema from "./schema/business.drizzle.js";
 import * as crmSchemaQ from "./schema/crm.drizzle.js";
@@ -13,8 +13,8 @@ import * as userSchemaQ from "./schema/auth.drizzle.js";
 const url = process.env.TURSO_DATABASE_URL;
 const authToken = process.env.TURSO_AUTH_TOKEN;
 
-console.log('Database URL exists:', !!url);
-console.log('Auth Token exists:', !!authToken);
+console.log("Database URL exists:", !!url);
+console.log("Auth Token exists:", !!authToken);
 
 const turso = createClient({
   url: url!,
