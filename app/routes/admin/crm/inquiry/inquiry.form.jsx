@@ -5,7 +5,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import FindInquiryForm from "./findInquiry.form";
 import { fillDrawer } from "@components/QDrawer.ui";
-
+// import { turso } from "@database/turso";
+import { db } from "@database/drizzle";
+import { inquiryTable } from "@database/schema/crm.drizzle";
 const inquirySchema = yup.object().shape({
   email: yup
     .string()
@@ -29,6 +31,17 @@ export default function Inquiry() {
 
   const handleInquiry = async (data) => {
     console.log(data);
+
+    const record = await db
+      .insert(inquiryTable)
+      .values({
+        id: crypto.randomUUID(),
+        email: data.email.toLowerCase().trim(),
+        message: data.message.trim(),
+      })
+      .returning()
+      .then((res) => res[0]);
+    console.log("inquiry.form.jsx :: record => ", record);
   };
   return (
     <>

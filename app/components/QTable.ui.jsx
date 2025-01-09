@@ -135,7 +135,9 @@ export default function QTable({ items, caption, description, actions }) {
                   {action.component ? (
                     action.component
                   ) : (
-                    <Button onClick={action.onClick}>{action.label}</Button>
+                    <Button onClick={action.onClick} color="dark">
+                      {action.label}
+                    </Button>
                   )}
                 </Tooltip>
               ))}

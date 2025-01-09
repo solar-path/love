@@ -17,8 +17,6 @@ export const userTable = sqliteTable("user", {
     .default(sql`CURRENT_TIMESTAMP`),
 });
 
-export type User = typeof userTable.$inferSelect;
-
 export const sessionTable = sqliteTable("session", {
   id: text("id").primaryKey(),
   userId: text("userId")
@@ -26,5 +24,3 @@ export const sessionTable = sqliteTable("session", {
     .references(() => userTable.id),
   expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
 });
-
-export type Session = typeof sessionTable.$inferSelect;
