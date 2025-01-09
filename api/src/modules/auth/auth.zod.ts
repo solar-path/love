@@ -34,6 +34,8 @@ export const registerSchema = z
     path: ["passwordConfirm"],
   });
 
+export type Register = z.infer<typeof registerSchema>;
+
 export const loginSchema = z.object({
   email: z
     .string()
@@ -44,9 +46,13 @@ export const loginSchema = z.object({
     .min(8, { message: "Password must be at least 8 characters long" }),
 });
 
+export type Login = z.infer<typeof loginSchema>;
+
 export const forgotPasswordSchema = z.object({
   email: z
     .string()
     .email("Invalid email address")
     .min(1, { message: "Email is required" }),
 });
+
+export type ForgotPassword = z.infer<typeof forgotPasswordSchema>;

@@ -1,10 +1,13 @@
 import { db } from "@/database/database.js";
 import { userTable } from "@/database/schema/auth.drizzle.js";
-import { findRecordByKey } from "@/helper/findRecordByKey.helper.js";
 import bcrypt from "bcryptjs";
+import { eq } from "drizzle-orm";
+import type { Register, Login, ForgotPassword } from "./auth.zod.js";
+import { companyTable, structureTable } from "@/database/schema/business.drizzle.js";
+import jwt from 'jsonwebtoken';
 
-export const register = async (user: { email: string; password: string }) => {
-    const record = await findRecordByKey(userTable, 'email', user.email);
+export const register = async (data: Register) => {
+    const record = await db.select().from(userTable).where(eq(userTable.email, data.email)).then((res) => res[0]);
 
     if (record) return {
         data: null,
@@ -16,26 +19,50 @@ export const register = async (user: { email: string; password: string }) => {
         const verificationToken = crypto.randomUUID();
 
         // create user 
-        await tx.insert(userTable).values({
+        const user = await tx.insert(userTable).values({
             id: crypto.randomUUID(),
-            email: user.email,
-            password: await bcrypt.hash(user.password, 10),
+            email: data.email,
+            password: await bcrypt.hash(data.password, 10),
             verificationToken,
-        });
+        }).returning().then((res) => res[0]);
+
+        //create company
+        const company = await tx.insert(companyTable).values({
+            id: crypto.randomUUID(),
+            title: data.company,
+            BIN: data.bin,
+            industry: data.industry,
+            residence: data.residence,
+            author: user.id,
+            companySlug: data.company.toLowerCase().replace(/ /g, '-'),
+        }).returning().then((res) => res[0]);
+
+        // create structure
+        const structure = await tx.insert(structureTable).values({
+            id: crypto.randomUUID(),
+            company: company.id,
+            employee: user.id,
+        }).returning().then((res) => res[0]);
     })
+
+    return {
+        data: data.email,
+        success: true,
+        message: 'User created',
+    };
 
 }
 
-export const login = async (user: { email: string; password: string }) => {
-  const record = await findRecordByKey(userTable, "email", user.email);
+export const login = async (data: Login) => {
+  const user = await db.select().from(userTable).where(eq(userTable.email, data.email)).then((res) => res[0]);
 
-  if (!record) return {
+  if (!user) return {
     data: null,
     success: false,
     message: 'User not found',
   };
 
-  const isPasswordValid = await bcrypt.compare(user.password, record.password);
+  const isPasswordValid = await bcrypt.compare(data.password, user.password);
 
   if (!isPasswordValid)
     return {
@@ -44,15 +71,34 @@ export const login = async (user: { email: string; password: string }) => {
       message: "Invalid password",
     };
 
+    if (!user.emailVerified)
+      return {
+        data: null,
+        success: false,
+        message: "Account is not verified",
+      };
+
+      const token = await jwt.sign({
+        email: user.email,
+        id: user.verificationToken
+      }, {
+        secret: process.env.JWT_SECRET,
+        expiresIn: '1h'
+      })
+
+
   return {
-    data: record,
+    data: {
+        token,
+        user
+    },
     success: true,
     message: "Login successful",
   };
 };
 
-export const forgotPassword = async (user: { email: string }) => {
-  const record = await findRecordByKey(userTable, "email", user.email);
+export const forgotPassword = async (data: ForgotPassword) => {
+  const record = await db.select().from(userTable).where(eq(userTable.email, data.email)).then((res) => res[0]);
 
   if (!record)
     return {

@@ -1,5 +1,5 @@
 import { index, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { userTable } from "./auth.drizzle";
+import { userTable } from "./auth.drizzle.js";
 import { sql } from "drizzle-orm";
 import { relations } from "drizzle-orm";
 
