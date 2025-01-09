@@ -1,7 +1,7 @@
 import { db } from "@/database/database.js";
 import { inquiryTable } from "@/database/schema/crm.drizzle.js";
 import { eq } from "drizzle-orm";
-import type { Inquiry } from "./inquiry.zod.js";
+import type { Inquiry, ReplyToInquiry } from "./inquiry.zod.js";
 
 export const getInquiryList = async () => {
   return await db.select().from(inquiryTable);
@@ -23,9 +23,12 @@ export const createInquiry = async (inquiry: Inquiry) => {
     .then((res) => res[0]);
 };
 
-export const updateInquiry = async (id: string, inquiry: Inquiry) => {
+export const updateInquiry = async (
+  id: string,
+  replyToInquiry: ReplyToInquiry
+) => {
   return await db
     .update(inquiryTable)
-    .set(inquiry)
+    .set(replyToInquiry)
     .where(eq(inquiryTable.id, id));
 };

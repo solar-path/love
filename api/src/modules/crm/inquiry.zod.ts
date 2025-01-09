@@ -12,3 +12,10 @@ export const idSchema = z.object({
 });
 
 export type Id = z.infer<typeof idSchema>;
+
+export const replyToInquirySchema = z.object({
+  author: z.string().uuid().min(1, { message: "Required field" }),
+  reply: z.string().min(1, { message: "Required field" }),
+});
+
+export type ReplyToInquiry = z.infer<typeof replyToInquirySchema>;

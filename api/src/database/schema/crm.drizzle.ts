@@ -1,7 +1,7 @@
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { userTable } from "./auth.drizzle";
 import { sql } from "drizzle-orm";
-import { companyTable } from "./business.drizzle";
+import { companyTable } from "./business.drizzle.js";
+import { userTable } from "./auth.drizzle.js";
 
 export const inquiryTable = sqliteTable("crm_inquiry", {
   id: text("id").primaryKey(),

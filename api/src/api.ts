@@ -14,10 +14,13 @@ import {
   createInquiry,
   updateInquiry,
 } from "./modules/crm/inquiry.service.js";
-
+import { prettyJSON } from "hono/pretty-json";
+import { logger } from "hono/logger";
 const app = new Hono();
 
 app
+  .use(prettyJSON())
+  .use(logger())
   .get("/", (c) => {
     return c.text("Hello Hono!");
   })
@@ -44,8 +47,8 @@ app
     return c.json(await createInquiry(inquiry));
   })
   .put("/inquiry/:id", async (c) => {
-    const inquiry = await c.req.json();
-    return c.json(await updateInquiry(c.req.param("id"), inquiry));
+    const replyToInquiry = await c.req.json();
+    return c.json(await updateInquiry(c.req.param("id"), replyToInquiry));
   });
 
 const port = 3000;
