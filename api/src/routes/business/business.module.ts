@@ -3,10 +3,11 @@ import { zValidator } from "@hono/zod-validator";
 import { idSchema } from "../crm/inquiry.zod.js";
 import { getIndustryList, getIndustryById } from "./industry.service.js";
 import { getCountryList, getCountryById } from "./country.service.js";
+import type { Context } from "@/context.js";
 
-const business = new Hono();
+const businessRoutes = new Hono<Context>();
 
-business
+businessRoutes
   .get("/industry", async (c) => {
     return c.json(await getIndustryList());
   })
@@ -20,4 +21,4 @@ business
     return c.json(await getCountryById(c.req.param("id")));
   });
 
-export default business;
+export default businessRoutes;

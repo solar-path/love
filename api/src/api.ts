@@ -2,9 +2,9 @@ import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { prettyJSON } from "hono/pretty-json";
 import { logger } from "hono/logger";
-import business from "./modules/business/business.module.js";
-import crm from "./modules/crm/crm.module.js";
-import auth from "./modules/auth/auth.module.js";
+import businessRoutes from "./routes/business/business.module.js";
+import crmRoutes from "./routes/crm/crm.module.js";
+import authRoutes from "./routes/auth/auth.module.js";
 import { HTTPException } from "hono/http-exception";
 import type { ErrorResponse } from "./helper/types.js";
 import { cors } from "hono/cors";
@@ -40,9 +40,9 @@ app.use("*", cors(), async (c, next) => {
 app
   .use(prettyJSON())
   .use(logger())
-  .route("/auth", auth)
-  .route("/business", business)
-  .route("/crm", crm);
+  .route("/auth", authRoutes)
+  .route("/business", businessRoutes)
+  .route("/crm", crmRoutes);
 // .get("/", (c) => {
 //   return c.text("Hello Hono!");
 // });

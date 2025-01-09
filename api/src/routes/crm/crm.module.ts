@@ -7,10 +7,11 @@ import {
   createInquiry,
   updateInquiry,
 } from "./inquiry.service.js";
+import type { Context } from "@/context.js";
 
-const crm = new Hono();
+const crmRoutes = new Hono<Context>();
 
-crm
+crmRoutes
   .get("/inquiry", async (c) => {
     return c.json(await getInquiryList());
   })
@@ -26,4 +27,4 @@ crm
     return c.json(await updateInquiry(c.req.param("id"), replyToInquiry));
   });
 
-export default crm;
+export default crmRoutes;

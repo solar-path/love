@@ -6,10 +6,11 @@ import {
   loginSchema,
   registerSchema,
 } from "./auth.zod.js";
+import type { Context } from "@/context.js";
 
-const auth = new Hono();
+const authRoutes = new Hono<Context>();
 
-auth
+authRoutes
   .post("/register", zValidator("json", registerSchema), async (c) => {
     const data = await c.req.valid("json");
     return c.json(await register(data));
@@ -26,4 +27,4 @@ auth
       return c.json(await forgotPassword(data));
     }
   );
-export default auth;
+export default authRoutes;
