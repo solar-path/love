@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import FindInquiryForm from "./findInquiry.form";
 import { fillDrawer } from "@components/QDrawer.ui";
 import { inquirySchema } from "./inquiry.yup";
-import { addInquiry } from "./inquiry.store";
+// import { addInquiry } from "../../../../../api/src/inquiry.store";
 import { fillToast } from "@components/QToast.ui";
 import { closeDrawer } from "@components/QDrawer.ui";
 
@@ -23,14 +23,14 @@ export default function Inquiry() {
   });
 
   const handleInquiry = async (data) => {
-    const record = await addInquiry(data);
-    console.log("inquiry.form.jsx :: record => ", record);
-    if (record) {
-      fillToast("success", `Inquiry ${record.id} submitted successfully`);
-      closeDrawer();
-    } else {
-      fillToast("error", "Failed to submit inquiry");
-    }
+    // const record = await addInquiry(data);
+    // console.log("inquiry.form.jsx :: record => ", record);
+    // if (record) {
+    //   fillToast("success", `Inquiry ${record.id} submitted successfully`);
+    //   closeDrawer();
+    // } else {
+    //   fillToast("error", "Failed to submit inquiry");
+    // }
   };
   return (
     <>

@@ -11,7 +11,7 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "app/components"),
       "@routes": path.resolve(__dirname, "app/routes"),
       "@helpers": path.resolve(__dirname, "app/helpers"),
-      "@database": path.resolve(__dirname, "app/database"),
+      "@api": path.resolve(__dirname, "api"),
     },
   },
 });
