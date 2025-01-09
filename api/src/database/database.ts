@@ -1,5 +1,6 @@
 import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/node-postgres';
+import { createClient } from '@libsql/client';
+import { drizzle } from 'drizzle-orm/libsql';
 
 import * as businessSchema from './schema/business.drizzle';
 import * as crmSchemaQ from './schema/crm.drizzle';
@@ -9,7 +10,12 @@ import * as docSchemaQ from './schema/docs.drizzle';
 import * as taskSchemaQ from './schema/task.drizzle';
 import * as userSchemaQ from './schema/auth.drizzle';
 
-export const db = drizzle(process.env.DATABASE_URL!, {
+const turso = createClient({
+  url: process.env.TURSO_DATABASE_URL!,
+  authToken: process.env.TURSO_DATABASE_AUTH_TOKEN!,
+});
+
+export const db = drizzle(turso, {
   schema: {
     ...businessSchema,
     ...crmSchemaQ,

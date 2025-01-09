@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { db } from 'src/database/database';
 import { generateResponse } from 'src/helpers/generateResponse.helper';
-import { inquiryTable } from '../crm.drizzle';
+
 import { findRecordByKey } from 'src/helpers/findRecordByKey.helper';
 import { eq } from 'drizzle-orm';
 import { CreateInquiryDTO } from './inquiry.zod';
+import { inquiryTable } from '@/database/schema/crm.drizzle';
 
 @Injectable()
 export class InquiryService {

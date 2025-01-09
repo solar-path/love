@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { db } from 'src/database/database';
-import { postTable } from './docs.drizzle';
 import { buildTree } from 'src/helpers/buildTree.helper';
 import { generateResponse } from 'src/helpers/generateResponse.helper';
 import { eq } from 'drizzle-orm';
+import { postTable } from '@/database/schema/docs.drizzle';
 
 @Injectable()
 export class DocsService {

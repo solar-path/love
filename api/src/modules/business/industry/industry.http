@@ -1,0 +1,7 @@
+@baseUrl = http://localhost:3000
+
+### Get 
+GET {{baseUrl}}/industry
+
+### Get by id 
+GET {{baseUrl}}/industry/02c4ed3a-c9ef-4cbc-8858-c2f802c4675f

@@ -21,13 +21,13 @@ export class AuthService {
       });
     }
 
-    const accountVerificationToken = crypto.randomUUID();
+    const verificationToken = crypto.randomUUID();
 
     await db.insert(userTable).values({
       id: crypto.randomUUID(),
       email: user.email,
       password: await bcrypt.hash(user.password, 10),
-      accountVerificationToken,
+      verificationToken,
     });
 
     // send email to user
