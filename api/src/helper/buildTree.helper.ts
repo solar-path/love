@@ -1,7 +1,7 @@
 export const buildTree = (list: any[], parentKey: string) => {
   // Return empty array if list is null, undefined, or not an array
   if (!Array.isArray(list)) {
-    console.warn('buildTree received invalid input:', list);
+    console.warn("buildTree received invalid input:", list);
     return [];
   }
 
