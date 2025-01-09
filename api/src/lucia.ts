@@ -1,6 +1,7 @@
 import { Lucia } from "lucia";
 import { adapter } from "./database/database";
-const lucia = new Lucia(adapter, {
+
+export const lucia = new Lucia(adapter, {
   sessionCookie: {
     attributes: {
       secure: process.env.NODE_ENV === "production",
