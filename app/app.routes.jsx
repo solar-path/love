@@ -10,7 +10,7 @@ import AdminPage from "@routes/admin/admin.page";
 import NotFound from "@routes/public/NotFound.page";
 import CrmPage from "@routes/admin/crm/crm.page";
 import InquiryPage from "@routes/admin/crm/inquiry/inquiry.page";
-
+import AddressBookPage from "@routes/admin/crm/addressBook/addressBook.page";
 export default function AppRoutes() {
   return (
     <Switch>
@@ -19,6 +19,7 @@ export default function AppRoutes() {
           <AdminPage />
           <Route path="/admin/crm" component={CrmPage} />
           <Route path="/admin/crm/inquiry" component={InquiryPage} />
+          <Route path="/admin/crm/addressBook" component={AddressBookPage} />
         </AdminLayout>
       </Route>
 

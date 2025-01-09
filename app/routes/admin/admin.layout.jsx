@@ -1,5 +1,6 @@
-import { Inbox, House } from "lucide-preact";
+import { Inbox, House, Tickets } from "lucide-preact";
 import QSideNav from "@components/QSideNav.ui";
+import { BookUser } from "lucide-preact";
 
 export default function AdminLayout({ children }) {
   const items = [
@@ -17,7 +18,12 @@ export default function AdminLayout({ children }) {
         {
           label: "Inquiry",
           href: "/admin/crm/inquiry",
-          icon: <Inbox size={16} className="text-gray-700" />,
+          icon: <Tickets size={16} className="text-gray-700" />,
+        },
+        {
+          label: "Address Book",
+          href: "/admin/crm/addressBook",
+          icon: <BookUser size={16} className="text-gray-700" />,
         },
       ],
     },
