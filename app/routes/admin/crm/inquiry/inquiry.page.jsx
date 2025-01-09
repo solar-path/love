@@ -1,4 +1,4 @@
-import { turso } from "app/database/turso";
+import { turso } from "@database/turso";
 
 const inquiryList = await turso.execute(sql`SELECT * FROM crm_inquiry`);
 

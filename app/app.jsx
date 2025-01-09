@@ -12,7 +12,8 @@ import DocsLayout from "./routes/public/documentation/docs.layouts";
 import AdminLayout from "@routes/admin/admin.layout";
 import AdminPage from "@routes/admin/admin.page";
 import NotFound from "@routes/public/NotFound.page";
-
+import CrmPage from "@routes/admin/crm/crm.page";
+import InquiryPage from "@routes/admin/crm/inquiry/inquiry.page";
 export function App() {
   return (
     <div className="flex min-h-screen flex-col justify-between">
@@ -23,6 +24,8 @@ export function App() {
           <Route path="/admin">
             <AdminLayout>
               <AdminPage />
+              <Route path="/admin/crm" component={CrmPage} />
+              <Route path="/admin/crm/inquiry" component={InquiryPage} />
             </AdminLayout>
           </Route>
 
