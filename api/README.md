@@ -1,19 +1,8 @@
-# nestjs/cli
-
-## create module
-
-```bash
-nest g mo path/to/moduleName
+```
+npm install
+npm run dev
 ```
 
-## create controller
-
-```bash
-nest g co path/to/controllerName
 ```
-
-## create service
-
-```bash
-nest g s path/to/serviceName
+open http://localhost:3000
 ```

@@ -1,7 +1,0 @@
-@baseUrl = http://localhost:3000
-
-### get 
-GET {{baseUrl}}/country
-
-### get by id 
-GET {{baseUrl}}/country/01bbd8e5-bec4-4e76-a99c-4f8a002f188f
