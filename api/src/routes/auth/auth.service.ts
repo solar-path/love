@@ -1,6 +1,6 @@
 import { db } from "@/database/database.js";
 import { userTable } from "@/database/schema/auth.drizzle.js";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import type { Register, Login, ForgotPassword } from "./auth.zod.js";
 import {
   companyTable,
@@ -8,17 +8,36 @@ import {
 } from "@/database/schema/business.drizzle.js";
 
 export const register = async (data: Register) => {
-  const record = await db
+  const checkUser = await db
     .select()
     .from(userTable)
-    .where(eq(userTable.email, data.email))
+    .where(eq(userTable.email, data.email.toLowerCase()))
     .then((res) => res[0]);
 
-  if (record)
+  if (checkUser)
     return {
       data: null,
       success: false,
       message: "User already exists",
+    };
+
+  const checkCompany = await db
+    .select()
+    .from(companyTable)
+    .where(
+      and(
+        eq(companyTable.BIN, data.bin),
+        eq(companyTable.title, data.company),
+        eq(companyTable.residence, data.residence)
+      )
+    )
+    .then((res) => res[0]);
+
+  if (checkCompany)
+    return {
+      data: null,
+      success: false,
+      message: "Company already exists",
     };
 
   db.transaction(async (tx) => {
@@ -29,8 +48,8 @@ export const register = async (data: Register) => {
       .insert(userTable)
       .values({
         id: crypto.randomUUID(),
-        email: data.email,
-        password: data.password,
+        email: data.email.toLowerCase(),
+        password: await Bun.password.hash(data.password, {}),
         verificationToken,
       })
       .returning()
