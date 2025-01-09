@@ -8,20 +8,6 @@ import RegisterForm from "./register.form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
 import { fillDrawer } from "@components/QDrawer.ui";
 import ForgotPasswordForm from "./forgot.form";
-// Define a schema for login validation
-const loginSchema = yup
-  .object()
-  .shape({
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    password: yup
-      .string()
-      .min(8, "Password must be at least 8 characters long")
-      .required("Password is required"), // Example password validation
-  })
-  .required();
 
 export default function Login() {
   const {

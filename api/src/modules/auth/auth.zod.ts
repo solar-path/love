@@ -33,3 +33,20 @@ export const registerSchema = z
     message: "Passwords must match",
     path: ["passwordConfirm"],
   });
+
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .email("Invalid email address")
+    .min(1, { message: "Email is required" }),
+  password: z
+    .string()
+    .min(8, { message: "Password must be at least 8 characters long" }),
+});
+
+export const forgotPasswordSchema = z.object({
+  email: z
+    .string()
+    .email("Invalid email address")
+    .min(1, { message: "Email is required" }),
+});
