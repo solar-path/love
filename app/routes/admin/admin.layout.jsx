@@ -6,23 +6,23 @@ export default function AdminLayout({ children }) {
   const items = [
     {
       label: "Dashboard",
-      href: "/admin",
+      href: "/",
       icon: <House size={16} className="text-gray-700" />,
       children: [],
     },
     {
       label: "CRM",
-      href: "/admin/crm",
+      href: "/crm",
       icon: <Inbox size={16} className="text-gray-700" />,
       children: [
         {
           label: "Inquiry",
-          href: "/admin/crm/inquiry",
+          href: "/crm/inquiry",
           icon: <Tickets size={16} className="text-gray-700" />,
         },
         {
           label: "Address Book",
-          href: "/admin/crm/addressBook",
+          href: "/crm/addressBook",
           icon: <BookUser size={16} className="text-gray-700" />,
         },
       ],

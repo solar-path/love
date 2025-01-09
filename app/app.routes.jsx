@@ -14,12 +14,14 @@ import AddressBookPage from "@routes/admin/crm/addressBook/addressBook.page";
 export default function AppRoutes() {
   return (
     <Switch>
-      <Route path="/admin">
+      <Route path="/admin" nest>
         <AdminLayout>
-          <AdminPage />
-          <Route path="/admin/crm" component={CrmPage} />
-          <Route path="/admin/crm/inquiry" component={InquiryPage} />
-          <Route path="/admin/crm/addressBook" component={AddressBookPage} />
+          <Switch>
+            <Route path="/" component={AdminPage} />
+            <Route path="/crm" component={CrmPage} />
+            <Route path="/crm/inquiry" component={InquiryPage} />
+            <Route path="/crm/addressBook" component={AddressBookPage} />
+          </Switch>
         </AdminLayout>
       </Route>
 
