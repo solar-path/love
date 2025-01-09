@@ -1,14 +1,19 @@
 import QTable from "@components/QTable.ui";
-import { db } from "@database/drizzle";
-import { inquiryTable } from "@database/schema/crm.drizzle";
+
 import { fillDrawer } from "@components/QDrawer.ui";
 import InquiryForm from "./inquiry.form";
 import RespondToInquiryForm from "./respondToInquiry.form";
-
-const inquiryList = await db.select().from(inquiryTable);
-
+import { getInquiryList } from "./inquiry.store";
+import { useEffect, useState } from "preact/hooks";
 export default function InquiryPage() {
-  console.log(inquiryList);
+  const [inquiryList, setInquiryList] = useState([]);
+
+  useEffect(() => {
+    const fetchInquiryList = async () => {
+      setInquiryList(await getInquiryList());
+    };
+    fetchInquiryList();
+  }, []);
 
   const tableActions = [
     {

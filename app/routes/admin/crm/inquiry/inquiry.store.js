@@ -1,23 +1,43 @@
 import { db } from "@database/drizzle";
 import { inquiryTable } from "@database/schema/crm.drizzle";
+import { inquirySchema } from "./inquiry.yup";
 
 export const getInquiryList = async () => {
   try {
     return await db.select().from(inquiryTable);
   } catch (error) {
     console.error("Error fetching inquiry list:", error);
+    return [];
+  }
+};
+
+export const getInquiryById = async (id) => {
+  try {
+    return await db
+      .select()
+      .from(inquiryTable)
+      .where(eq(inquiryTable.id, id))
+      .then((res) => res[0]);
+  } catch (error) {
+    console.error("Error fetching inquiry by id:", error);
     return null;
   }
 };
 
 export const addInquiry = async (data) => {
   try {
+    const validatedData = inquirySchema.validateSync(data);
+
+    if (!validatedData) {
+      return null;
+    }
+
     const record = await db
       .insert(inquiryTable)
       .values({
         id: crypto.randomUUID(),
-        email: data.email.toLowerCase().trim(),
-        message: data.message.trim(),
+        email: validatedData.email.toLowerCase().trim(),
+        message: validatedData.message.trim(),
       })
       .returning()
       .then((res) => res[0]);

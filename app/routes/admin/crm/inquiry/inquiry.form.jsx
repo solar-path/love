@@ -1,18 +1,10 @@
 import { Label, TextInput, Textarea, Button } from "flowbite-react";
 import { Mail } from "lucide-preact";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import FindInquiryForm from "./findInquiry.form";
 import { fillDrawer } from "@components/QDrawer.ui";
-
-const inquirySchema = yup.object().shape({
-  email: yup
-    .string()
-    .email("Invalid email address")
-    .required("Email is required"),
-  message: yup.string().required("Message cannot be empty"),
-});
+import { inquirySchema } from "./inquiry.yup";
 
 export default function Inquiry() {
   const {
