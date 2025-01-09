@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMkBleGFtcGxlLmNvbSIsImlzcyI6ImFuZWtvLmlvIiwiYXVkIjoiYXV0aGVudGljYXRlZF91c2VyIiwiaWF0IjoxNzM0NTU3NTg1LCJleHAiOjE3MzQ1NjExODV9.LB39oKKvVTa-EafoaTxUpPi2MAdTT7G0G3OC-Ve4wDc
+
+### Register user
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "email": "user2@example.com",
+    "password": "securepassword"
+}
+
+### Login user
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "user2@example.com",
+    "password": "securepassword"
+}
+
+### Test
+GET {{baseUrl}}/auth/test
+Authorization: Bearer {{token}}

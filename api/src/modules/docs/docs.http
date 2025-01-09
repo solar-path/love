@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:3000/learn
+
+### Get all docs
+GET {{baseUrl}}
+
+### Get inquiry by id
+GET {{baseUrl}}/bd4bf6a3-485b-4d60-92d7-442aa3a54aac
+
+# ### Create inquiry
+# POST {{baseUrl}}/docs
+# Content-Type: application/json
+
+# {
+#     "email": "assanali.tungat@aneko.io",
+#     "message": "test"
+# }
+
+# ### Update inquiry
+# PATCH {{baseUrl}}/docs/bd4bf6a3-485b-4d60-92d7-442aa3a54aac
+# Content-Type: application/json
+
+# {
+#     "message": "not test"
+# }
+
+# ### Delete inquiry
+# DELETE {{baseUrl}}/docs/bd4bf6a3-485b-4d60-92d7-442aa3a54aac

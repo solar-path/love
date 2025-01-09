@@ -16,7 +16,7 @@ import { useForm } from "react-hook-form";
 import { fillDrawer } from "@components/QDrawer.ui";
 import LoginForm from "./login.form";
 import QInput from "@components/QInput.ui";
-import { getIndustryList } from "@helpers/getIndustryList.helper";
+import { getIndustryList } from "@api/src/modules/business/industry/getIndustryList.helper";
 import { getCountryList } from "@helpers/getCountryList.helper";
 
 const registerSchema = yup
