@@ -59,7 +59,7 @@ export const login = async (data: Login) => {
   if (!user) return {
     data: null,
     success: false,
-    message: 'User not found',
+    message: 'Invalid credentials',
   };
 
   const isPasswordValid = await bcrypt.compare(data.password, user.password);
@@ -68,7 +68,7 @@ export const login = async (data: Login) => {
     return {
       data: null,
       success: false,
-      message: "Invalid password",
+      message: "Invalid credentials",
     };
 
     if (!user.emailVerified)
@@ -81,10 +81,7 @@ export const login = async (data: Login) => {
       const token = await jwt.sign({
         email: user.email,
         id: user.verificationToken
-      }, {
-        secret: process.env.JWT_SECRET,
-        expiresIn: '1h'
-      })
+      }, process.env.JWT_SECRET as string)
 
 
   return {
