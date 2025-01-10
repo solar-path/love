@@ -6,6 +6,7 @@ import { logger } from "hono/logger";
 import { lucia } from "./lucia";
 import { cors } from "hono/cors";
 import type { Context } from "./context";
+import authRouter from "./routes/auth.route";
 
 const app = new Hono<Context>();
 
@@ -37,7 +38,7 @@ app.use("*", cors(), async (c, next) => {
 //   return c.text("Hello Hono!");
 // });
 
-app.use(prettyJSON()).use(logger());
+app.use(prettyJSON()).use(logger()).route("/auth", authRouter);
 
 app.onError((err, c) => {
   if (err instanceof HTTPException) {

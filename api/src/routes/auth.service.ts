@@ -125,8 +125,6 @@ export const login = async (data: Login) => {
       message: "Account is not verified",
     };
 
-  const { password, ...userData } = user;
-
   const session = await lucia.createSession(user.id, {
     user: {
       email: user.email,
@@ -135,18 +133,7 @@ export const login = async (data: Login) => {
   });
 
   const sessionCookie = lucia.createSessionCookie(session.id).serialize();
-
-  c.header("Set-Cookie", sessionCookie, {
-    append: true,
-  });
-
-  return {
-    data: {
-      user: userData,
-    },
-    success: true,
-    message: "Login successful",
-  };
+  return { sessionCookie };
 };
 
 export const forgotPassword = async (data: ForgotPassword) => {
