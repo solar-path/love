@@ -19,10 +19,12 @@ Content-Type: application/json
 POST {{baseUrl}}/login
 Content-Type: application/json
 
+
 {
   "email": "john.doe@example.com",
   "password": "M1r@nd@32"
 }
+
 
 ### Forgot Password
 

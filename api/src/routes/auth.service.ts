@@ -94,6 +94,7 @@ export const login = async (data: Login) => {
     .select()
     .from(userTable)
     .where(eq(userTable.email, data.email))
+    .limit(1)
     .then((res) => res[0]);
 
   if (!user)

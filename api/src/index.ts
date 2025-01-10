@@ -38,7 +38,9 @@ app.use("*", cors(), async (c, next) => {
 //   return c.text("Hello Hono!");
 // });
 
-app.use(prettyJSON()).use(logger()).basePath("/api").route("/auth", authRouter);
+app.use(prettyJSON()).use(logger());
+
+const routes = app.basePath("/api").route("/auth", authRouter);
 
 app.onError((err, c) => {
   if (err instanceof HTTPException) {
@@ -70,3 +72,5 @@ app.onError((err, c) => {
 });
 
 export default app;
+
+export type ApiRoutes = typeof routes;
