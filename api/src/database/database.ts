@@ -7,8 +7,8 @@ import * as soxSchemaQ from "./schema/sox.drizzle";
 import * as docSchemaQ from "./schema/docs.drizzle";
 import * as taskSchemaQ from "./schema/task.drizzle";
 import * as userSchemaQ from "./schema/auth.drizzle";
-// import { sessionTable, userTable } from "./schema/auth.drizzle";
-// import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
+import { sessionTable, userTable } from "./schema/auth.drizzle";
+import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
 const url = process.env["TURSO_DATABASE_URL"];
 const authToken = process.env["TURSO_AUTH_TOKEN"];
 
@@ -29,4 +29,4 @@ export const db = drizzle(turso, {
   },
 });
 
-// export const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);
+export const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);
