@@ -7,6 +7,7 @@ import {
   structureTable,
 } from "@/database/schema/business.drizzle.js";
 import { lucia } from "@/lucia.js";
+import { HTTPException } from "hono/http-exception";
 
 export const register = async (data: Register) => {
   const checkUser = await db
@@ -16,11 +17,9 @@ export const register = async (data: Register) => {
     .then((res) => res[0]);
 
   if (checkUser)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "User already exists",
-    };
+    });
 
   const checkCompany = await db
     .select()
@@ -35,11 +34,9 @@ export const register = async (data: Register) => {
     .then((res) => res[0]);
 
   if (checkCompany)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "Company already exists",
-    };
+    });
 
   db.transaction(async (tx) => {
     const verificationToken = crypto.randomUUID();
@@ -100,11 +97,9 @@ export const login = async (data: Login) => {
     .then((res) => res[0]);
 
   if (!user)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "Invalid credentials",
-    };
+    });
 
   const isPasswordValid = await Bun.password.verify(
     data.password,
@@ -112,18 +107,14 @@ export const login = async (data: Login) => {
   );
 
   if (!isPasswordValid)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "Invalid credentials",
-    };
+    });
 
   if (!user.emailVerified)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "Account is not verified",
-    };
+    });
 
   const session = await lucia.createSession(user.id, {
     user: {
@@ -144,11 +135,9 @@ export const forgotPassword = async (data: ForgotPassword) => {
     .then((res) => res[0]);
 
   if (!record)
-    return {
-      data: null,
-      success: false,
+    throw new HTTPException(409, {
       message: "User not found",
-    };
+    });
 
   // send email logic
 
