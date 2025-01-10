@@ -6,6 +6,7 @@ import {
   companyTable,
   structureTable,
 } from "@/database/schema/business.drizzle.js";
+import { lucia } from "@/lucia.js";
 
 export const register = async (data: Register) => {
   const checkUser = await db
@@ -71,7 +72,7 @@ export const register = async (data: Register) => {
       .then((res) => res[0]);
 
     // create structure
-    const structure = await tx
+    await tx
       .insert(structureTable)
       .values({
         id: crypto.randomUUID(),
@@ -80,6 +81,8 @@ export const register = async (data: Register) => {
       })
       .returning()
       .then((res) => res[0]);
+
+    // send email
   });
 
   return {
@@ -103,14 +106,17 @@ export const login = async (data: Login) => {
       message: "Invalid credentials",
     };
 
-  // // const isPasswordValid = await bcrypt.compare(data.password, user.password);
+  const isPasswordValid = await Bun.password.verify(
+    data.password,
+    user.password
+  );
 
-  // if (!isPasswordValid)
-  //   return {
-  //     data: null,
-  //     success: false,
-  //     message: "Invalid credentials",
-  //   };
+  if (!isPasswordValid)
+    return {
+      data: null,
+      success: false,
+      message: "Invalid credentials",
+    };
 
   if (!user.emailVerified)
     return {
@@ -120,6 +126,19 @@ export const login = async (data: Login) => {
     };
 
   const { password, ...userData } = user;
+
+  const session = await lucia.createSession(user.id, {
+    user: {
+      email: user.email,
+      fullName: user.fullname,
+    },
+  });
+
+  const sessionCookie = lucia.createSessionCookie(session.id).serialize();
+
+  c.header("Set-Cookie", sessionCookie, {
+    append: true,
+  });
 
   return {
     data: {
