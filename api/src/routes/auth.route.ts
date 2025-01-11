@@ -5,7 +5,7 @@ import { registerSchema, loginSchema, forgotPasswordSchema } from "./auth.zod";
 import { forgotPassword, login, register } from "./auth.service";
 import type { SuccessResponse } from "@/helper/types";
 import { lucia } from "@/lucia";
-
+import { loggedIn } from "@/middleware/loggedIn";
 export const authRouter = new Hono<Context>()
   .post("/register", zValidator("json", registerSchema), async (c) => {
     const data = await c.req.valid("json");
@@ -45,6 +45,19 @@ export const authRouter = new Hono<Context>()
     c.header("Set-Cookie", lucia.createBlankSessionCookie().serialize());
     return c.redirect("/");
   })
-  .get("/user");
+  .get("/user", loggedIn, async (c) => {
+    const user = c.get("user")!;
+    return c.json<
+      SuccessResponse<{ email: string; fullname: string; avatar: string }>
+    >({
+      success: true,
+      message: "User fetched successfully",
+      data: {
+        email: user.email,
+        fullname: user.fullname,
+        avatar: user.avatar,
+      },
+    });
+  });
 
 export default authRouter;

@@ -25,6 +25,8 @@ Content-Type: application/json
   "password": "M1r@nd@32"
 }
 
+### User
+GET {{baseUrl}}/user
 
 ### Forgot Password
 
