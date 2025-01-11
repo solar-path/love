@@ -1,7 +1,12 @@
 import { db } from "@/database/database.js";
 import { userTable } from "@/database/schema/auth.drizzle.js";
 import { eq, and } from "drizzle-orm";
-import type { Register, Login, ForgotPassword } from "./auth.zod.js";
+import type {
+  Register,
+  Login,
+  ForgotPassword,
+  ResetPassword,
+} from "./auth.zod.js";
 import {
   companyTable,
   structureTable,
@@ -137,14 +142,43 @@ export const forgotPassword = async (data: ForgotPassword) => {
 
   if (!record)
     throw new HTTPException(409, {
-      message: "User not found",
+      message: "Invalid credentials",
     });
 
-  // send email logic
+  // send email with record.verificationToken
 
   return {
     data: null,
     success: true,
     message: "Email sent",
+  };
+};
+
+export const resetPassword = async (data: ResetPassword) => {
+  const { token, password } = data;
+  const user = await db
+    .select()
+    .from(userTable)
+    .where(eq(userTable.verificationToken, token))
+    .then((res) => res[0]);
+
+  if (!user)
+    throw new HTTPException(409, {
+      message: "Invalid credentials",
+    });
+
+  await db
+    .update(userTable)
+    .set({
+      password: await Bun.password.hash(password),
+      // update verification token for future verification
+      verificationToken: crypto.randomUUID(),
+    })
+    .where(eq(userTable.id, user.id));
+
+  return {
+    data: null,
+    success: true,
+    message: "Password reset successful",
   };
 };

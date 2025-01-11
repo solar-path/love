@@ -1,8 +1,13 @@
 import { Hono } from "hono";
 import type { Context } from "@/context";
 import { zValidator } from "@hono/zod-validator";
-import { registerSchema, loginSchema, forgotPasswordSchema } from "./auth.zod";
-import { forgotPassword, login, register } from "./auth.service";
+import {
+  registerSchema,
+  loginSchema,
+  forgotPasswordSchema,
+  resetPasswordSchema,
+} from "./auth.zod";
+import { forgotPassword, login, register, resetPassword } from "./auth.service";
 import type { SuccessResponse } from "@/helper/types";
 import { lucia } from "@/lucia";
 import { loggedIn } from "@/middleware/loggedIn";
@@ -33,6 +38,14 @@ export const authRouter = new Hono<Context>()
     async (c) => {
       const data = await c.req.valid("json");
       return c.json(await forgotPassword(data));
+    }
+  )
+  .post(
+    "/reset-password",
+    zValidator("json", resetPasswordSchema),
+    async (c) => {
+      const data = await c.req.valid("json");
+      return c.json(await resetPassword(data));
     }
   )
   .get("/logout", async (c) => {

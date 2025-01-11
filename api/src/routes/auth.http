@@ -28,6 +28,9 @@ Content-Type: application/json
 ### User
 GET {{baseUrl}}/user
 
+### Logout
+GET {{baseUrl}}/logout
+
 ### Forgot Password
 
 ### Reset Password
