@@ -1,14 +1,18 @@
-import { db } from "@/database/database.js";
-import { inquiryTable } from "@/database/schema/crm.drizzle.js";
+import { db } from "@/database/database";
+import { inquiryTable } from "@/database/schema/crm.drizzle";
 import { eq } from "drizzle-orm";
-import type { Inquiry, ReplyToInquiry } from "./inquiry.zod.js";
+import type { Inquiry, ReplyToInquiry } from "./inquiry.zod";
 
 export const getInquiryList = async () => {
   return await db.select().from(inquiryTable);
 };
 
 export const getInquiryById = async (id: string) => {
-  return await db.select().from(inquiryTable).where(eq(inquiryTable.id, id));
+  return await db
+    .select()
+    .from(inquiryTable)
+    .where(eq(inquiryTable.id, id))
+    .limit(1);
 };
 
 export const createInquiry = async (inquiry: Inquiry) => {

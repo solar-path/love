@@ -50,6 +50,7 @@ export const authRouter = new Hono<Context>()
     }
   )
   .get("/logout", async (c) => {
+    // .get("/logout", loggedIn, async (c) => {
     const session = c.get("session");
     if (!session) {
       return c.redirect("/");

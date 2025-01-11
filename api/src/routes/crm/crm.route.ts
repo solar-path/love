@@ -1,18 +1,19 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
-import { idSchema, inquirySchema } from "./inquiry.zod.js";
+import { idSchema, inquirySchema } from "./inquiry.zod";
 import {
   getInquiryList,
   getInquiryById,
   createInquiry,
   updateInquiry,
-} from "./inquiry.service.js";
-import type { Context } from "@/context.js";
+} from "./inquiry.service";
+import type { Context } from "@/context";
+import { loggedIn } from "@/middleware/loggedIn";
 
-const crmRoutes = new Hono<Context>();
+const crmRouter = new Hono<Context>();
 
-crmRoutes
-  .get("/inquiry", async (c) => {
+crmRouter
+  .get("/inquiry", loggedIn, async (c) => {
     return c.json(await getInquiryList());
   })
   .get("/inquiry/:id", zValidator("param", idSchema), async (c) => {
@@ -22,9 +23,9 @@ crmRoutes
     const inquiry = await c.req.valid("json");
     return c.json(await createInquiry(inquiry));
   })
-  .put("/inquiry/:id", async (c) => {
+  .put("/inquiry/:id", loggedIn, async (c) => {
     const replyToInquiry = await c.req.json();
     return c.json(await updateInquiry(c.req.param("id"), replyToInquiry));
   });
 
-export default crmRoutes;
+export default crmRouter;

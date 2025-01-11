@@ -8,6 +8,7 @@ import { cors } from "hono/cors";
 import type { Context } from "./context";
 import authRouter from "./routes/auth/auth.route";
 import businessRouter from "./routes/business/business.route";
+import crmRouter from "./routes/crm/crm.route";
 
 const app = new Hono<Context>();
 
@@ -44,7 +45,8 @@ app.use(prettyJSON()).use(logger());
 const routes = app
   .basePath("/api")
   .route("/auth", authRouter)
-  .route("/business", businessRouter);
+  .route("/business", businessRouter)
+  .route("/crm", crmRouter);
 
 app.onError((err, c) => {
   if (err instanceof HTTPException) {

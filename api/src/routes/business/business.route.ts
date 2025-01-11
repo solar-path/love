@@ -1,9 +1,9 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
-import { idSchema } from "../crm/inquiry.zod.js";
-import { getIndustryList, getIndustryById } from "./industry.service.js";
-import { getCountryList, getCountryById } from "./country.service.js";
-import type { Context } from "@/context.js";
+import { idSchema } from "../crm/inquiry.zod";
+import { getIndustryList, getIndustryById } from "./industry.service";
+import { getCountryList, getCountryById } from "./country.service";
+import type { Context } from "@/context";
 
 const businessRouter = new Hono<Context>();
 
