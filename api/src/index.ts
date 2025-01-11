@@ -6,7 +6,8 @@ import { logger } from "hono/logger";
 import { lucia } from "./lucia";
 import { cors } from "hono/cors";
 import type { Context } from "./context";
-import authRouter from "./routes/auth.route";
+import authRouter from "./routes/auth/auth.route";
+import businessRouter from "./routes/business/business.route";
 
 const app = new Hono<Context>();
 
@@ -40,7 +41,10 @@ app.use("*", cors(), async (c, next) => {
 
 app.use(prettyJSON()).use(logger());
 
-const routes = app.basePath("/api").route("/auth", authRouter);
+const routes = app
+  .basePath("/api")
+  .route("/auth", authRouter)
+  .route("/business", businessRouter);
 
 app.onError((err, c) => {
   if (err instanceof HTTPException) {

@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:3000/api/business
+
+### Get Industry List
+GET {{baseUrl}}/industry
+
+### Get Industry by ID
+GET {{baseUrl}}/industry/0292544e-0c54-4cec-91b1-20d0ac745050
+
+### Get Country List
+GET {{baseUrl}}/country
+
+### Get Country by ID
+GET {{baseUrl}}/country/01bbd8e5-bec4-4e76-a99c-4f8a002f188f

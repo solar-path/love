@@ -11,6 +11,7 @@ import { forgotPassword, login, register, resetPassword } from "./auth.service";
 import type { SuccessResponse } from "@/helper/types";
 import { lucia } from "@/lucia";
 import { loggedIn } from "@/middleware/loggedIn";
+
 export const authRouter = new Hono<Context>()
   .post("/register", zValidator("json", registerSchema), async (c) => {
     const data = await c.req.valid("json");
