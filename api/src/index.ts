@@ -9,6 +9,7 @@ import type { Context } from "./context";
 import authRouter from "./routes/auth/auth.route";
 import businessRouter from "./routes/business/business.route";
 import crmRouter from "./routes/crm/crm.route";
+import { serveStatic } from "hono/serve-static";
 
 const app = new Hono<Context>();
 
@@ -48,6 +49,8 @@ const routes = app
   .route("/business", businessRouter)
   .route("/crm", crmRouter);
 
+// app.get("*", serveStatic({ root: "../app/dist" }));
+// app.get("*", serveStatic({ root: "../app/dist/index.html" }));
 app.onError((err, c) => {
   if (err instanceof HTTPException) {
     const errResponse =

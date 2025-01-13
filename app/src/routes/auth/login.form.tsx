@@ -7,7 +7,9 @@ import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import ForgotPasswordForm from "./forgot.form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginSchema } from "@api/src/routes/auth/auth.zod";
+import { loginSchema, type Login } from "@api/src/routes/auth/auth.zod";
+import { client } from "@/main";
+
 export default function Login() {
   const {
     register,
@@ -28,8 +30,15 @@ export default function Login() {
     setShowPassword((prev) => !prev); // Toggle password visibility
   };
 
-  const handleLogin = (data) => {
-    console.log(data);
+  const handleLogin = async (data: Login) => {
+    console.log("app :: login.form.ui :: data => ", data);
+    try {
+      const res = await client.auth.login.$post({ json: data });
+      const resData = await res.json();
+      console.log("app :: login.form.ui :: res => ", resData);
+    } catch (error) {
+      console.log("app :: login.form.ui :: error => ", error);
+    }
   };
 
   return (

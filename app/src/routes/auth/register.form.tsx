@@ -14,8 +14,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "@/routes/auth/login.form";
-import { registerSchema } from "@api/src/routes/auth/auth.zod";
 import QInput from "@/components/QInput.ui";
+import { registerSchema } from "@api/src/routes/auth/auth.zod";
+import { client } from "@/main";
 
 export default function Register() {
   const {
@@ -46,18 +47,29 @@ export default function Register() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  // const [industryList, setIndustryList] = useState([]);
+  // const [countryList, setCountryList] = useState([]);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
   const toggleConfirmPasswordVisibility = () =>
     setShowConfirmPassword((prev) => !prev);
 
-  const industryList = getIndustryList();
-  const countryList = getCountryList();
-
   const handleSearchSelect = (field, value, id) => {
     setValue(field, value);
     setValue(`${field}Id`, id);
   };
+
+  // const getIndustryList = async () => {
+  //   const res = await client.business.industry.$get();
+  //   const resData = await res.json();
+  //   setIndustryList(resData);
+  // };
+
+  // const getCountryList = async () => {
+  //   const res = await client.business.country.$get();
+  //   const resData = await res.json();
+  //   setCountryList(resData);
+  // };
 
   return (
     <form
