@@ -9,6 +9,4 @@ export const client = hc<ApiRoutes>("/", {
     fetch(input, { ...init, credentials: "include" }),
 }).api;
 
-// export const client = hc<ApiRoutes>("/").api;
-
 render(<App />, document.getElementById("app")!);

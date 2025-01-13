@@ -10,9 +10,7 @@ import {
 import type { Context } from "@/context";
 import { loggedIn } from "@/middleware/loggedIn";
 
-const crmRouter = new Hono<Context>();
-
-crmRouter
+export const crmRouter = new Hono<Context>()
   .get("/inquiry", loggedIn, async (c) => {
     return c.json(await getInquiryList());
   })

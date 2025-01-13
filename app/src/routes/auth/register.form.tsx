@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import { Label, TextInput, Button, Checkbox } from "flowbite-react";
 import {
   Mail,
@@ -15,7 +15,7 @@ import { useForm } from "react-hook-form";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "@/routes/auth/login.form";
 import QInput from "@/components/QInput.ui";
-import { registerSchema } from "@api/src/routes/auth/auth.zod";
+import { registerSchema, type Register } from "@api/src/routes/auth/auth.zod";
 import { client } from "@/main";
 
 export default function Register() {
@@ -41,14 +41,14 @@ export default function Register() {
     resolver: zodResolver(registerSchema),
   });
 
-  const handleRegister = (data) => {
+  const handleRegister = async (data: Register) => {
     console.log(data);
   };
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  // const [industryList, setIndustryList] = useState([]);
-  // const [countryList, setCountryList] = useState([]);
+  const [industryList, setIndustryList] = useState([]);
+  const [countryList, setCountryList] = useState([]);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
   const toggleConfirmPasswordVisibility = () =>
@@ -59,17 +59,19 @@ export default function Register() {
     setValue(`${field}Id`, id);
   };
 
-  // const getIndustryList = async () => {
-  //   const res = await client.business.industry.$get();
-  //   const resData = await res.json();
-  //   setIndustryList(resData);
-  // };
+  useEffect(() => {
+    const fetchData = async () => {
+      const industryRes = await client.business.industry.$get();
+      const industryData = await industryRes.json();
+      setIndustryList(industryData);
 
-  // const getCountryList = async () => {
-  //   const res = await client.business.country.$get();
-  //   const resData = await res.json();
-  //   setCountryList(resData);
-  // };
+      const countryRes = await client.business.country.$get();
+      const countryData = await countryRes.json();
+      setCountryList(countryData);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <form

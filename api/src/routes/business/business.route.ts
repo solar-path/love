@@ -5,9 +5,7 @@ import { getIndustryList, getIndustryById } from "./industry.service";
 import { getCountryList, getCountryById } from "./country.service";
 import type { Context } from "@/context";
 
-const businessRouter = new Hono<Context>();
-
-businessRouter
+export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
     return c.json(await getIndustryList());
   })
