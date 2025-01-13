@@ -10,10 +10,11 @@ import {
   Boxes,
   Earth,
 } from "lucide-preact";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "@/routes/auth/login.form";
+import { registerSchema } from "@api/src/routes/auth/auth.zod";
 import QInput from "@/components/QInput.ui";
 
 export default function Register() {
@@ -36,7 +37,7 @@ export default function Register() {
       company: "",
       bin: "",
     },
-    resolver: yupResolver(registerSchema),
+    resolver: zodResolver(registerSchema),
   });
 
   const handleRegister = (data) => {

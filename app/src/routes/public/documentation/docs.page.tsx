@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Docs() {
   const [content, setContent] = useState("");
   const [toc, setToc] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const path =
@@ -12,7 +12,7 @@ export default function Docs() {
 
     const loadContent = async () => {
       try {
-        const response = await fetch(`/app/assets/posts/${path}/${path}.md`);
+        const response = await fetch(`/src/assets/posts/${path}.md`);
 
         if (!response.ok) {
           throw new Error(
@@ -25,10 +25,10 @@ export default function Docs() {
         const tokens = marked.lexer(content);
         const headings = tokens.filter((token) => token.type === "heading");
 
-        setToc(headings);
-        setContent(marked.parse(content));
+        setToc(headings as any);
+        setContent(marked.parse(content) as string);
       } catch (error) {
-        setError(error.message);
+        setError((error as Error).message);
       }
     };
 
