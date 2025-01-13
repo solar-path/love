@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function Docs() {
   const [content, setContent] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const path =
@@ -33,10 +33,10 @@ export default function Docs() {
         // Use custom renderer
         marked.use({ renderer });
 
-        setContent(marked.parse(content));
-        setError(null);
+        setContent(await marked.parse(content));
+        setError(null); // Reset error state before loading new content
       } catch (error) {
-        setError(error.message);
+        setError(error instanceof Error ? error.message : "An error occurred");
       }
     };
 
