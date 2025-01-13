@@ -1,6 +1,10 @@
 import { Link } from "wouter-preact";
 
-export default function DocsLayout({ children }) {
+export default function DocsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   // Group posts by category based on folder structure
   const postCategories = {
     "Getting Started": [
