@@ -1,6 +1,8 @@
-import { Link } from "wouter-preact";
+import { useLocation } from "wouter-preact";
 
 export default function NotFound() {
+  const [, setLocation] = useLocation();
+
   return (
     <section className="flex flex-col items-center justify-center min-h-[50vh]  px-4">
       <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
@@ -10,12 +12,12 @@ export default function NotFound() {
       <p className="text-gray-600 text-center mb-8">
         Oops! The page you're looking for seems to have gone on vacation.
       </p>
-      <Link
-        to="/"
+      <button
+        onClick={() => window.history.back()}
         className="px-6 py-3 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors"
       >
-        Return Home
-      </Link>
+        Return to Previous Page
+      </button>
     </section>
   );
 }

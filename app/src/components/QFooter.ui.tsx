@@ -1,7 +1,7 @@
 import { List } from "flowbite-react";
 import { Link } from "wouter-preact";
-// import InquiryForm from "@routes/admin/crm/inquiry/inquiry.form";
 import { fillDrawer } from "./QDrawer.ui";
+import InquiryForm from "@/routes/admin/crm/inquiry/inquiry.form";
 
 export default function QFooter() {
   return (
@@ -27,14 +27,14 @@ export default function QFooter() {
             </Link>
           </List.Item>
 
-          {/* <List.Item className="me-4 md:me-6">
+          <List.Item className="me-4 md:me-6">
             <button
               onClick={() => fillDrawer(<InquiryForm />, "Contact us")}
               className="hover:text-red-700"
             >
               Contact Us
             </button>
-          </List.Item> */}
+          </List.Item>
         </List>
       </div>
     </footer>
