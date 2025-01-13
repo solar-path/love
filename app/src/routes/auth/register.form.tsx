@@ -18,6 +18,18 @@ import QInput from "@/components/QInput.ui";
 import { registerSchema, type Register } from "@api/src/routes/auth/auth.zod";
 import { client } from "@/main";
 
+type FormFields =
+  | "email"
+  | "password"
+  | "passwordConfirm"
+  | "terms"
+  | "residence"
+  | "residenceId"
+  | "industry"
+  | "industryId"
+  | "company"
+  | "bin";
+
 export default function Register() {
   const {
     register,
@@ -54,9 +66,9 @@ export default function Register() {
   const toggleConfirmPasswordVisibility = () =>
     setShowConfirmPassword((prev) => !prev);
 
-  const handleSearchSelect = (field, value, id) => {
+  const handleSearchSelect = (field: FormFields, value: string, id: string) => {
     setValue(field, value);
-    setValue(`${field}Id`, id);
+    setValue(`${field}Id` as FormFields, id);
   };
 
   useEffect(() => {
@@ -86,7 +98,7 @@ export default function Register() {
         <Label htmlFor="email" value="Email" />
         <TextInput
           type="email"
-          icon={Mail}
+          icon={Mail as any}
           {...register("email")}
           color={errors.email ? "failure" : "gray"}
           helperText={errors.email ? errors.email.message : ""}
@@ -98,7 +110,7 @@ export default function Register() {
           <TextInput
             autoComplete="off"
             type={showPassword ? "text" : "password"}
-            icon={Lock}
+            icon={Lock as any}
             color={errors.password ? "failure" : "gray"}
             helperText={errors.password ? errors.password.message : ""}
             {...register("password")}
@@ -119,7 +131,7 @@ export default function Register() {
           <TextInput
             autoComplete="off"
             type={showConfirmPassword ? "text" : "password"}
-            icon={Lock}
+            icon={Lock as any}
             color={errors.passwordConfirm ? "failure" : "gray"}
             helperText={
               errors.passwordConfirm ? errors.passwordConfirm.message : ""
@@ -141,7 +153,7 @@ export default function Register() {
         <TextInput
           type="text"
           {...register("company")}
-          icon={Building}
+          icon={Building as any}
           color={errors.company ? "failure" : "gray"}
           helperText={errors.company ? errors.company.message : ""}
         />
@@ -152,7 +164,7 @@ export default function Register() {
         <TextInput
           type="text"
           {...register("bin")}
-          icon={ScanBarcode}
+          icon={ScanBarcode as any}
           color={errors.bin ? "failure" : "gray"}
           helperText={errors.bin ? errors.bin.message : ""}
         />
@@ -165,10 +177,10 @@ export default function Register() {
         value={watch("industry")}
         error={errors.industry?.message}
         items={industryList}
-        icon={Boxes}
+        icon={Boxes as any}
         searchField="title"
         displayAsHelper="description"
-        onChange={(e) =>
+        onChange={(e: { target: { value: string; dataset: { id: string } } }) =>
           handleSearchSelect("industry", e.target.value, e.target.dataset.id)
         }
       />
@@ -180,9 +192,9 @@ export default function Register() {
         value={watch("residence")}
         error={errors.residence?.message}
         items={countryList}
-        icon={Earth}
+        icon={Earth as any}
         searchField="title"
-        onChange={(e) =>
+        onChange={(e: { target: { value: string; dataset: { id: string } } }) =>
           handleSearchSelect("residence", e.target.value, e.target.dataset.id)
         }
       />

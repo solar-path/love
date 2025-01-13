@@ -1,5 +1,4 @@
 import { useState } from "preact/hooks";
-import { useLocation } from "wouter-preact";
 import { Label, TextInput, Button } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import RegisterForm from "./register.form";
@@ -24,7 +23,6 @@ export default function Login() {
   });
 
   const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
-  const [, setLocation] = useLocation();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev); // Toggle password visibility
@@ -54,7 +52,7 @@ export default function Login() {
         <Label htmlFor="email" value="Email" />
         <TextInput
           type="email"
-          icon={Mail}
+          icon={Mail as any}
           {...register("email")}
           color={errors.email ? "failure" : "gray"}
           helperText={errors.email ? errors.email.message : ""}
@@ -65,7 +63,7 @@ export default function Login() {
         <div className="relative">
           <TextInput
             type={showPassword ? "text" : "password"}
-            icon={Lock}
+            icon={Lock as any}
             color={errors.password ? "failure" : "gray"}
             helperText={errors.password ? errors.password.message : ""}
             {...register("password")}
