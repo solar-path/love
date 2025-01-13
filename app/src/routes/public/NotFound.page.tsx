@@ -1,8 +1,4 @@
-import { useLocation } from "wouter-preact";
-
 export default function NotFound() {
-  const [, setLocation] = useLocation();
-
   return (
     <section className="flex flex-col items-center justify-center min-h-[50vh]  px-4">
       <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
