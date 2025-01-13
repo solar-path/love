@@ -1,9 +1,9 @@
 import { Navbar } from "flowbite-react";
 import { Link } from "wouter-preact";
 import { fillDrawer } from "./QDrawer.ui";
-import RegisterForm from "@routes/auth/register.form";
-import LoginForm from "@routes/auth/login.form";
-import Logo from "@assets/logo.png";
+import RegisterForm from "@/routes/auth/register.form";
+import LoginForm from "@/routes/auth/login.form";
+import Logo from "@/assets/logo.png";
 
 export default function QHeader() {
   return (

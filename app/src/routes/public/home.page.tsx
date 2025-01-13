@@ -1,7 +1,7 @@
 import { fillDrawer } from "@/components/QDrawer.ui";
 import RegisterForm from "@/routes/auth/register.form";
 import { Carousel } from "flowbite-react";
-import Icon from "@assets/icon.png";
+import Icon from "@/assets/icon.png";
 
 export default function Home() {
   return (

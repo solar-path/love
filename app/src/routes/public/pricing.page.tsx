@@ -1,6 +1,6 @@
 import { Card, Button, List } from "flowbite-react";
 import RegisterForm from "@/routes/auth/register.form";
-import QrCode from "@assets/qrcode.png";
+import QrCode from "@/assets/qrcode.png";
 import { fillDrawer } from "@/components/QDrawer.ui";
 
 export default function Pricing() {

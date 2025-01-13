@@ -1,20 +1,8 @@
 import { Label, Button, TextInput } from "flowbite-react";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Mail } from "lucide-preact";
-
-// Define a schema for login validation
-// Define a schema for login validation
-const forgotSchema = yup
-  .object()
-  .shape({
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("Email is required"),
-  })
-  .required();
+import { forgotPasswordSchema } from "@api/src/routes/auth/auth.zod";
 
 export default function ForgotPasswordForm() {
   const {
@@ -25,7 +13,7 @@ export default function ForgotPasswordForm() {
     defaultValues: {
       email: "",
     },
-    resolver: yupResolver(forgotSchema),
+    resolver: zodResolver(forgotPasswordSchema),
   });
 
   const handleForgot = (data) => {

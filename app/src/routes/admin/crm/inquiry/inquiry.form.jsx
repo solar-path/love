@@ -1,13 +1,13 @@
 import { Label, TextInput, Textarea, Button } from "flowbite-react";
 import { Mail } from "lucide-preact";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import FindInquiryForm from "./findInquiry.form";
-import { fillDrawer } from "@components/QDrawer.ui";
-import { inquirySchema } from "./inquiry.yup";
+import { fillDrawer } from "@/components/QDrawer.ui";
+import { inquirySchema } from "@api/src/routes/crm/inquiry.zod";
 // import { addInquiry } from "../../../../../api/src/inquiry.store";
-import { fillToast } from "@components/QToast.ui";
-import { closeDrawer } from "@components/QDrawer.ui";
+import { fillToast } from "@/components/QToast.ui";
+import { closeDrawer } from "@/components/QDrawer.ui";
 
 export default function Inquiry() {
   const {
@@ -19,7 +19,7 @@ export default function Inquiry() {
       email: "",
       message: "",
     },
-    resolver: yupResolver(inquirySchema),
+    resolver: zodResolver(inquirySchema),
   });
 
   const handleInquiry = async (data) => {

@@ -1,10 +1,10 @@
 import { Label, TextInput, Button } from "flowbite-react";
 import { useState } from "react"; // Add this import
-import { idSchema } from "@helpers/yup/id.yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { fillDrawer } from "@components/QDrawer.ui";
+import { fillDrawer } from "@/components/QDrawer.ui";
 import InquiryForm from "./inquiry.form";
+import { idSchema } from "@api/src/routes/crm/inquiry.zod";
 
 export default function FindInquiryForm() {
   const [record, setRecord] = useState(null); // Add state for response

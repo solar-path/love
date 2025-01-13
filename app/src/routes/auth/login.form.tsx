@@ -1,14 +1,13 @@
 import { useState } from "preact/hooks";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { useLocation } from "wouter-preact";
 import { Label, TextInput, Button } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import RegisterForm from "./register.form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
-import { fillDrawer } from "@components/QDrawer.ui";
+import { fillDrawer } from "@/components/QDrawer.ui";
 import ForgotPasswordForm from "./forgot.form";
-
+import { zodResolver } from "@hookform/resolvers/zod";
+import { loginSchema } from "@api/src/routes/auth/auth.zod";
 export default function Login() {
   const {
     register,
@@ -19,7 +18,7 @@ export default function Login() {
       email: "",
       password: "",
     },
-    resolver: yupResolver(loginSchema),
+    resolver: zodResolver(loginSchema),
   });
 
   const [showPassword, setShowPassword] = useState(false); // State to manage password visibility

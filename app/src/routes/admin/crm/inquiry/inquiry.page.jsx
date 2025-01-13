@@ -1,6 +1,6 @@
-import QTable from "@components/QTable.ui";
+import QTable from "@/components/QTable.ui";
 
-import { fillDrawer } from "@components/QDrawer.ui";
+import { fillDrawer } from "@/components/QDrawer.ui";
 import InquiryForm from "./inquiry.form";
 import RespondToInquiryForm from "./respondToInquiry.form";
 // import { getInquiryList } from "../../../../../api/src/inquiry.store";

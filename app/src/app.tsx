@@ -1,4 +1,3 @@
-import "./app.css";
 import QHeader from "./components/QHeader.ui";
 import QDrawer from "./components/QDrawer.ui";
 import QFooter from "./components/QFooter.ui";
