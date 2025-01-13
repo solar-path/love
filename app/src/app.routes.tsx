@@ -30,9 +30,11 @@ export default function AppRoutes() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
 
-      <Route path="/documentation">
+      <Route path="/documentation" nest>
         <DocsLayout>
-          <Docs />
+          <Switch>
+            <Route path="/:page?" component={Docs} />
+          </Switch>
         </DocsLayout>
       </Route>
 

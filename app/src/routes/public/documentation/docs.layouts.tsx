@@ -1,11 +1,6 @@
 import { Link } from "wouter-preact";
-import { type ComponentChildren } from "preact";
 
-export default function DocsLayout({
-  children,
-}: {
-  children: ComponentChildren;
-}) {
+export default function DocsLayout({ children }) {
   // Group posts by category based on folder structure
   const postCategories = {
     "Getting Started": [
@@ -31,7 +26,7 @@ export default function DocsLayout({
                 {posts.map((post) => (
                   <li key={post.path}>
                     <Link
-                      to={`/documentation${post.path}`}
+                      to={`${post.path}`}
                       className="text-gray-600 hover:text-gray-900 block py-1"
                     >
                       {post.title}

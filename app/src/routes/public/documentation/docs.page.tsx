@@ -7,12 +7,12 @@ export default function Docs() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const path =
-      window.location.pathname.split("/documentation/")[1] || "whats-new";
+    const pathSegments = window.location.pathname.split("/documentation/");
+    const page = pathSegments[1] || "whats-new";
 
     const loadContent = async () => {
       try {
-        const response = await fetch(`/app/assets/posts/${path}/${path}.md`);
+        const response = await fetch(`/src/assets/posts/${page}/${page}.md`);
 
         if (!response.ok) {
           throw new Error(
@@ -27,8 +27,10 @@ export default function Docs() {
 
         setToc(headings);
         setContent(marked.parse(content));
+        setError(null);
       } catch (error) {
         setError(error.message);
+        console.error("Error loading documentation:", error);
       }
     };
 
@@ -57,7 +59,7 @@ export default function Docs() {
               <div
                 dangerouslySetInnerHTML={{ __html: content }}
                 className="
-                  prose-headings:font-semibold 
+                  prose-headings:font-semibold
                   prose-h1:text-3xl prose-h1:mb-6
                   prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-3
                   prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-2
