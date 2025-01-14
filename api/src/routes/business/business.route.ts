@@ -5,10 +5,10 @@ import { getIndustryList, getIndustryById } from "./services/industry.service";
 import { getCountryList, getCountryById } from "./services/country.service";
 import type { Context } from "@/context";
 import { loggedIn } from "@/middleware/loggedIn";
-import { getPhonebookList } from "./services/company.phonebook.service";
+import { getPhoneBookByCompanyId } from "./services/phoneBook/getPhoneBookByCompanyId.service";
 import { paginationSchema } from "@/helper/pagination.zod";
-import { createCompany } from "./services/company.create.service";
-import { companySchema } from "./services/company.zod";
+import { createCompany } from "./services/company/createCompany.service";
+import { companySchema } from "./services/company/company.zod";
 
 export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
@@ -32,7 +32,7 @@ export const businessRouter = new Hono<Context>()
       const user = c.get("user");
       console.log("business/business.route.ts :: user => ", user);
       // const data = await c.req.valid("query");
-      return c.json(await getPhonebookList());
+      return c.json(await getPhoneBookByCompanyId());
     }
   )
   .post("/company", loggedIn, zValidator("json", companySchema), async (c) => {

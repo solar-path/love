@@ -4,10 +4,7 @@ import { eq } from "drizzle-orm";
 import type { Login } from "../auth.zod.js";
 import { lucia } from "@/lucia.js";
 import { HTTPException } from "hono/http-exception";
-import {
-  companyTable,
-  structureTable,
-} from "@/database/schema/business.drizzle.js";
+import { getCompanyListByUserId } from "@/routes/business/services/company/getCompanyListByUserId.js";
 
 export const login = async (data: Login) => {
   const user = await db
@@ -38,15 +35,7 @@ export const login = async (data: Login) => {
     });
 
   // get company list in which user is employee
-  const companyList = await db
-    .selectDistinct({
-      id: companyTable.id,
-      title: companyTable.title,
-      companySlug: companyTable.companySlug,
-    })
-    .from(structureTable)
-    .where(eq(structureTable.employee, user.id))
-    .innerJoin(companyTable, eq(companyTable.id, structureTable.company));
+  const companyList = await getCompanyListByUserId(user.id);
 
   // generate cookie session
   const session = await lucia.createSession(user.id, {

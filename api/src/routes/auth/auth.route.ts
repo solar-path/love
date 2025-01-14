@@ -15,6 +15,7 @@ import { resetPassword } from "./services/resetPassword.service";
 import type { SuccessResponse } from "@/helper/types";
 import { lucia } from "@/lucia";
 import { loggedIn } from "@/middleware/loggedIn";
+import { getCompanyListByUserId } from "../business/services/company/getCompanyListByUserId";
 
 export const authRouter = new Hono<Context>()
   .post("/register", zValidator("json", registerSchema), async (c) => {
@@ -58,8 +59,7 @@ export const authRouter = new Hono<Context>()
       return c.json(await resetPassword(data));
     }
   )
-  .get("/logout", async (c) => {
-    // .get("/logout", loggedIn, async (c) => {
+  .get("/logout", loggedIn, async (c) => {
     const session = c.get("session");
     if (!session) {
       return c.redirect("/");
@@ -71,15 +71,24 @@ export const authRouter = new Hono<Context>()
   })
   .get("/user", loggedIn, async (c) => {
     const user = c.get("user")!;
+
     return c.json<
-      SuccessResponse<{ email: string; fullname: string; avatar: string }>
+      SuccessResponse<{
+        id: string;
+        email: string;
+        fullname: string;
+        avatar: string;
+        companyList: any;
+      }>
     >({
       success: true,
       message: "User fetched successfully",
       data: {
+        id: user.id,
         email: user.email,
         fullname: user.fullname,
         avatar: user.avatar,
+        companyList: await getCompanyListByUserId(user.id),
       },
     });
   });
