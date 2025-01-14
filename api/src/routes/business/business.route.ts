@@ -9,6 +9,7 @@ import { getPhonebookList } from "./services/company.phonebook.service";
 import { paginationSchema } from "@/helper/pagination.zod";
 import { createCompany } from "./services/company.create.service";
 import { companySchema } from "./services/company.zod";
+
 export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
     return c.json(await getIndustryList());
@@ -37,9 +38,9 @@ export const businessRouter = new Hono<Context>()
   .post("/company", loggedIn, zValidator("json", companySchema), async (c) => {
     const data = await c.req.valid("json");
     console.log("business/business.route.ts :: data => ", data);
-    return c.json({ message: "Company data received", data });
+    // return c.json({ message: "Company data received", data });
 
-    // return c.json(await createCompany(data));
+    return c.json(await createCompany(data));
   });
 
 export default businessRouter;

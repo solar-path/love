@@ -35,7 +35,7 @@ export const createCompany = async (data: Company) => {
         BIN: data.bin,
         industry: data.industry,
         residence: data.residence,
-        author: data.id,
+        author: data.author,
         companySlug: data.company.toLowerCase().replace(/ /g, "-"),
       })
       .returning()
@@ -47,7 +47,7 @@ export const createCompany = async (data: Company) => {
       .values({
         id: crypto.randomUUID(),
         company: company.id,
-        employee: data.id,
+        employee: data.author,
       })
       .returning()
       .then((res) => res[0]);
@@ -55,5 +55,9 @@ export const createCompany = async (data: Company) => {
     // send email
   });
 
-  return data;
+  return {
+    data: data,
+    success: true,
+    message: "Company created",
+  };
 };
