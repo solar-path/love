@@ -103,10 +103,12 @@ export default function QHeader() {
               >
                 <Dropdown.Header>
                   <span className="block text-sm">
-                    {currentUser.value.fullname}
+                    {currentUser.value
+                      ? currentUser.value.fullname
+                      : "Anonymous"}
                   </span>
                   <span className="block truncate text-sm font-medium">
-                    {currentUser.value.email}
+                    {currentUser.value ? currentUser.value.email : "Anonymous"}
                   </span>
                 </Dropdown.Header>
                 <Dropdown.Item>

@@ -1,4 +1,4 @@
-import type { Company } from "@api/src/routes/business/services/company.zod";
+import type { Company } from "@api/src/routes/business/services/company/company.zod";
 import { signal } from "@preact/signals";
 
 export const currentCompany = signal<Company | null>(null);
