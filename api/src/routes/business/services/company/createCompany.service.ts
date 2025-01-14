@@ -5,9 +5,10 @@ import {
 } from "@/database/schema/business.drizzle";
 import { eq, and } from "drizzle-orm";
 import { HTTPException } from "hono/http-exception";
-import type { Company } from "./company.zod";
+import type { CompanyCreateEdit } from "./company.zod";
+import { getCompanyListByUserId } from "./getCompanyListByUserId";
 
-export const createCompany = async (data: Company) => {
+export const createCompany = async (data: CompanyCreateEdit) => {
   const checkCompany = await db
     .select()
     .from(companyTable)
@@ -56,8 +57,8 @@ export const createCompany = async (data: Company) => {
   });
 
   return {
-    data: data,
+    data: await getCompanyListByUserId(data.author),
     success: true,
-    message: "Company created",
+    message: `Company ${data.title} has been created`,
   };
 };

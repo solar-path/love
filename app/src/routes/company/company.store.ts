@@ -12,18 +12,25 @@ export const currentCompany = signal<CompanyForFrontend | null>(null);
 export const companyList = signal<CompanyForFrontend[]>([]);
 
 export const createCompany = async (data: CompanyCreateEdit) => {
-  console.log("company.store.ts :: createCompany :: data => ", data);
+  // console.log("company.store.ts :: createCompany :: data => ", data);
   await client.business.company
     .$post({ json: data })
     .then((res: any) => res.json())
     .then((resData: any) => {
       console.log("company.store.ts :: createCompany :: resData => ", resData);
-      companyList.value = [...companyList.value, resData];
-      currentCompany.value = resData;
+
       if (resData.success === true) {
-        // companyList.value = [...companyList.value, resData.data.company];
-        // currentCompany.value = resData.data.company;
         fillToast("success", resData.message);
+        companyList.value = resData.data;
+        console.log(
+          "company.store.ts :: createCompany :: companyList => ",
+          companyList.value
+        );
+        currentCompany.value = resData.data[0];
+        console.log(
+          "company.store.ts :: createCompany :: currentCompany => ",
+          currentCompany.value
+        );
         closeDrawer();
       }
 

@@ -9,6 +9,7 @@ import { getPhoneBookByCompanyId } from "./services/phoneBook/getPhoneBookByComp
 import { paginationSchema } from "@/helper/pagination.zod";
 import { createCompany } from "./services/company/createCompany.service";
 import { companyCreateEditSchema } from "./services/company/company.zod";
+import { getCompanyUserList } from "./services/user/getCompanyUserList.service";
 
 export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
@@ -46,6 +47,14 @@ export const businessRouter = new Hono<Context>()
 
       return c.json(await createCompany(data));
     }
+  )
+  .get(
+    "/company/:id/user",
+    loggedIn,
+    zValidator("param", idSchema),
+    async (c) => {
+      const companyId = c.req.param("id");
+      return c.json(await getCompanyUserList(companyId));
+    }
   );
-
 export default businessRouter;

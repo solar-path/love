@@ -8,6 +8,13 @@
       "when": 1736424240738,
       "tag": "0000_elite_hulk",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1736888065075,
+      "tag": "0001_gorgeous_lizard",
+      "breakpoints": true
     }
   ]
 }

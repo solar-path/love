@@ -9,6 +9,8 @@ export const userTable = sqliteTable("user", {
   emailVerified: integer("verified", { mode: "boolean" }).default(false),
   avatar: text("avatar"),
   verificationToken: text("verificationToken").notNull(),
+  gender: text("gender"),
+  dob: text("dob"),
   createdAt: text("createdAt")
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),

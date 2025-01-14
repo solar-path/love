@@ -31,3 +31,8 @@ Cookie: {{login.response.headers.set-cookie}}
   "residence": "01bbd8e5-bec4-4e76-a99c-4f8a002f188f",
   "author": "b41a3094-4000-44ec-8f8d-aad0976fe5ec"
 }
+
+### Get Company User List
+GET {{businessUrl}}/company/0f8b6b02-30c3-4c14-be01-6dc6d2663011/user
+Content-Type: application/json
+Cookie: {{login.response.headers.set-cookie}}
