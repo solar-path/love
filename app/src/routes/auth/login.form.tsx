@@ -8,6 +8,7 @@ import ForgotPasswordForm from "./forgot.form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type Login } from "@api/src/routes/auth/auth.zod";
 import { client } from "@/main";
+import { fillToast } from "@/components/QToast.ui";
 
 export default function Login() {
   const {
@@ -29,11 +30,15 @@ export default function Login() {
   };
 
   const handleLogin = async (data: Login) => {
-    console.log("app :: login.form.ui :: data => ", data);
     try {
       const res = await client.auth.login.$post({ json: data });
+      console.log("app :: login.form.ui :: res => ", res);
       const resData = await res.json();
       console.log("app :: login.form.ui :: res => ", resData);
+
+      if (resData.success === false) {
+        fillToast("error", resData.error);
+      }
     } catch (error) {
       console.log("app :: login.form.ui :: error => ", error);
     }
