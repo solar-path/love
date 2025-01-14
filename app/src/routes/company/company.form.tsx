@@ -5,11 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
 import QInput from "@/components/QInput.ui";
-import {
-  companySchema,
-  type Company,
-} from "@api/src/routes/business/company.zod";
+import { companySchema } from "@api/src/routes/business/services/company.zod";
 import { client } from "@/main";
+import { currentUser } from "../auth/auth.store";
 
 type FormFields =
   | "residence"
@@ -17,7 +15,8 @@ type FormFields =
   | "industry"
   | "industryId"
   | "company"
-  | "bin";
+  | "bin"
+  | "author";
 
 export default function CompanyForm() {
   const {
@@ -34,6 +33,7 @@ export default function CompanyForm() {
       industryId: "",
       company: "",
       bin: "",
+      author: "",
     },
     resolver: zodResolver(companySchema),
   });
@@ -62,12 +62,13 @@ export default function CompanyForm() {
 
   return (
     <form
-      onSubmit={handleSubmit(handleCompany)}
+      onSubmit={handleSubmit((data) =>
+        handleCompany({ ...data, author: currentUser!.value!.id })
+      )}
       className="flex flex-col w-full space-y-2"
     >
       <p className="text-sm">
-        Please fill in the details below to create your account. Ensure your
-        password meets the required criteria.
+        Please fill in the details below to create your company.
       </p>
 
       <div>

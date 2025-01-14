@@ -5,6 +5,7 @@ import {
 } from "@/database/schema/business.drizzle";
 import { eq, and } from "drizzle-orm";
 import { HTTPException } from "hono/http-exception";
+import type { Company } from "./company.zod";
 
 export const createCompany = async (data: Company) => {
   const checkCompany = await db
