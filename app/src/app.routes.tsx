@@ -11,16 +11,16 @@ import NotFound from "@/routes/public/NotFound.page";
 import CrmPage from "@/routes/admin/crm/crm.page";
 import InquiryPage from "@/routes/admin/crm/inquiry/inquiry.page";
 import AddressBookPage from "@/routes/admin/crm/addressBook/addressBook.page";
-import ProtectedLayout from "./routes/company/company.layout";
-import DashboardPage from "./routes/company/company.page";
-import ErmPage from "./routes/company/erm/erm.page";
-import RiskPage from "./routes/company/erm/risk/risk.page";
-import OrgChartPage from "./routes/company/orgchart/orgchart.page";
-import OrgChartUnitPage from "./routes/company/orgchart/unit/orgchartUnit.page";
-import UserPage from "./routes/company/user/user.page";
-import PhoneBookPage from "./routes/company/phoneBook/phoneBook.page";
-import ProcurementPage from "./routes/company/procurement/procurement.page";
-import CompanyLayout from "./routes/company/company.layout";
+import DashboardPage from "@/routes/company/company.page";
+import ErmPage from "@/routes/company/erm/erm.page";
+import RiskPage from "@/routes/company/erm/risk/risk.page";
+import OrgChartPage from "@/routes/company/orgchart/orgchart.page";
+import OrgChartUnitPage from "@/routes/company/orgchart/unit/orgchartUnit.page";
+import UserPage from "@/routes/company/user/user.page";
+import PhoneBookPage from "@/routes/company/phoneBook/phoneBook.page";
+import ProcurementPage from "@/routes/company/procurement/procurement.page";
+import CompanyLayout from "@/routes/company/company.layout";
+import { ProtectedRoute } from "@/guards/protected.guard";
 
 export default function AppRoutes() {
   return (
@@ -50,18 +50,20 @@ export default function AppRoutes() {
       </Route>
 
       <Route path="/company" nest>
-        <CompanyLayout>
-          <Switch>
-            <Route path="/" component={DashboardPage} />
-            <Route path="/erm" component={ErmPage} />
-            <Route path="/erm/risk" component={RiskPage} />
-            <Route path="/orgchart" component={OrgChartPage} />
-            <Route path="/orgchart/unit" component={OrgChartUnitPage} />
-            <Route path="/user" component={UserPage} />
-            <Route path="/phoneBook" component={PhoneBookPage} />
-            <Route path="/procurement" component={ProcurementPage} />
-          </Switch>
-        </CompanyLayout>
+        <ProtectedRoute>
+          <CompanyLayout>
+            <Switch>
+              <Route path="/" component={DashboardPage} />
+              <Route path="/erm" component={ErmPage} />
+              <Route path="/erm/risk" component={RiskPage} />
+              <Route path="/orgchart" component={OrgChartPage} />
+              <Route path="/orgchart/unit" component={OrgChartUnitPage} />
+              <Route path="/user" component={UserPage} />
+              <Route path="/phoneBook" component={PhoneBookPage} />
+              <Route path="/procurement" component={ProcurementPage} />
+            </Switch>
+          </CompanyLayout>
+        </ProtectedRoute>
       </Route>
 
       <Route component={NotFound} />
