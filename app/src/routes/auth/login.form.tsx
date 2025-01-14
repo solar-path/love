@@ -30,22 +30,22 @@ export default function Login() {
   };
 
   const handleLogin = async (data: Login) => {
-    try {
-      const res = await client.auth.login.$post({ json: data });
-      console.log("app :: login.form.ui :: res => ", res);
-      const resData = await res.json();
-      console.log("app :: login.form.ui :: res => ", resData);
-
-      if (resData.success === true) {
-        fillToast("success", resData.message);
-        closeDrawer();
-      }
-      if (resData.success === false) {
-        fillToast("error", resData.error);
-      }
-    } catch (error) {
-      console.log("app :: login.form.ui :: error => ", error);
-    }
+    client.auth.login
+      .$post({ json: data })
+      .then((res) => res.json())
+      .then((resData) => {
+        if (resData.success === true) {
+          fillToast("success", resData.message);
+          closeDrawer();
+          // navigate("/");
+        }
+        if (resData.success === false) {
+          fillToast("error", resData.error);
+        }
+      })
+      .catch((error) => {
+        console.log("app :: login.form.ui :: error => ", error);
+      });
   };
 
   return (
