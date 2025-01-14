@@ -12,8 +12,6 @@ Content-Type: application/json
   "password": "M1r@nd@32"
 }
 
-
-
 ### Get Phonebook List
 GET {{businessUrl}}/phonebook
 Content-Type: application/json
