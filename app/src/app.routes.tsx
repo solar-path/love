@@ -11,6 +11,10 @@ import NotFound from "@/routes/public/NotFound.page";
 import CrmPage from "@/routes/admin/crm/crm.page";
 import InquiryPage from "@/routes/admin/crm/inquiry/inquiry.page";
 import AddressBookPage from "@/routes/admin/crm/addressBook/addressBook.page";
+import ProtectedLayout from "./routes/protected/protected.layout";
+import DashboardPage from "./routes/protected/dashboard.page";
+import ErmPage from "./routes/protected/erm/erm.page";
+import RiskPage from "./routes/protected/erm/risk/risk.page";
 export default function AppRoutes() {
   return (
     <Switch>
@@ -36,6 +40,16 @@ export default function AppRoutes() {
             <Route path="/:page?" component={Docs} />
           </Switch>
         </DocsLayout>
+      </Route>
+
+      <Route path="/protected" nest>
+        <ProtectedLayout>
+          <Switch>
+            <Route path="/" component={DashboardPage} />
+            <Route path="/erm" component={ErmPage} />
+            <Route path="/erm/risk" component={RiskPage} />
+          </Switch>
+        </ProtectedLayout>
       </Route>
 
       <Route component={NotFound} />

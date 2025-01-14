@@ -2,7 +2,11 @@ import { Inbox, House, Tickets } from "lucide-preact";
 import QSideNav from "@/components/QSideNav.ui";
 import { BookUser } from "lucide-preact";
 
-export default function AdminLayout({ children }) {
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const items = [
     {
       label: "Dashboard",

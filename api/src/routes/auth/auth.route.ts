@@ -29,10 +29,7 @@ export const authRouter = new Hono<Context>()
       append: true,
     });
 
-    console.log(
-      "auth/services/login.service.ts :: companyList =>",
-      companyList
-    );
+    console.log("auth/services/auth.route.ts :: companyList =>", companyList);
 
     return c.json<SuccessResponse<{ companyList: typeof companyList }>>(
       {

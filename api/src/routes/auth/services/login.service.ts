@@ -48,8 +48,6 @@ export const login = async (data: Login) => {
     .where(eq(structureTable.employee, user.id))
     .innerJoin(companyTable, eq(companyTable.id, structureTable.company));
 
-  console.log("auth/services/login.service.ts :: companyList =>", companyList);
-
   // generate cookie session
   const session = await lucia.createSession(user.id, {
     user: {
