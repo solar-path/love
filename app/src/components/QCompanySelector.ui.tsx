@@ -1,21 +1,13 @@
 import { Button, Dropdown, TextInput } from "flowbite-react";
 import { computed } from "@preact/signals";
 import { HiSearch } from "react-icons/hi";
-// import { CompanyForm } from "./Company.form";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import { companyList, currentCompany } from "@/routes/company/company.store";
 import { useEffect, useState } from "preact/hooks";
 import CompanyForm from "@/routes/company/company.form";
 
-export default function CompanyDropdownUI() {
+export default function QCompanySelector() {
   const [searchTerm, setSearchTerm] = useState("");
-
-  // Set initial company if not set and companies exist
-  useEffect(() => {
-    if (companyList.value.length > 0 && !currentCompany.value) {
-      currentCompany.value = companyList.value[0];
-    }
-  }, [companyList.value]);
 
   // Listen for company creation and updates
   useEffect(() => {
@@ -54,7 +46,7 @@ export default function CompanyDropdownUI() {
 
   if (companyList.value.length === 0) {
     return (
-      <Button onClick={() => fillDrawer(<CompanyForm />, "Create Company")}>
+      <Button onClick={() => fillDrawer(CompanyForm, "Create Company")}>
         Create a new company
       </Button>
     );
@@ -64,15 +56,16 @@ export default function CompanyDropdownUI() {
     <Dropdown
       label={currentCompany.value?.title || "Select Company"}
       dismissOnClick={false}
+      color="dark"
     >
       <Dropdown.Item>
         <TextInput
           className="w-full"
           type="text"
           placeholder="Search..."
-          icon={HiSearch}
+          icon={HiSearch as any}
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm((e.target as HTMLInputElement).value)}
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -96,7 +89,7 @@ export default function CompanyDropdownUI() {
 
       <Dropdown.Divider />
       <Dropdown.Item
-        onClick={() => fillDrawer(<CompanyForm />, "Create Company")}
+        onClick={() => fillDrawer(CompanyForm, "Create Company")}
         className="flex items-center justify-start gap-2 hover:bg-primary-700 hover:text-white"
       >
         Create a new company

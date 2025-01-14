@@ -8,7 +8,7 @@ import QInput from "@/components/QInput.ui";
 import {
   companySchema,
   type Company,
-} from "@api/src/routes/business/services/company.zod";
+} from "@api/src/routes/business/services/company/company.zod";
 import { client } from "@/main";
 import { currentUser } from "../auth/auth.store";
 import { createCompany } from "./company.store";

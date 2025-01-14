@@ -7,6 +7,7 @@ import Logo from "@/assets/logo.png";
 import { Phone, ShoppingCart } from "lucide-preact";
 import { currentUser, logout } from "@/routes/auth/auth.store";
 import { isAuthenticated } from "@/routes/auth/auth.store";
+import QCompanySelector from "./QCompanySelector.ui";
 
 export default function QHeader() {
   const [, setLocation] = useLocation();
@@ -57,7 +58,7 @@ export default function QHeader() {
     return (
       <Navbar fluid rounded className="flex items-center justify-between">
         <Navbar.Brand className="flex items-center">
-          company selector
+          <QCompanySelector />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="flex items-center gap-4 md:flex-row">

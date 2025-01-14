@@ -60,20 +60,6 @@ export default function RegisterForm() {
     setValue(`${field}Id`, id);
   };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const industryRes = await client.business.industry.$get();
-  //     const industryData = await industryRes.json();
-  //     setIndustryList(industryData);
-
-  //     const countryRes = await client.business.country.$get();
-  //     const countryData = await countryRes.json();
-  //     setCountryList(countryData);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   return (
     <form
       onSubmit={handleSubmit((data) => signUp(data))}

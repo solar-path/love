@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const companySchema = z.object({
+  id: z.string().optional(),
   residence: z.string().min(1, { message: "Required field" }),
   residenceId: z.string().optional(),
   industry: z.string().min(1, { message: "Required field" }),
