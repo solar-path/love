@@ -31,7 +31,10 @@ export const businessRouter = new Hono<Context>()
       console.log("business/business.route.ts :: user => ", user);
       // const data = await c.req.valid("query");
       return c.json(await getPhonebookList());
-    }
-  );
+    })
+  )
+  .post("/company", loggedIn, zValidator("json", companySchema), async (c) => {
+    return c.json(await createCompany(c.req.valid("json")));
+  });
 
 export default businessRouter;

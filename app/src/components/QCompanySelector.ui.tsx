@@ -3,11 +3,7 @@ import { computed } from "@preact/signals";
 import { HiSearch } from "react-icons/hi";
 // import { CompanyForm } from "./Company.form";
 import { fillDrawer } from "@/components/QDrawer.ui";
-import {
-  companyList,
-  currentCompany,
-  setCurrentCompany,
-} from "@/routes/company/company.store";
+import { companyList, currentCompany } from "@/routes/company/company.store";
 import { useEffect, useState } from "preact/hooks";
 
 export default function CompanyDropdownUI() {
@@ -15,26 +11,26 @@ export default function CompanyDropdownUI() {
 
   // Set initial company if not set and companies exist
   useEffect(() => {
-    if (userCompanies.value.length > 0 && !currentCompany.value) {
-      setCurrentCompany(userCompanies.value[0]);
+    if (companyList.value.length > 0 && !currentCompany.value) {
+      currentCompany.value = companyList.value[0];
     }
-  }, [userCompanies.value]);
+  }, [companyList.value]);
 
   // Listen for company creation and updates
   useEffect(() => {
-    const handleCompanyCreated = (event) => {
+    const handleCompanyCreated = (event: any) => {
       const newCompany = event.detail;
-      userCompanies.value = [...userCompanies.value, newCompany];
-      setCurrentCompany(newCompany);
+      companyList.value = [...companyList.value, newCompany];
+      currentCompany.value = newCompany;
     };
 
-    const handleCompanyUpdated = (event) => {
+    const handleCompanyUpdated = (event: any) => {
       const updatedCompany = event.detail;
-      userCompanies.value = userCompanies.value.map((company) =>
+      companyList.value = companyList.value.map((company) =>
         company.id === updatedCompany.id ? updatedCompany : company
       );
       if (currentCompany.value?.id === updatedCompany.id) {
-        setCurrentCompany(updatedCompany);
+        currentCompany.value = updatedCompany;
       }
     };
 
