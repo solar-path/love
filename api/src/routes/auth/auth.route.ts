@@ -23,16 +23,22 @@ export const authRouter = new Hono<Context>()
   })
   .post("/login", zValidator("json", loginSchema), async (c) => {
     const data = await c.req.valid("json");
-    const { sessionCookie } = await login(data);
+    const { sessionCookie, companyList } = await login(data);
 
     c.header("Set-Cookie", sessionCookie, {
       append: true,
     });
 
-    return c.json<SuccessResponse>(
+    console.log(
+      "auth/services/login.service.ts :: companyList =>",
+      companyList
+    );
+
+    return c.json<SuccessResponse<{ companyList: typeof companyList }>>(
       {
         success: true,
         message: "Login successful",
+        data: { companyList },
       },
       201
     );

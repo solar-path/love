@@ -4,6 +4,10 @@ import { eq } from "drizzle-orm";
 import type { Login } from "../auth.zod.js";
 import { lucia } from "@/lucia.js";
 import { HTTPException } from "hono/http-exception";
+import {
+  companyTable,
+  structureTable,
+} from "@/database/schema/business.drizzle.js";
 
 export const login = async (data: Login) => {
   const user = await db
@@ -33,6 +37,20 @@ export const login = async (data: Login) => {
       message: "Account is not verified",
     });
 
+  // get company list in which user is employee
+  const companyList = await db
+    .selectDistinct({
+      id: companyTable.id,
+      title: companyTable.title,
+      companySlug: companyTable.companySlug,
+    })
+    .from(structureTable)
+    .where(eq(structureTable.employee, user.id))
+    .innerJoin(companyTable, eq(companyTable.id, structureTable.company));
+
+  console.log("auth/services/login.service.ts :: companyList =>", companyList);
+
+  // generate cookie session
   const session = await lucia.createSession(user.id, {
     user: {
       email: user.email,
@@ -41,5 +59,5 @@ export const login = async (data: Login) => {
   });
 
   const sessionCookie = lucia.createSessionCookie(session.id).serialize();
-  return { sessionCookie };
+  return { sessionCookie, companyList };
 };
