@@ -3,15 +3,12 @@ import { Label, TextInput, Button } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import RegisterForm from "./register.form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
-import { closeDrawer, fillDrawer } from "@/components/QDrawer.ui";
+import { fillDrawer } from "@/components/QDrawer.ui";
 import ForgotPasswordForm from "./forgot.form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type Login } from "@api/src/routes/auth/auth.zod";
-import { client } from "@/main";
-import { fillToast } from "@/components/QToast.ui";
-import { navigate } from "wouter-preact/use-hash-location";
-import { isAuthenticated, setCurrentUser } from "./auth.store";
-import { companyList, currentCompany } from "../company/company.store";
+import { login } from "./auth.store";
+import { useLocation } from "wouter-preact";
 
 export default function Login() {
   const {
@@ -27,42 +24,17 @@ export default function Login() {
   });
 
   const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
+  const [, setLocation] = useLocation();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev); // Toggle password visibility
   };
 
-  const handleLogin = async (data: Login) => {
-    client.auth.login
-      .$post({ json: data })
-      .then((res) => res.json())
-      .then((resData) => {
-        if (resData.success === true) {
-          // set current user
-          setCurrentUser(resData.data.user);
-          // set authenticated
-          isAuthenticated.value = true;
-          // set company list
-          companyList.value = resData.data.companyList;
-          // set current company
-          currentCompany.value = resData.data.companyList[0];
-          // close drawer
-          closeDrawer();
-          // navigate to company
-          navigate("/company");
-        }
-        if (resData.success === false) {
-          fillToast("error", resData.error);
-        }
-      })
-      .catch((error) => {
-        console.log("app :: login.form.ui :: error => ", error);
-      });
-  };
-
   return (
     <form
-      onSubmit={handleSubmit(handleLogin)}
+      onSubmit={handleSubmit((data) =>
+        login(data, () => setLocation("/company"))
+      )}
       className="flex flex-col w-full space-y-2"
     >
       <h2 className="text-lg font-semibold">Welcome Back!</h2>

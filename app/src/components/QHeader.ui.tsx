@@ -1,5 +1,5 @@
 import { Button, Dropdown, Avatar, Navbar } from "flowbite-react";
-import { Link } from "wouter-preact";
+import { Link, useLocation } from "wouter-preact";
 import { fillDrawer } from "./QDrawer.ui";
 import RegisterForm from "@/routes/auth/register.form";
 import LoginForm from "@/routes/auth/login.form";
@@ -9,6 +9,7 @@ import { currentUser, logout } from "@/routes/auth/auth.store";
 import { isAuthenticated } from "@/routes/auth/auth.store";
 
 export default function QHeader() {
+  const [, setLocation] = useLocation();
   const serviceItems = [
     {
       name: "Phone book",
@@ -112,7 +113,9 @@ export default function QHeader() {
                   <Link href="/company/profile">Profile</Link>
                 </Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item onClick={() => logout()}>Sign out</Dropdown.Item>
+                <Dropdown.Item onClick={() => logout(() => setLocation("/"))}>
+                  Sign out
+                </Dropdown.Item>
               </Dropdown>
             </Navbar.Link>
           </div>

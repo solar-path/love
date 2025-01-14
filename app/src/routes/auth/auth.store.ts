@@ -1,8 +1,9 @@
 import { client } from "@/main";
 import { signal } from "@preact/signals";
-import { companyList } from "../company/company.store";
-import { currentCompany } from "../company/company.store";
-import { navigate } from "wouter-preact/use-hash-location";
+import { fillToast } from "@/components/QToast.ui";
+import { companyList, currentCompany } from "@/routes/company/company.store";
+import type { Login } from "@api/src/routes/auth/auth.zod";
+import { closeDrawer } from "@/components/QDrawer.ui";
 
 export const currentUser = signal({
   id: null,
@@ -13,7 +14,7 @@ export const currentUser = signal({
 
 export const isAuthenticated = signal(false);
 
-export const logout = async () => {
+export const logout = async (onSuccess: () => void) => {
   await client.auth.logout.$get();
   // clean user data
   currentUser.value = {
@@ -29,9 +30,39 @@ export const logout = async () => {
   // set authenticated to false
   isAuthenticated.value = false;
   // navigate to home
-  navigate("/");
+  // navigate("/");
+  onSuccess?.();
 };
 
 export const setCurrentUser = (user: any) => {
   currentUser.value = user;
+};
+
+export const login = async (data: Login, onSuccess: () => void) => {
+  client.auth.login
+    .$post({ json: data })
+    .then((res) => res.json())
+    .then((resData) => {
+      if (resData.success === true) {
+        // set current user
+        setCurrentUser(resData.data.user);
+        // set authenticated
+        isAuthenticated.value = true;
+        // set company list
+        companyList.value = resData.data.companyList;
+        // set current company
+        currentCompany.value = resData.data.companyList[0];
+        // close drawer
+        closeDrawer();
+        // navigate to company
+        // navigate("/company");
+        onSuccess?.();
+      }
+      if (resData.success === false) {
+        fillToast("error", resData.error);
+      }
+    })
+    .catch((error) => {
+      console.log("app :: login.form.ui :: error => ", error);
+    });
 };
