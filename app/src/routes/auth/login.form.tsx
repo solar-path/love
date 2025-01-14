@@ -3,7 +3,7 @@ import { Label, TextInput, Button } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import RegisterForm from "./register.form";
 import { Mail, Lock, Eye, EyeOff } from "lucide-preact";
-import { fillDrawer } from "@/components/QDrawer.ui";
+import { closeDrawer, fillDrawer } from "@/components/QDrawer.ui";
 import ForgotPasswordForm from "./forgot.form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type Login } from "@api/src/routes/auth/auth.zod";
@@ -36,6 +36,10 @@ export default function Login() {
       const resData = await res.json();
       console.log("app :: login.form.ui :: res => ", resData);
 
+      if (resData.success === true) {
+        fillToast("success", resData.message);
+        closeDrawer();
+      }
       if (resData.success === false) {
         fillToast("error", resData.error);
       }
