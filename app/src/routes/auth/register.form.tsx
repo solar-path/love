@@ -16,7 +16,7 @@ import { fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "@/routes/auth/login.form";
 import QInput from "@/components/QInput.ui";
 import { registerSchema, type Register } from "@api/src/routes/auth/auth.zod";
-import { client } from "@/main";
+import { client, countryList, industryList } from "@/main";
 import { signUp } from "./auth.store";
 
 export default function RegisterForm() {
@@ -44,8 +44,8 @@ export default function RegisterForm() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [industryList, setIndustryList] = useState([]);
-  const [countryList, setCountryList] = useState([]);
+  // const [industryList, setIndustryList] = useState([]);
+  // const [countryList, setCountryList] = useState([]);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
   const toggleConfirmPasswordVisibility = () =>
@@ -60,19 +60,19 @@ export default function RegisterForm() {
     setValue(`${field}Id`, id);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const industryRes = await client.business.industry.$get();
-      const industryData = await industryRes.json();
-      setIndustryList(industryData);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const industryRes = await client.business.industry.$get();
+  //     const industryData = await industryRes.json();
+  //     setIndustryList(industryData);
 
-      const countryRes = await client.business.country.$get();
-      const countryData = await countryRes.json();
-      setCountryList(countryData);
-    };
+  //     const countryRes = await client.business.country.$get();
+  //     const countryData = await countryRes.json();
+  //     setCountryList(countryData);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <form
@@ -165,7 +165,7 @@ export default function RegisterForm() {
         id="industry"
         value={watch("industry")}
         error={errors.industry?.message}
-        items={industryList}
+        items={industryList.value}
         icon={Boxes as any}
         searchField="title"
         displayAsHelper="description"
@@ -180,7 +180,7 @@ export default function RegisterForm() {
         name="residence"
         value={watch("residence")}
         error={errors.residence?.message}
-        items={countryList}
+        items={countryList.value}
         icon={Earth as any}
         searchField="title"
         onChange={(e: { target: { value: string; dataset: { id: string } } }) =>

@@ -5,6 +5,7 @@ import { companyList, currentCompany } from "@/routes/company/company.store";
 import type { Login, Register } from "@api/src/routes/auth/auth.zod";
 import { closeDrawer, fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "./login.form";
+
 export const currentUser = signal({
   id: null,
   email: null,

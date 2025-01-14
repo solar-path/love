@@ -5,6 +5,7 @@ import { hc } from "hono/client";
 import type { ApiRoutes } from "@api/src";
 import { currentUser, isAuthenticated } from "./routes/auth/auth.store.ts";
 import { companyList, currentCompany } from "./routes/company/company.store.ts";
+import { signal } from "@preact/signals";
 
 // Hono client customised fetch to include credentials (cookies & session)
 export const client = hc<ApiRoutes>("/", {
@@ -12,6 +13,7 @@ export const client = hc<ApiRoutes>("/", {
     fetch(input, { ...init, credentials: "include" }),
 }).api;
 
+// get user/companyList data and set to store
 client.auth.user
   .$get()
   .then((res) => res.json())
@@ -28,6 +30,31 @@ client.auth.user
       companyList.value = resData.data.companyList;
       currentCompany.value = resData.data.companyList[0];
     }
+  })
+  .catch((err) => {
+    console.log("main.ts :: err => ", err);
+  });
+
+// define master data signals
+export const industryList = signal([]);
+export const countryList = signal([]);
+
+// get master data (industry, country) and set to store
+client.business.industry
+  .$get()
+  .then((res) => res.json())
+  .then((resData) => {
+    industryList.value = resData;
+  })
+  .catch((err) => {
+    console.log("main.ts :: err => ", err);
+  });
+
+client.business.country
+  .$get()
+  .then((res) => res.json())
+  .then((resData) => {
+    countryList.value = resData;
   })
   .catch((err) => {
     console.log("main.ts :: err => ", err);
