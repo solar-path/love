@@ -5,18 +5,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
 import QInput from "@/components/QInput.ui";
-import { companySchema } from "@api/src/routes/business/services/company.zod";
+import {
+  companySchema,
+  type Company,
+} from "@api/src/routes/business/services/company.zod";
 import { client } from "@/main";
 import { currentUser } from "../auth/auth.store";
 import { createCompany } from "./company.store";
-type FormFields =
-  | "residence"
-  | "residenceId"
-  | "industry"
-  | "industryId"
-  | "company"
-  | "bin"
-  | "author";
 
 export default function CompanyForm() {
   const {
@@ -25,13 +20,13 @@ export default function CompanyForm() {
     formState: { errors },
     watch,
     setValue,
-  } = useForm({
+  } = useForm<Company>({
     defaultValues: {
       residence: "",
       residenceId: "",
       industry: "",
       industryId: "",
-      company: "",
+      title: "",
       bin: "",
       author: "",
     },
@@ -41,9 +36,13 @@ export default function CompanyForm() {
   const [industryList, setIndustryList] = useState([]);
   const [countryList, setCountryList] = useState([]);
 
-  const handleSearchSelect = (field: FormFields, value: string, id: string) => {
+  const handleSearchSelect = (
+    field: "industry" | "residence",
+    value: string,
+    id: string
+  ) => {
     setValue(field, value);
-    setValue(`${field}Id` as FormFields, id);
+    setValue(`${field}Id`, id);
   };
 
   useEffect(() => {
@@ -74,13 +73,13 @@ export default function CompanyForm() {
       </p>
 
       <div>
-        <Label htmlFor="company" value="Company" />
+        <Label htmlFor="title" value="Company" />
         <TextInput
           type="text"
-          {...register("company")}
+          {...register("title")}
           icon={Building as any}
-          color={errors.company ? "failure" : "gray"}
-          helperText={errors.company ? errors.company.message : ""}
+          color={errors.title ? "failure" : "gray"}
+          helperText={errors.title ? errors.title.message : ""}
         />
       </div>
 

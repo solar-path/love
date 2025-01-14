@@ -1,17 +1,18 @@
 import { Drawer } from "flowbite-react";
 import { signal } from "@preact/signals";
+import { type ComponentType } from "preact";
 
 export const DrawerProps = signal({
   title: "Default title",
   state: false,
-  form: null,
+  form: null as ComponentType | null,
 });
 
-export const fillDrawer = (form, title: string) => {
+export const fillDrawer = (FormComponent: ComponentType, title: string) => {
   DrawerProps.value = {
     title,
     state: true,
-    form,
+    form: FormComponent,
   };
 };
 
@@ -24,6 +25,7 @@ export const closeDrawer = () => {
 };
 
 export default function QDrawer() {
+  const FormComponent = DrawerProps.value.form;
   return (
     <Drawer
       open={DrawerProps.value.state}
@@ -33,7 +35,7 @@ export default function QDrawer() {
       className="w-full max-w-md sm:w-[480px]"
     >
       <Drawer.Header title={DrawerProps.value.title} />
-      <Drawer.Items>{DrawerProps.value.form}</Drawer.Items>
+      <Drawer.Items>{FormComponent && <FormComponent />}</Drawer.Items>
     </Drawer>
   );
 }

@@ -17,27 +17,16 @@ import LoginForm from "@/routes/auth/login.form";
 import QInput from "@/components/QInput.ui";
 import { registerSchema, type Register } from "@api/src/routes/auth/auth.zod";
 import { client } from "@/main";
+import { signUp } from "./auth.store";
 
-type FormFields =
-  | "email"
-  | "password"
-  | "passwordConfirm"
-  | "terms"
-  | "residence"
-  | "residenceId"
-  | "industry"
-  | "industryId"
-  | "company"
-  | "bin";
-
-export default function Register() {
+export default function RegisterForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
     setValue,
-  } = useForm({
+  } = useForm<Register>({
     defaultValues: {
       email: "",
       password: "",
@@ -47,15 +36,11 @@ export default function Register() {
       residenceId: "",
       industry: "",
       industryId: "",
-      company: "",
+      title: "",
       bin: "",
     },
     resolver: zodResolver(registerSchema),
   });
-
-  const handleRegister = async (data: Register) => {
-    console.log(data);
-  };
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -66,9 +51,13 @@ export default function Register() {
   const toggleConfirmPasswordVisibility = () =>
     setShowConfirmPassword((prev) => !prev);
 
-  const handleSearchSelect = (field: FormFields, value: string, id: string) => {
+  const handleSearchSelect = (
+    field: "industry" | "residence",
+    value: string,
+    id: string
+  ) => {
     setValue(field, value);
-    setValue(`${field}Id` as FormFields, id);
+    setValue(`${field}Id`, id);
   };
 
   useEffect(() => {
@@ -87,7 +76,7 @@ export default function Register() {
 
   return (
     <form
-      onSubmit={handleSubmit(handleRegister)}
+      onSubmit={handleSubmit((data) => signUp(data))}
       className="flex flex-col w-full space-y-2"
     >
       <p className="text-sm">
@@ -149,13 +138,13 @@ export default function Register() {
       </div>
 
       <div>
-        <Label htmlFor="company" value="Company" />
+        <Label htmlFor="title" value="Company" />
         <TextInput
           type="text"
-          {...register("company")}
+          {...register("title")}
           icon={Building as any}
-          color={errors.company ? "failure" : "gray"}
-          helperText={errors.company ? errors.company.message : ""}
+          color={errors.title ? "failure" : "gray"}
+          helperText={errors.title ? errors.title.message : ""}
         />
       </div>
 
@@ -229,7 +218,7 @@ export default function Register() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() => fillDrawer(<LoginForm />, "Sign in")}
+              onClick={() => fillDrawer(LoginForm, "Sign in")}
             >
               Sign in
             </button>

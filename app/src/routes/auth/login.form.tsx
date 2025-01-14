@@ -15,7 +15,7 @@ export default function Login() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<Login>({
     defaultValues: {
       email: "",
       password: "",
@@ -80,7 +80,7 @@ export default function Login() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() => fillDrawer(<RegisterForm />, "Sign up")}
+              onClick={() => fillDrawer(RegisterForm, "Sign up")}
             >
               Sign up
             </button>
@@ -92,9 +92,7 @@ export default function Login() {
             <button
               type="button"
               className="text-red-500"
-              onClick={() =>
-                fillDrawer(<ForgotPasswordForm />, "Forgot password")
-              }
+              onClick={() => fillDrawer(ForgotPasswordForm, "Forgot password")}
             >
               Remind
             </button>

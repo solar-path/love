@@ -2,9 +2,9 @@ import { client } from "@/main";
 import { signal } from "@preact/signals";
 import { fillToast } from "@/components/QToast.ui";
 import { companyList, currentCompany } from "@/routes/company/company.store";
-import type { Login } from "@api/src/routes/auth/auth.zod";
-import { closeDrawer } from "@/components/QDrawer.ui";
-
+import type { Login, Register } from "@api/src/routes/auth/auth.zod";
+import { closeDrawer, fillDrawer } from "@/components/QDrawer.ui";
+import LoginForm from "./login.form";
 export const currentUser = signal({
   id: null,
   email: null,
@@ -65,4 +65,24 @@ export const login = async (data: Login, onSuccess: () => void) => {
     .catch((error) => {
       console.log("app :: login.form.ui :: error => ", error);
     });
+};
+
+export const signUp = async (data: Register) => {
+  console.log("app :: auth.store :: register :: data => ", data);
+  client.auth.register
+    .$post({ json: data })
+    .then((res) => res.json())
+    .then((resData) => {
+      if (resData.success === true) {
+        fillToast("success", "Registration successful. Activate your account.");
+        fillDrawer(LoginForm, "Sign in");
+      }
+      if (resData.success === false) {
+        fillToast("error", resData.message);
+      }
+    })
+    .catch((error) => {
+      console.log("app :: login.form.ui :: error => ", error);
+    });
+  // client.auth.register.$post({ json: data }).then((res) => res.json());
 };
