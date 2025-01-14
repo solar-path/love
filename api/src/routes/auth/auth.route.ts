@@ -7,7 +7,11 @@ import {
   forgotPasswordSchema,
   resetPasswordSchema,
 } from "./auth.zod";
-import { forgotPassword, login, register, resetPassword } from "./auth.service";
+import { register } from "./services/register.service";
+import { login } from "./services/login.service";
+import { forgotPassword } from "./services/forgotPassword.service";
+import { resetPassword } from "./services/resetPassword.service";
+
 import type { SuccessResponse } from "@/helper/types";
 import { lucia } from "@/lucia";
 import { loggedIn } from "@/middleware/loggedIn";
