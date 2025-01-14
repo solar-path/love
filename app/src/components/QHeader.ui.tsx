@@ -12,12 +12,12 @@ export default function QHeader() {
   const serviceItems = [
     {
       name: "Phone book",
-      href: "/protected/phonebook",
+      href: "/company/phonebook",
       icon: Phone,
     },
     {
       name: "Procurement",
-      href: "/protected/procurement",
+      href: "/company/procurement",
       icon: ShoppingCart,
     },
   ];
@@ -103,7 +103,7 @@ export default function QHeader() {
             >
               <Dropdown.Header>
                 <span className="block text-sm">
-                  {currentUser.value.fullname}
+                  {currentUser.value.fullname || currentUser.value.email}
                 </span>
                 <span className="block truncate text-sm font-medium">
                   {currentUser.value.email}

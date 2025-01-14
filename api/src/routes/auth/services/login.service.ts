@@ -57,5 +57,14 @@ export const login = async (data: Login) => {
   });
 
   const sessionCookie = lucia.createSessionCookie(session.id).serialize();
-  return { sessionCookie, companyList };
+  return {
+    sessionCookie,
+    companyList,
+    user: {
+      id: user.id,
+      email: user.email,
+      fullName: user.fullname,
+      avatar: user.avatar,
+    },
+  };
 };

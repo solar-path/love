@@ -9,6 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type Login } from "@api/src/routes/auth/auth.zod";
 import { client } from "@/main";
 import { fillToast } from "@/components/QToast.ui";
+import { navigate } from "wouter-preact/use-hash-location";
+import { isAuthenticated, setCurrentUser } from "./auth.store";
 
 export default function Login() {
   const {
@@ -35,9 +37,11 @@ export default function Login() {
       .then((res) => res.json())
       .then((resData) => {
         if (resData.success === true) {
+          setCurrentUser(resData.data.user);
+          isAuthenticated.value = true;
           fillToast("success", resData.message);
           closeDrawer();
-          // navigate("/");
+          navigate("/company");
         }
         if (resData.success === false) {
           fillToast("error", resData.error);
