@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-export const companySchema = z.object({
+// export const companySchema = z.object({
+export const companyCreateEditSchema = z.object({
   id: z.string().optional(),
   residence: z.string().min(1, { message: "Required field" }),
   residenceId: z.string().optional(),
@@ -11,4 +12,12 @@ export const companySchema = z.object({
   author: z.string().min(1, { message: "Required field" }),
 });
 
-export type Company = z.infer<typeof companySchema>;
+export type CompanyCreateEdit = z.infer<typeof companyCreateEditSchema>;
+
+export const companyForFrontendSchema = companyCreateEditSchema.extend({
+  id: z.string(),
+  companySlug: z.string(),
+  title: z.string(),
+});
+
+export type CompanyForFrontend = z.infer<typeof companyForFrontendSchema>;

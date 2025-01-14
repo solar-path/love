@@ -5,9 +5,12 @@ import { fillDrawer } from "@/components/QDrawer.ui";
 import { companyList, currentCompany } from "@/routes/company/company.store";
 import { useEffect, useState } from "preact/hooks";
 import CompanyForm from "@/routes/company/company.form";
+import { useLocation } from "wouter-preact";
 
 export default function QCompanySelector() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [, setLocation] = useLocation();
+  console.log("QCompanySelector :: companyList.value => ", companyList.value);
 
   // Listen for company creation and updates
   useEffect(() => {
@@ -78,6 +81,7 @@ export default function QCompanySelector() {
           key={company.id}
           onClick={() => {
             currentCompany.value = company;
+            setLocation(`/${company.companySlug}`);
           }}
           className="w-full hover:bg-primary-700 hover:text-white"
         >

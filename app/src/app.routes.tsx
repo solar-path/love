@@ -51,7 +51,8 @@ export default function AppRoutes() {
         </DocsLayout>
       </Route>
 
-      <Route path="/company" nest>
+      {/* <Route path="/company" nest> */}
+      <Route path="/:companySlug?" nest>
         <ProtectedRoute>
           <CompanyLayout>
             <Switch>

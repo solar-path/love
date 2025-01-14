@@ -8,18 +8,19 @@ import { Phone, ShoppingCart } from "lucide-preact";
 import { currentUser, logout } from "@/routes/auth/auth.store";
 import { isAuthenticated } from "@/routes/auth/auth.store";
 import QCompanySelector from "./QCompanySelector.ui";
+import { currentCompany } from "@/routes/company/company.store";
 
 export default function QHeader() {
   const [, setLocation] = useLocation();
   const serviceItems = [
     {
       name: "Phone book",
-      href: "/company/phonebook",
+      href: `/${currentCompany.value?.companySlug}/phonebook`,
       icon: Phone,
     },
     {
       name: "Procurement",
-      href: "/company/procurement",
+      href: `/${currentCompany.value?.companySlug}/procurement`,
       icon: ShoppingCart,
     },
   ];
@@ -69,7 +70,8 @@ export default function QHeader() {
             <Navbar.Link as={Link} to="/admin">
               Administation panel
             </Navbar.Link>
-            <Navbar.Link as={Link} to="/company">
+            {/* <Navbar.Link as={Link} to="/company"> */}
+            <Navbar.Link as={Link} to={`/${currentCompany.value?.companySlug}`}>
               Dashboard
             </Navbar.Link>
 

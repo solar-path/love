@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 
 import QInput from "@/components/QInput.ui";
 import {
-  companySchema,
-  type Company,
+  companyCreateEditSchema,
+  type CompanyCreateEdit,
 } from "@api/src/routes/business/services/company/company.zod";
 import { client } from "@/main";
 import { currentUser } from "../auth/auth.store";
@@ -20,7 +20,7 @@ export default function CompanyForm() {
     formState: { errors },
     watch,
     setValue,
-  } = useForm<Company>({
+  } = useForm<CompanyCreateEdit>({
     defaultValues: {
       residence: "",
       residenceId: "",
@@ -30,7 +30,7 @@ export default function CompanyForm() {
       bin: "",
       author: "",
     },
-    resolver: zodResolver(companySchema),
+    resolver: zodResolver(companyCreateEditSchema),
   });
 
   const [industryList, setIndustryList] = useState([]);
