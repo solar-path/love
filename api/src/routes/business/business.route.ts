@@ -8,7 +8,7 @@ import { loggedIn } from "@/middleware/loggedIn";
 import { getPhoneBookByCompanyId } from "./services/phoneBook/getPhoneBookByCompanyId.service";
 import { paginationSchema } from "@/helper/pagination.zod";
 import { createCompany } from "./services/company/createCompany.service";
-import { companySchema } from "./services/company/company.zod";
+import { companyCreateEditSchema } from "./services/company/company.zod";
 
 export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
@@ -35,12 +35,17 @@ export const businessRouter = new Hono<Context>()
       return c.json(await getPhoneBookByCompanyId());
     }
   )
-  .post("/company", loggedIn, zValidator("json", companySchema), async (c) => {
-    const data = await c.req.valid("json");
-    console.log("business/business.route.ts :: data => ", data);
-    // return c.json({ message: "Company data received", data });
+  .post(
+    "/company",
+    loggedIn,
+    zValidator("json", companyCreateEditSchema),
+    async (c) => {
+      const data = await c.req.valid("json");
+      console.log("business/business.route.ts :: data => ", data);
+      // return c.json({ message: "Company data received", data });
 
-    return c.json(await createCompany(data));
-  });
+      return c.json(await createCompany(data));
+    }
+  );
 
 export default businessRouter;

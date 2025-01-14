@@ -18,7 +18,7 @@ client.auth.user
   .$get()
   .then((res) => res.json())
   .then((resData) => {
-    console.log("main.ts :: resData => ", resData);
+    // console.log("main.ts :: resData => ", resData);
     if (resData.success) {
       currentUser.value = {
         id: resData.data.id,

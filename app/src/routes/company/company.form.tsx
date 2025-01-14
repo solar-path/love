@@ -1,17 +1,14 @@
-import { useState, useEffect } from "preact/hooks";
 import { Label, TextInput, Button } from "flowbite-react";
 import { Building, ScanBarcode, Boxes, Earth } from "lucide-preact";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
+import { createCompany } from "@/routes/company/company.store";
 import QInput from "@/components/QInput.ui";
 import {
   companyCreateEditSchema,
   type CompanyCreateEdit,
 } from "@api/src/routes/business/services/company/company.zod";
-import { client } from "@/main";
-import { currentUser } from "../auth/auth.store";
-import { createCompany } from "./company.store";
+import { countryList, industryList } from "@/main";
 
 export default function CompanyForm() {
   const {
@@ -22,6 +19,7 @@ export default function CompanyForm() {
     setValue,
   } = useForm<CompanyCreateEdit>({
     defaultValues: {
+      id: "",
       residence: "",
       residenceId: "",
       industry: "",
@@ -33,9 +31,6 @@ export default function CompanyForm() {
     resolver: zodResolver(companyCreateEditSchema),
   });
 
-  const [industryList, setIndustryList] = useState([]);
-  const [countryList, setCountryList] = useState([]);
-
   const handleSearchSelect = (
     field: "industry" | "residence",
     value: string,
@@ -45,27 +40,9 @@ export default function CompanyForm() {
     setValue(`${field}Id`, id);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const industryRes = await client.business.industry.$get();
-      const industryData = await industryRes.json();
-      setIndustryList(industryData);
-
-      const countryRes = await client.business.country.$get();
-      const countryData = await countryRes.json();
-      setCountryList(countryData);
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <form
-      onSubmit={handleSubmit((data) => {
-        if (currentUser?.value?.id) {
-          createCompany({ ...data, author: currentUser.value.id });
-        }
-      })}
+      onSubmit={handleSubmit(createCompany)}
       className="flex flex-col w-full space-y-2"
     >
       <p className="text-sm">
@@ -100,7 +77,7 @@ export default function CompanyForm() {
         id="industry"
         value={watch("industry")}
         error={errors.industry?.message}
-        items={industryList}
+        items={industryList.value}
         icon={Boxes as any}
         searchField="title"
         displayAsHelper="description"
@@ -115,7 +92,7 @@ export default function CompanyForm() {
         name="residence"
         value={watch("residence")}
         error={errors.residence?.message}
-        items={countryList}
+        items={countryList.value}
         icon={Earth as any}
         searchField="title"
         onChange={(e: { target: { value: string; dataset: { id: string } } }) =>
