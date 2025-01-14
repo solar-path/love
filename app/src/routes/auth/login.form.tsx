@@ -11,6 +11,7 @@ import { client } from "@/main";
 import { fillToast } from "@/components/QToast.ui";
 import { navigate } from "wouter-preact/use-hash-location";
 import { isAuthenticated, setCurrentUser } from "./auth.store";
+import { companyList, currentCompany } from "../company/company.store";
 
 export default function Login() {
   const {
@@ -37,10 +38,17 @@ export default function Login() {
       .then((res) => res.json())
       .then((resData) => {
         if (resData.success === true) {
+          // set current user
           setCurrentUser(resData.data.user);
+          // set authenticated
           isAuthenticated.value = true;
-          fillToast("success", resData.message);
+          // set company list
+          companyList.value = resData.data.companyList;
+          // set current company
+          currentCompany.value = resData.data.companyList[0];
+          // close drawer
           closeDrawer();
+          // navigate to company
           navigate("/company");
         }
         if (resData.success === false) {
