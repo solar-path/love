@@ -1,9 +1,12 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { idSchema } from "../crm/inquiry.zod";
-import { getIndustryList, getIndustryById } from "./industry.service";
-import { getCountryList, getCountryById } from "./country.service";
+import { getIndustryList, getIndustryById } from "./services/industry.service";
+import { getCountryList, getCountryById } from "./services/country.service";
 import type { Context } from "@/context";
+import { loggedIn } from "@/middleware/loggedIn";
+import { getPhonebookList } from "./services/company.phonebook.service";
+import { paginationSchema } from "@/helper/pagination.zod";
 
 export const businessRouter = new Hono<Context>()
   .get("/industry", async (c) => {
@@ -17,6 +20,18 @@ export const businessRouter = new Hono<Context>()
   })
   .get("/country/:id", zValidator("param", idSchema), async (c) => {
     return c.json(await getCountryById(c.req.param("id")));
-  });
+  })
+  .get(
+    "/phonebook",
+    loggedIn,
+    zValidator("query", paginationSchema),
+    async (c) => {
+      // const { limit, page, sortBy, order, author, site } = c.req.valid("query");
+      const user = c.get("user");
+      console.log("business/business.route.ts :: user => ", user);
+      // const data = await c.req.valid("query");
+      return c.json(await getPhonebookList());
+    }
+  );
 
 export default businessRouter;

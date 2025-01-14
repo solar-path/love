@@ -1,0 +1,6 @@
+@baseUrl = http://localhost:3000/api/business
+
+### Get Phonebook List
+GET {{baseUrl}}/phonebook
+Content-Type: application/json
+Cookie: auth_session=bw4s5efexcr7r23wsqrdfaxu4ne2ypnk7fe4mgh6
