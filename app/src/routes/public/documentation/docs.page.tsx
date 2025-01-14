@@ -27,6 +27,7 @@ export default function Docs() {
         // Override heading renderer
         renderer.heading = ({ tokens, depth }) => {
           const text = tokens?.[0]?.type === "text" ? tokens[0].raw : "";
+          console.log(text);
           return `<h${depth}>${text}</h${depth}>`;
         };
 
