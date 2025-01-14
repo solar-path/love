@@ -26,14 +26,16 @@ export default function AppRoutes() {
   return (
     <Switch>
       <Route path="/admin" nest>
-        <AdminLayout>
-          <Switch>
-            <Route path="/" component={AdminPage} />
-            <Route path="/crm" component={CrmPage} />
-            <Route path="/crm/inquiry" component={InquiryPage} />
-            <Route path="/crm/addressBook" component={AddressBookPage} />
-          </Switch>
-        </AdminLayout>
+        <ProtectedRoute>
+          <AdminLayout>
+            <Switch>
+              <Route path="/" component={AdminPage} />
+              <Route path="/crm" component={CrmPage} />
+              <Route path="/crm/inquiry" component={InquiryPage} />
+              <Route path="/crm/addressBook" component={AddressBookPage} />
+            </Switch>
+          </AdminLayout>
+        </ProtectedRoute>
       </Route>
 
       <Route path="/" component={Home} />
