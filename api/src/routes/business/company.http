@@ -1,0 +1,35 @@
+@businessUrl = http://localhost:3000/api/business
+@authUrl = http://localhost:3000/api/auth
+
+
+### Login
+# @name login
+POST {{authUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "M1r@nd@32"
+}
+
+
+
+### Get Phonebook List
+GET {{businessUrl}}/phonebook
+Content-Type: application/json
+Cookie: {{login.response.headers.set-cookie}}
+
+
+
+### Create Company
+POST {{businessUrl}}/company
+Content-Type: application/json
+Cookie: {{login.response.headers.set-cookie}}
+
+{
+  "company": "Test Company",
+  "bin": "1234567890",
+  "industry": "0292544e-0c54-4cec-91b1-20d0ac745050",
+  "residence": "01bbd8e5-bec4-4e76-a99c-4f8a002f188f",
+  "author": "b41a3094-4000-44ec-8f8d-aad0976fe5ec"
+}
