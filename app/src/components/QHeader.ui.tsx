@@ -38,7 +38,10 @@ export default function QHeader() {
             Pricing
           </Navbar.Link>
 
-          <Navbar.Link onClick={() => fillDrawer(<RegisterForm />, "Sign up")}>
+          <Navbar.Link
+            onClick={() => fillDrawer(<RegisterForm />, "Sign up")}
+            className="text-red-700 font-bold text-lg"
+          >
             Sign up
           </Navbar.Link>
           <Navbar.Link onClick={() => fillDrawer(<LoginForm />, "Sign in")}>
