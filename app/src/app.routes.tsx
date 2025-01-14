@@ -15,6 +15,9 @@ import ProtectedLayout from "./routes/protected/protected.layout";
 import DashboardPage from "./routes/protected/dashboard.page";
 import ErmPage from "./routes/protected/erm/erm.page";
 import RiskPage from "./routes/protected/erm/risk/risk.page";
+import OrgChartPage from "./routes/protected/orgchart/orgchart.page";
+import OrgChartUnitPage from "./routes/protected/orgchart/unit/orgchartUnit.page";
+import UserPage from "./routes/protected/user/user.page";
 export default function AppRoutes() {
   return (
     <Switch>
@@ -48,6 +51,9 @@ export default function AppRoutes() {
             <Route path="/" component={DashboardPage} />
             <Route path="/erm" component={ErmPage} />
             <Route path="/erm/risk" component={RiskPage} />
+            <Route path="/orgchart" component={OrgChartPage} />
+            <Route path="/orgchart/unit" component={OrgChartUnitPage} />
+            <Route path="/user" component={UserPage} />
           </Switch>
         </ProtectedLayout>
       </Route>
