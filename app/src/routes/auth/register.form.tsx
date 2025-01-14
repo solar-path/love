@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState } from "preact/hooks";
 import { Label, TextInput, Button, Checkbox } from "flowbite-react";
 import {
   Mail,
@@ -16,7 +16,7 @@ import { fillDrawer } from "@/components/QDrawer.ui";
 import LoginForm from "@/routes/auth/login.form";
 import QInput from "@/components/QInput.ui";
 import { registerSchema, type Register } from "@api/src/routes/auth/auth.zod";
-import { client, countryList, industryList } from "@/main";
+import { countryList, industryList } from "@/main";
 import { signUp } from "./auth.store";
 
 export default function RegisterForm() {
@@ -44,8 +44,6 @@ export default function RegisterForm() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  // const [industryList, setIndustryList] = useState([]);
-  // const [countryList, setCountryList] = useState([]);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
   const toggleConfirmPasswordVisibility = () =>

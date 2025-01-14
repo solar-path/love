@@ -12,6 +12,7 @@ export const currentCompany = signal<CompanyForFrontend | null>(null);
 export const companyList = signal<CompanyForFrontend[]>([]);
 
 export const createCompany = async (data: CompanyCreateEdit) => {
+  console.log("company.store.ts :: createCompany :: data => ", data);
   await client.business.company
     .$post({ json: data })
     .then((res: any) => res.json())
