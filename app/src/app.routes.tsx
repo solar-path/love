@@ -11,15 +11,17 @@ import NotFound from "@/routes/public/NotFound.page";
 import CrmPage from "@/routes/admin/crm/crm.page";
 import InquiryPage from "@/routes/admin/crm/inquiry/inquiry.page";
 import AddressBookPage from "@/routes/admin/crm/addressBook/addressBook.page";
-import ProtectedLayout from "./routes/protected/protected.layout";
-import DashboardPage from "./routes/protected/dashboard.page";
-import ErmPage from "./routes/protected/erm/erm.page";
-import RiskPage from "./routes/protected/erm/risk/risk.page";
-import OrgChartPage from "./routes/protected/orgchart/orgchart.page";
-import OrgChartUnitPage from "./routes/protected/orgchart/unit/orgchartUnit.page";
-import UserPage from "./routes/protected/user/user.page";
-import PhoneBookPage from "./routes/protected/phoneBook/phoneBook.page";
-import ProcurementPage from "./routes/protected/procurement/procurement.page";
+import ProtectedLayout from "./routes/company/company.layout";
+import DashboardPage from "./routes/company/company.page";
+import ErmPage from "./routes/company/erm/erm.page";
+import RiskPage from "./routes/company/erm/risk/risk.page";
+import OrgChartPage from "./routes/company/orgchart/orgchart.page";
+import OrgChartUnitPage from "./routes/company/orgchart/unit/orgchartUnit.page";
+import UserPage from "./routes/company/user/user.page";
+import PhoneBookPage from "./routes/company/phoneBook/phoneBook.page";
+import ProcurementPage from "./routes/company/procurement/procurement.page";
+import CompanyLayout from "./routes/company/company.layout";
+
 export default function AppRoutes() {
   return (
     <Switch>
@@ -47,8 +49,8 @@ export default function AppRoutes() {
         </DocsLayout>
       </Route>
 
-      <Route path="/protected" nest>
-        <ProtectedLayout>
+      <Route path="/company" nest>
+        <CompanyLayout>
           <Switch>
             <Route path="/" component={DashboardPage} />
             <Route path="/erm" component={ErmPage} />
@@ -59,7 +61,7 @@ export default function AppRoutes() {
             <Route path="/phoneBook" component={PhoneBookPage} />
             <Route path="/procurement" component={ProcurementPage} />
           </Switch>
-        </ProtectedLayout>
+        </CompanyLayout>
       </Route>
 
       <Route component={NotFound} />

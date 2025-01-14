@@ -66,7 +66,7 @@ export default function QHeader() {
           </Navbar.Link>
 
           <Navbar.Link>
-            <Dropdown label="Services" size="xs" color="dark">
+            <Dropdown label="Services" color="dark">
               {serviceItems.map((item) => (
                 <Dropdown.Item>
                   <Link

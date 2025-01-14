@@ -7,7 +7,7 @@ import {
   User,
 } from "lucide-preact";
 
-export default function ProtectedLayout({
+export default function CompanyLayout({
   children,
 }: {
   children: React.ReactNode;
