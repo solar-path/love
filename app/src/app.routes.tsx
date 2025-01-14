@@ -18,6 +18,8 @@ import RiskPage from "./routes/protected/erm/risk/risk.page";
 import OrgChartPage from "./routes/protected/orgchart/orgchart.page";
 import OrgChartUnitPage from "./routes/protected/orgchart/unit/orgchartUnit.page";
 import UserPage from "./routes/protected/user/user.page";
+import PhoneBookPage from "./routes/protected/phoneBook/phoneBook.page";
+import ProcurementPage from "./routes/protected/procurement/procurement.page";
 export default function AppRoutes() {
   return (
     <Switch>
@@ -54,6 +56,8 @@ export default function AppRoutes() {
             <Route path="/orgchart" component={OrgChartPage} />
             <Route path="/orgchart/unit" component={OrgChartUnitPage} />
             <Route path="/user" component={UserPage} />
+            <Route path="/phoneBook" component={PhoneBookPage} />
+            <Route path="/procurement" component={ProcurementPage} />
           </Switch>
         </ProtectedLayout>
       </Route>
