@@ -5,7 +5,7 @@ export const companySchema = z.object({
   residenceId: z.string().optional(),
   industry: z.string().min(1, { message: "Required field" }),
   industryId: z.string().optional(),
-  company: z.string().min(1, { message: "Required field" }),
+  title: z.string().min(1, { message: "Required field" }),
   bin: z.string().min(1, { message: "Required field" }),
   author: z.string().min(1, { message: "Required field" }),
 });

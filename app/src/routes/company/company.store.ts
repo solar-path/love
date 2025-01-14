@@ -1,7 +1,7 @@
 import type { Company } from "@api/src/routes/business/services/company.zod";
 import { signal } from "@preact/signals";
 
-export const currentCompany = signal(null);
+export const currentCompany = signal<Company | null>(null);
 
 export const companyList = signal([]);
 

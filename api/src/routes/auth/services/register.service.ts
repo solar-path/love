@@ -26,7 +26,7 @@ export const register = async (data: Register) => {
     .where(
       and(
         eq(companyTable.BIN, data.bin),
-        eq(companyTable.title, data.company),
+        eq(companyTable.title, data.title),
         eq(companyTable.residence, data.residence)
       )
     )
@@ -57,12 +57,12 @@ export const register = async (data: Register) => {
       .insert(companyTable)
       .values({
         id: crypto.randomUUID(),
-        title: data.company,
+        title: data.title,
         BIN: data.bin,
         industry: data.industry,
         residence: data.residence,
         author: user.id,
-        companySlug: data.company.toLowerCase().replace(/ /g, "-"),
+        companySlug: data.title.toLowerCase().replace(/ /g, "-"),
       })
       .returning()
       .then((res) => res[0]);

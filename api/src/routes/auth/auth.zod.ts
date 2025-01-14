@@ -23,7 +23,7 @@ export const registerSchema = z
     residenceId: z.string().optional(),
     industry: z.string().min(1, { message: "Required field" }),
     industryId: z.string().optional(),
-    company: z.string().min(1, { message: "Required field" }),
+    title: z.string().min(1, { message: "Required field" }),
     bin: z.string().min(1, { message: "Required field" }),
     terms: z.boolean().refine((val) => val === true, {
       message: "You must accept the terms of use",

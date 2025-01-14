@@ -5,6 +5,7 @@ import { HiSearch } from "react-icons/hi";
 import { fillDrawer } from "@/components/QDrawer.ui";
 import { companyList, currentCompany } from "@/routes/company/company.store";
 import { useEffect, useState } from "preact/hooks";
+import CompanyForm from "@/routes/company/company.form";
 
 export default function CompanyDropdownUI() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,7 +54,7 @@ export default function CompanyDropdownUI() {
 
   if (companyList.value.length === 0) {
     return (
-      <Button onClick={() => fillDrawer(CompanyForm, "Create Company")}>
+      <Button onClick={() => fillDrawer(<CompanyForm />, "Create Company")}>
         Create a new company
       </Button>
     );
@@ -83,7 +84,7 @@ export default function CompanyDropdownUI() {
         <Dropdown.Item
           key={company.id}
           onClick={() => {
-            setCurrentCompany(company);
+            currentCompany.value = company;
           }}
           className="w-full hover:bg-primary-700 hover:text-white"
         >
@@ -95,7 +96,7 @@ export default function CompanyDropdownUI() {
 
       <Dropdown.Divider />
       <Dropdown.Item
-        onClick={() => fillDrawer(CompanyForm, "Create Company")}
+        onClick={() => fillDrawer(<CompanyForm />, "Create Company")}
         className="flex items-center justify-start gap-2 hover:bg-primary-700 hover:text-white"
       >
         Create a new company

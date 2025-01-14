@@ -8,7 +8,7 @@ import QInput from "@/components/QInput.ui";
 import { companySchema } from "@api/src/routes/business/services/company.zod";
 import { client } from "@/main";
 import { currentUser } from "../auth/auth.store";
-
+import { createCompany } from "./company.store";
 type FormFields =
   | "residence"
   | "residenceId"
@@ -62,9 +62,11 @@ export default function CompanyForm() {
 
   return (
     <form
-      onSubmit={handleSubmit((data) =>
-        handleCompany({ ...data, author: currentUser!.value!.id })
-      )}
+      onSubmit={handleSubmit((data) => {
+        if (currentUser?.value?.id) {
+          createCompany({ ...data, author: currentUser.value.id });
+        }
+      })}
       className="flex flex-col w-full space-y-2"
     >
       <p className="text-sm">

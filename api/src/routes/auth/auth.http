@@ -5,11 +5,11 @@ POST {{baseUrl}}/register
 Content-Type: application/json
 
 {
-  "email": "john.doe@example.com",
+  "email": "demo@demo.com",
   "password": "M1r@nd@32",
   "passwordConfirm": "M1r@nd@32",
   "terms": true,
-  "company": "John Doe Inc",
+  "title": "Demo Inc",
   "bin": "1234567890",
   "industry": "27c85309-b3d2-464c-b1ed-b06fc6e188ca",
   "residence": "01bbd8e5-bec4-4e76-a99c-4f8a002f188f"
@@ -18,7 +18,6 @@ Content-Type: application/json
 ### Login
 POST {{baseUrl}}/login
 Content-Type: application/json
-
 
 {
   "email": "john.doe@example.com",
