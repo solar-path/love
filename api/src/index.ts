@@ -9,6 +9,7 @@ import type { Context } from "./context";
 import authRouter from "./routes/auth/auth.route";
 import businessRouter from "./routes/business/business.route";
 import crmRouter from "./routes/crm/crm.route";
+import ermRouter from "./routes/erm/erm.route";
 
 const app = new Hono<Context>();
 
@@ -46,7 +47,8 @@ const routes = app
   .basePath("/api")
   .route("/business", businessRouter)
   .route("/auth", authRouter)
-  .route("/crm", crmRouter);
+  .route("/crm", crmRouter)
+  .route("/erm", ermRouter);
 
 // app.get("*", serveStatic({ root: "../app/dist" }));
 // app.get("*", serveStatic({ root: "../app/dist/index.html" }));

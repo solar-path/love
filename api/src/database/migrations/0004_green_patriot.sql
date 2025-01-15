@@ -1,0 +1,1 @@
+ALTER TABLE `erm_risk` ADD `title` text NOT NULL;

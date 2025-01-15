@@ -1,0 +1,1 @@
+ALTER TABLE `erm_risk` RENAME COLUMN "consequence" TO "outcome";
