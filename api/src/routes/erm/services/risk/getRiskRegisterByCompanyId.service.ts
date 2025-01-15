@@ -9,7 +9,6 @@ export const getRiskRegisterByCompanyId = async (companyId: string) => {
       author: true,
       actions: true,
       riskOwner: true,
-      score: true,
     },
   });
   return {
