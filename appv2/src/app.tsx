@@ -9,7 +9,6 @@ export function App() {
     <div className="flex min-h-screen flex-col justify-between">
       <QHeader />
       <QDrawer />
-      ssr
       <main className="flex-grow pl-10 pr-10">
         <AppRoutes />
       </main>
